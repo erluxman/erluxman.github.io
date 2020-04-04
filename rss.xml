@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Dan Abramov's Overreacted Blog RSS Feed]]></title><description><![CDATA[Personal blog by Dan Abramov. I explain with words and code.]]></description><link>https://overreacted.io</link><generator>GatsbyJS</generator><lastBuildDate>Sat, 04 Apr 2020 15:25:15 GMT</lastBuildDate><item><title><![CDATA[Writing Resilient Components]]></title><description><![CDATA[Four principles to set you on the right path.]]></description><link>https://overreacted.io/writing-resilient-components/</link><guid isPermaLink="false">https://overreacted.io/writing-resilient-components/</guid><pubDate>Sat, 16 Mar 2019 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;When people start learning React, they often ask for a style guide. While it’s a good idea to have some consistent rules applied across a project, a lot of them are arbitrary — and so React doesn’t have a strong opinion about them.&lt;/p&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Dan Abramov's Overreacted Blog RSS Feed]]></title><description><![CDATA[My Journey with Code]]></description><link>https://erluxman.com</link><generator>GatsbyJS</generator><lastBuildDate>Sat, 04 Apr 2020 16:08:34 GMT</lastBuildDate><item><title><![CDATA[Writing Resilient Components]]></title><description><![CDATA[Four principles to set you on the right path.]]></description><link>https://erluxman.com/writing-resilient-components/</link><guid isPermaLink="false">https://erluxman.com/writing-resilient-components/</guid><pubDate>Sat, 16 Mar 2019 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;When people start learning React, they often ask for a style guide. While it’s a good idea to have some consistent rules applied across a project, a lot of them are arbitrary — and so React doesn’t have a strong opinion about them.&lt;/p&gt;
 &lt;p&gt;You can use different type systems, prefer function declarations or arrow functions, sort your props in alphabetical order or in an order you find pleasing.&lt;/p&gt;
 &lt;p&gt;This flexibility allows &lt;a href=&quot;https://reactjs.org/docs/add-react-to-a-website.html&quot; target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot;&gt;integrating React&lt;/a&gt; into projects with existing conventions. But it also invites endless debates.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;There &lt;em&gt;are&lt;/em&gt; important design principles that every component should strive to follow. But I don’t think style guides capture those principles well. We’ll talk about style guides first, and then &lt;a href=&quot;#writing-resilient-components&quot;&gt;look at the principles that really &lt;em&gt;are&lt;/em&gt; useful&lt;/a&gt;.&lt;/strong&gt;&lt;/p&gt;
@@ -274,7 +274,7 @@
 &lt;p&gt;&lt;strong&gt;Wouldn’t it be nice if we could somehow automatically catch these mistakes?&lt;/strong&gt; Isn’t that something a linter could help us with?&lt;/p&gt;
 &lt;hr&gt;
 &lt;p&gt;Unfortunately, automatically checking a class component for consistency is too difficult. Any method can call any other method. Statically analyzing calls from &lt;code class=&quot;language-text&quot;&gt;componentDidMount&lt;/code&gt; and &lt;code class=&quot;language-text&quot;&gt;componentDidUpdate&lt;/code&gt; is fraught with false positives.&lt;/p&gt;
-&lt;p&gt;However, one &lt;em&gt;could&lt;/em&gt; design an API that &lt;em&gt;can&lt;/em&gt; be statically analyzed for consistency. The &lt;a href=&quot;https://overreacted.io/a-complete-guide-to-useeffect/&quot;&gt;React &lt;code class=&quot;language-text&quot;&gt;useEffect&lt;/code&gt; Hook&lt;/a&gt; is an example of such API:&lt;/p&gt;
+&lt;p&gt;However, one &lt;em&gt;could&lt;/em&gt; design an API that &lt;em&gt;can&lt;/em&gt; be statically analyzed for consistency. The &lt;a href=&quot;https://erluxman.com/a-complete-guide-to-useeffect/&quot;&gt;React &lt;code class=&quot;language-text&quot;&gt;useEffect&lt;/code&gt; Hook&lt;/a&gt; is an example of such API:&lt;/p&gt;
 &lt;div class=&quot;gatsby-highlight has-highlighted-lines&quot; data-language=&quot;jsx&quot;&gt;&lt;pre class=&quot;language-jsx&quot;&gt;&lt;code class=&quot;language-jsx&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;SearchResults&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token parameter&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt; query &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
   &lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;data&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; setData&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;useState&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token keyword&quot;&gt;null&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
   &lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;currentPage&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; setCurrentPage&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;useState&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
@@ -297,11 +297,11 @@
 &lt;p&gt;We put the logic &lt;em&gt;inside&lt;/em&gt; of the effect, and that makes it easier to see &lt;em&gt;which values from the React data flow&lt;/em&gt; it depends on. These values are called “dependencies”, and in our example they are &lt;code class=&quot;language-text&quot;&gt;[currentPage, query]&lt;/code&gt;.&lt;/p&gt;
 &lt;p&gt;Note how this array of “effect dependencies” isn’t really a new concept. In a class, we had to search for these “dependencies” through all the method calls. The &lt;code class=&quot;language-text&quot;&gt;useEffect&lt;/code&gt; API just makes the same concept explicit.&lt;/p&gt;
 &lt;p&gt;This, in turn, lets us validate them automatically:&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://overreacted.io/bc7a074c528f3b0be1b7e509b6a8683b/useeffect.gif&quot; alt=&quot;Demo of exhaustive-deps lint rule&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://erluxman.com/bc7a074c528f3b0be1b7e509b6a8683b/useeffect.gif&quot; alt=&quot;Demo of exhaustive-deps lint rule&quot;&gt;&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;(This is a demo of the new recommended &lt;code class=&quot;language-text&quot;&gt;exhaustive-deps&lt;/code&gt; lint rule which is a part of &lt;code class=&quot;language-text&quot;&gt;eslint-plugin-react-hooks&lt;/code&gt;. It will soon be included in Create React App.)&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Note that it is important to respect all prop and state updates for effects regardless of whether you’re writing component as a  class or a function.&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;With the class API, you have to think about consistency yourself, and verify that changes to every relevant prop or state are handled by &lt;code class=&quot;language-text&quot;&gt;componentDidUpdate&lt;/code&gt;. Otherwise, your component is not resilient to prop and state changes. This is not even a React-specific problem. It applies to any UI library that lets you handle “creation” and “updates” separately.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;The &lt;code class=&quot;language-text&quot;&gt;useEffect&lt;/code&gt; API flips the default by encouraging consistency.&lt;/strong&gt; This &lt;a href=&quot;https://overreacted.io/a-complete-guide-to-useeffect/&quot;&gt;might feel unfamiliar at first&lt;/a&gt;, but as a result your component becomes more resilient to changes in the logic. And since the “dependencies” are now explicit, we can &lt;em&gt;verify&lt;/em&gt; the effect is consistent using a lint rule. We’re using a linter to catch bugs!&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;The &lt;code class=&quot;language-text&quot;&gt;useEffect&lt;/code&gt; API flips the default by encouraging consistency.&lt;/strong&gt; This &lt;a href=&quot;https://erluxman.com/a-complete-guide-to-useeffect/&quot;&gt;might feel unfamiliar at first&lt;/a&gt;, but as a result your component becomes more resilient to changes in the logic. And since the “dependencies” are now explicit, we can &lt;em&gt;verify&lt;/em&gt; the effect is consistent using a lint rule. We’re using a linter to catch bugs!&lt;/p&gt;
 &lt;hr&gt;
 &lt;h3 id=&quot;dont-stop-the-data-flow-in-optimizations&quot;&gt;&lt;a href=&quot;#dont-stop-the-data-flow-in-optimizations&quot; aria-hidden class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Don’t Stop the Data Flow in Optimizations&lt;/h3&gt;
 &lt;p&gt;There’s one more case where you might accidentally ignore changes to props. This mistake can occur when you’re manually optimizing your components.&lt;/p&gt;
@@ -516,7 +516,7 @@
 &lt;li&gt;&lt;em&gt;Which comments are expanded.&lt;/em&gt; It would be weird if expanding a comment in one tree would also expand it in another tree. In this case we’re interacting with a particular &lt;code class=&quot;language-text&quot;&gt;Comment&lt;/code&gt; &lt;em&gt;UI representation&lt;/em&gt; rather than an abstract “comment entity”. Therefore, an “expanded” flag &lt;strong&gt;should&lt;/strong&gt; be a local state of the &lt;code class=&quot;language-text&quot;&gt;Comment&lt;/code&gt;.&lt;/li&gt;
 &lt;li&gt;&lt;em&gt;The value of new comment input.&lt;/em&gt; It would be odd if typing a comment in one input would also update an input in another tree. Unless inputs are clearly grouped together, usually people expect them to be independent. So the input value &lt;strong&gt;should&lt;/strong&gt; be a local state of the &lt;code class=&quot;language-text&quot;&gt;NewComment&lt;/code&gt; component.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;I don’t suggest a dogmatic interpretation of these rules. Of course, in a simpler app you might want to use local state for everything, including those “caches”. I’m only talking about the ideal user experience &lt;a href=&quot;https://overreacted.io/the-elements-of-ui-engineering/&quot;&gt;from the first principles&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;I don’t suggest a dogmatic interpretation of these rules. Of course, in a simpler app you might want to use local state for everything, including those “caches”. I’m only talking about the ideal user experience &lt;a href=&quot;https://erluxman.com/the-elements-of-ui-engineering/&quot;&gt;from the first principles&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Avoid making truly local state global.&lt;/strong&gt; This plays into our topic of “resilience”: there’s fewer surprising synchronization happening between components. As a bonus, this &lt;em&gt;also&lt;/em&gt; fixes a large class of performance issues. “Over-rendering” is much less of an issue when your state is in the right place.&lt;/p&gt;
 &lt;hr&gt;
 &lt;h2 id=&quot;recap&quot;&gt;&lt;a href=&quot;#recap&quot; aria-hidden class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Recap&lt;/h2&gt;
@@ -527,14 +527,14 @@
 &lt;li&gt;&lt;strong&gt;&lt;a href=&quot;#principle-3-no-component-is-a-singleton&quot;&gt;No component is a singleton.&lt;/a&gt;&lt;/strong&gt; Even if a component is rendered just once, your design will improve if rendering twice doesn’t break it.&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;&lt;a href=&quot;#principle-4-keep-the-local-state-isolated&quot;&gt;Keep the local state isolated.&lt;/a&gt;&lt;/strong&gt; Think about which state is local to a particular UI representation — and don’t hoist that state higher than necessary.&lt;/li&gt;
 &lt;/ol&gt;
-&lt;p&gt;&lt;strong&gt;These principles help you write components that are &lt;a href=&quot;https://overreacted.io/optimized-for-change/&quot;&gt;optimized for change&lt;/a&gt;. It’s easy to add, change them, and delete them.&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;These principles help you write components that are &lt;a href=&quot;https://erluxman.com/optimized-for-change/&quot;&gt;optimized for change&lt;/a&gt;. It’s easy to add, change them, and delete them.&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;And most importantly, once our components are resilient, we can come back to the pressing dilemma of whether or not props should be sorted by alphabet.&lt;/p&gt;
-                &lt;div style=&quot;margin-top=55px; font-style: italic;&quot;&gt;(This is an article posted to my blog at overreacted.io. You can read it online by &lt;a href=&quot;https://overreacted.io/writing-resilient-components/&quot;&gt;clicking here&lt;/a&gt;.)&lt;/div&gt;
-              </content:encoded></item><item><title><![CDATA[Kotlin Data Class - My Love at First Sight with Kotlin]]></title><description><![CDATA[It has something to do with security.]]></description><link>https://overreacted.io/0001-kotlin-data-class-my-love-at-first-sight-with-kotlin/</link><guid isPermaLink="false">https://overreacted.io/0001-kotlin-data-class-my-love-at-first-sight-with-kotlin/</guid><pubDate>Tue, 11 Apr 2017 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;Do you remember the &lt;strong&gt;POJO&lt;/strong&gt; (Plain Old Java Object) classes in Java? They had member variables, getters, setters, overridden toString(),hashCode() and copy() etc. methods. Well Kotlin &lt;code class=&quot;language-text&quot;&gt;data class&lt;/code&gt; does it all for you for free. We won’t even have to use some cleaver IDE shortcuts. All you have to do is type data before the keyword class.&lt;/p&gt;
+                &lt;div style=&quot;margin-top=55px; font-style: italic;&quot;&gt;(This is an article posted to my blog at erluxman.com. You can read it online by &lt;a href=&quot;https://erluxman.com/writing-resilient-components/&quot;&gt;clicking here&lt;/a&gt;.)&lt;/div&gt;
+              </content:encoded></item><item><title><![CDATA[Kotlin Data Class - My Love at First Sight with Kotlin]]></title><description><![CDATA[It has something to do with security.]]></description><link>https://erluxman.com/0001-kotlin-data-class-my-love-at-first-sight-with-kotlin/</link><guid isPermaLink="false">https://erluxman.com/0001-kotlin-data-class-my-love-at-first-sight-with-kotlin/</guid><pubDate>Tue, 11 Apr 2017 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;Do you remember the &lt;strong&gt;POJO&lt;/strong&gt; (Plain Old Java Object) classes in Java? They had member variables, getters, setters, overridden toString(),hashCode() and copy() etc. methods. Well Kotlin &lt;code class=&quot;language-text&quot;&gt;data class&lt;/code&gt; does it all for you for free. We won’t even have to use some cleaver IDE shortcuts. All you have to do is type data before the keyword class.&lt;/p&gt;
 &lt;p&gt;
   &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;https://overreacted.io/static/7175fd770239ba2eada2a58d609d0377/6029f/data_class_demo.png&quot;
+    href=&quot;https://erluxman.com/static/7175fd770239ba2eada2a58d609d0377/6029f/data_class_demo.png&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
@@ -553,8 +553,8 @@
         style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
         alt=&quot;data class demo&quot;
         title=&quot;&quot;
-        src=&quot;https://overreacted.io/static/7175fd770239ba2eada2a58d609d0377/fcda8/data_class_demo.png&quot;
-        srcset=&quot;https://overreacted.io/static/7175fd770239ba2eada2a58d609d0377/12f09/data_class_demo.png 148w,https://overreacted.io/static/7175fd770239ba2eada2a58d609d0377/e4a3f/data_class_demo.png 295w,https://overreacted.io/static/7175fd770239ba2eada2a58d609d0377/fcda8/data_class_demo.png 590w,https://overreacted.io/static/7175fd770239ba2eada2a58d609d0377/efc66/data_class_demo.png 885w,https://overreacted.io/static/7175fd770239ba2eada2a58d609d0377/6029f/data_class_demo.png 906w&quot;
+        src=&quot;https://erluxman.com/static/7175fd770239ba2eada2a58d609d0377/fcda8/data_class_demo.png&quot;
+        srcset=&quot;https://erluxman.com/static/7175fd770239ba2eada2a58d609d0377/12f09/data_class_demo.png 148w,https://erluxman.com/static/7175fd770239ba2eada2a58d609d0377/e4a3f/data_class_demo.png 295w,https://erluxman.com/static/7175fd770239ba2eada2a58d609d0377/fcda8/data_class_demo.png 590w,https://erluxman.com/static/7175fd770239ba2eada2a58d609d0377/efc66/data_class_demo.png 885w,https://erluxman.com/static/7175fd770239ba2eada2a58d609d0377/6029f/data_class_demo.png 906w&quot;
         sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
       /&gt;
     &lt;/span&gt;
@@ -566,7 +566,7 @@
 &lt;p&gt;
   &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;https://overreacted.io/static/ef501121acc0f9c301ebf2270c0d8dee/940c5/suggestion.png&quot;
+    href=&quot;https://erluxman.com/static/ef501121acc0f9c301ebf2270c0d8dee/940c5/suggestion.png&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
@@ -585,8 +585,8 @@
         style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
         alt=&quot;suggestion&quot;
         title=&quot;&quot;
-        src=&quot;https://overreacted.io/static/ef501121acc0f9c301ebf2270c0d8dee/fcda8/suggestion.png&quot;
-        srcset=&quot;https://overreacted.io/static/ef501121acc0f9c301ebf2270c0d8dee/12f09/suggestion.png 148w,https://overreacted.io/static/ef501121acc0f9c301ebf2270c0d8dee/e4a3f/suggestion.png 295w,https://overreacted.io/static/ef501121acc0f9c301ebf2270c0d8dee/fcda8/suggestion.png 590w,https://overreacted.io/static/ef501121acc0f9c301ebf2270c0d8dee/940c5/suggestion.png 772w&quot;
+        src=&quot;https://erluxman.com/static/ef501121acc0f9c301ebf2270c0d8dee/fcda8/suggestion.png&quot;
+        srcset=&quot;https://erluxman.com/static/ef501121acc0f9c301ebf2270c0d8dee/12f09/suggestion.png 148w,https://erluxman.com/static/ef501121acc0f9c301ebf2270c0d8dee/e4a3f/suggestion.png 295w,https://erluxman.com/static/ef501121acc0f9c301ebf2270c0d8dee/fcda8/suggestion.png 590w,https://erluxman.com/static/ef501121acc0f9c301ebf2270c0d8dee/940c5/suggestion.png 772w&quot;
         sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
       /&gt;
     &lt;/span&gt;
@@ -598,7 +598,7 @@
 &lt;p&gt;
   &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;https://overreacted.io/static/c2c7d9d1416fcdc6790702b5a8561213/5819f/tostring.png&quot;
+    href=&quot;https://erluxman.com/static/c2c7d9d1416fcdc6790702b5a8561213/5819f/tostring.png&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
@@ -617,8 +617,8 @@
         style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
         alt=&quot;tostring&quot;
         title=&quot;&quot;
-        src=&quot;https://overreacted.io/static/c2c7d9d1416fcdc6790702b5a8561213/fcda8/tostring.png&quot;
-        srcset=&quot;https://overreacted.io/static/c2c7d9d1416fcdc6790702b5a8561213/12f09/tostring.png 148w,https://overreacted.io/static/c2c7d9d1416fcdc6790702b5a8561213/e4a3f/tostring.png 295w,https://overreacted.io/static/c2c7d9d1416fcdc6790702b5a8561213/fcda8/tostring.png 590w,https://overreacted.io/static/c2c7d9d1416fcdc6790702b5a8561213/efc66/tostring.png 885w,https://overreacted.io/static/c2c7d9d1416fcdc6790702b5a8561213/5819f/tostring.png 1042w&quot;
+        src=&quot;https://erluxman.com/static/c2c7d9d1416fcdc6790702b5a8561213/fcda8/tostring.png&quot;
+        srcset=&quot;https://erluxman.com/static/c2c7d9d1416fcdc6790702b5a8561213/12f09/tostring.png 148w,https://erluxman.com/static/c2c7d9d1416fcdc6790702b5a8561213/e4a3f/tostring.png 295w,https://erluxman.com/static/c2c7d9d1416fcdc6790702b5a8561213/fcda8/tostring.png 590w,https://erluxman.com/static/c2c7d9d1416fcdc6790702b5a8561213/efc66/tostring.png 885w,https://erluxman.com/static/c2c7d9d1416fcdc6790702b5a8561213/5819f/tostring.png 1042w&quot;
         sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
       /&gt;
     &lt;/span&gt;
@@ -630,7 +630,7 @@
 &lt;p&gt;
   &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;https://overreacted.io/static/2c1167fe9c90ab3a74658bce6acc2c97/e751c/short.png&quot;
+    href=&quot;https://erluxman.com/static/2c1167fe9c90ab3a74658bce6acc2c97/e751c/short.png&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
@@ -649,8 +649,8 @@
         style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
         alt=&quot;short&quot;
         title=&quot;&quot;
-        src=&quot;https://overreacted.io/static/2c1167fe9c90ab3a74658bce6acc2c97/fcda8/short.png&quot;
-        srcset=&quot;https://overreacted.io/static/2c1167fe9c90ab3a74658bce6acc2c97/12f09/short.png 148w,https://overreacted.io/static/2c1167fe9c90ab3a74658bce6acc2c97/e4a3f/short.png 295w,https://overreacted.io/static/2c1167fe9c90ab3a74658bce6acc2c97/fcda8/short.png 590w,https://overreacted.io/static/2c1167fe9c90ab3a74658bce6acc2c97/efc66/short.png 885w,https://overreacted.io/static/2c1167fe9c90ab3a74658bce6acc2c97/e751c/short.png 1123w&quot;
+        src=&quot;https://erluxman.com/static/2c1167fe9c90ab3a74658bce6acc2c97/fcda8/short.png&quot;
+        srcset=&quot;https://erluxman.com/static/2c1167fe9c90ab3a74658bce6acc2c97/12f09/short.png 148w,https://erluxman.com/static/2c1167fe9c90ab3a74658bce6acc2c97/e4a3f/short.png 295w,https://erluxman.com/static/2c1167fe9c90ab3a74658bce6acc2c97/fcda8/short.png 590w,https://erluxman.com/static/2c1167fe9c90ab3a74658bce6acc2c97/efc66/short.png 885w,https://erluxman.com/static/2c1167fe9c90ab3a74658bce6acc2c97/e751c/short.png 1123w&quot;
         sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
       /&gt;
     &lt;/span&gt;
@@ -662,7 +662,7 @@
 &lt;p&gt;
   &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;https://overreacted.io/static/b82603ba2362bd216126c53f052b90f1/d073d/developers.png&quot;
+    href=&quot;https://erluxman.com/static/b82603ba2362bd216126c53f052b90f1/d073d/developers.png&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
@@ -681,8 +681,8 @@
         style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
         alt=&quot;developers&quot;
         title=&quot;&quot;
-        src=&quot;https://overreacted.io/static/b82603ba2362bd216126c53f052b90f1/fcda8/developers.png&quot;
-        srcset=&quot;https://overreacted.io/static/b82603ba2362bd216126c53f052b90f1/12f09/developers.png 148w,https://overreacted.io/static/b82603ba2362bd216126c53f052b90f1/e4a3f/developers.png 295w,https://overreacted.io/static/b82603ba2362bd216126c53f052b90f1/fcda8/developers.png 590w,https://overreacted.io/static/b82603ba2362bd216126c53f052b90f1/efc66/developers.png 885w,https://overreacted.io/static/b82603ba2362bd216126c53f052b90f1/c83ae/developers.png 1180w,https://overreacted.io/static/b82603ba2362bd216126c53f052b90f1/d073d/developers.png 1297w&quot;
+        src=&quot;https://erluxman.com/static/b82603ba2362bd216126c53f052b90f1/fcda8/developers.png&quot;
+        srcset=&quot;https://erluxman.com/static/b82603ba2362bd216126c53f052b90f1/12f09/developers.png 148w,https://erluxman.com/static/b82603ba2362bd216126c53f052b90f1/e4a3f/developers.png 295w,https://erluxman.com/static/b82603ba2362bd216126c53f052b90f1/fcda8/developers.png 590w,https://erluxman.com/static/b82603ba2362bd216126c53f052b90f1/efc66/developers.png 885w,https://erluxman.com/static/b82603ba2362bd216126c53f052b90f1/c83ae/developers.png 1180w,https://erluxman.com/static/b82603ba2362bd216126c53f052b90f1/d073d/developers.png 1297w&quot;
         sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
       /&gt;
     &lt;/span&gt;
@@ -694,7 +694,7 @@
 &lt;p&gt;
   &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;https://overreacted.io/static/460a39c90abd2b614d9aa53ca378d2a8/c0cb9/output.png&quot;
+    href=&quot;https://erluxman.com/static/460a39c90abd2b614d9aa53ca378d2a8/c0cb9/output.png&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
@@ -713,8 +713,8 @@
         style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
         alt=&quot;output&quot;
         title=&quot;&quot;
-        src=&quot;https://overreacted.io/static/460a39c90abd2b614d9aa53ca378d2a8/c0cb9/output.png&quot;
-        srcset=&quot;https://overreacted.io/static/460a39c90abd2b614d9aa53ca378d2a8/12f09/output.png 148w,https://overreacted.io/static/460a39c90abd2b614d9aa53ca378d2a8/e4a3f/output.png 295w,https://overreacted.io/static/460a39c90abd2b614d9aa53ca378d2a8/c0cb9/output.png 505w&quot;
+        src=&quot;https://erluxman.com/static/460a39c90abd2b614d9aa53ca378d2a8/c0cb9/output.png&quot;
+        srcset=&quot;https://erluxman.com/static/460a39c90abd2b614d9aa53ca378d2a8/12f09/output.png 148w,https://erluxman.com/static/460a39c90abd2b614d9aa53ca378d2a8/e4a3f/output.png 295w,https://erluxman.com/static/460a39c90abd2b614d9aa53ca378d2a8/c0cb9/output.png 505w&quot;
         sizes=&quot;(max-width: 505px) 100vw, 505px&quot;
       /&gt;
     &lt;/span&gt;
@@ -723,5 +723,5 @@
   &lt;/a&gt;
     &lt;/p&gt;
 &lt;h2 id=&quot;that-is-all-for-this-time-thanks-for-following-through&quot;&gt;&lt;a href=&quot;#that-is-all-for-this-time-thanks-for-following-through&quot; aria-hidden class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;That is all for this time. Thanks for following through.&lt;/h2&gt;
-                &lt;div style=&quot;margin-top=55px; font-style: italic;&quot;&gt;(This is an article posted to my blog at overreacted.io. You can read it online by &lt;a href=&quot;https://overreacted.io/0001-kotlin-data-class-my-love-at-first-sight-with-kotlin/&quot;&gt;clicking here&lt;/a&gt;.)&lt;/div&gt;
+                &lt;div style=&quot;margin-top=55px; font-style: italic;&quot;&gt;(This is an article posted to my blog at erluxman.com. You can read it online by &lt;a href=&quot;https://erluxman.com/0001-kotlin-data-class-my-love-at-first-sight-with-kotlin/&quot;&gt;clicking here&lt;/a&gt;.)&lt;/div&gt;
               </content:encoded></item></channel></rss>
