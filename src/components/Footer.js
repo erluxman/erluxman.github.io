@@ -28,11 +28,20 @@ class Footer extends React.Component {
         </a>{' '}
         &bull;{' '}
         <a
-          href="https://stackoverflow.com/users/2581314/erluxmanhttps://stackoverflow.com/users/458193/dan-abramov"
+          href="https://stackoverflow.com/users/2581314/erluxman"
           target="_blank"
           rel="noopener noreferrer"
         >
           Stackoverflow
+        </a>{' '}
+        <br/>
+        Inspired By:
+        <a
+          href="https://overreacted.io/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          overreacted.io
         </a>
       </footer>
     );
