@@ -35,7 +35,6 @@ exports.createPages = ({ graphql, actions }) => {
                     slug
                     langKey
                     directoryName
-                    maybeAbsoluteLinks
                   }
                   frontmatter {
                     title
@@ -116,25 +115,7 @@ exports.createPages = ({ graphql, actions }) => {
             // Record which links to internal posts have translated versions
             // into this language. We'll replace them before rendering HTML.
             let translatedLinks = [];
-            const { langKey, maybeAbsoluteLinks } = post.node.fields;
-            maybeAbsoluteLinks.forEach(link => {
-              if (allSlugs.has(link)) {
-                if (allSlugs.has('/' + langKey + link)) {
-                  // This is legit an internal post link,
-                  // and it has been already translated.
-                  translatedLinks.push(link);
-                } else if (link.startsWith('/' + langKey + '/')) {
-                  console.log('-----------------');
-                  console.error(
-                    `It looks like "${langKey}" translation of "${post.node.frontmatter.title}" ` +
-                      `is linking to a translated link: ${link}. Don't do this. Use the original link. ` +
-                      `The blog post renderer will automatically use a translation if it is available.`
-                  );
-                  console.log('-----------------');
-                }
-              }
-            });
-
+            const { langKey } = post.node.fields;
             createPage({
               path: post.node.fields.slug,
               component: blogPost,
@@ -167,18 +148,5 @@ exports.onCreateNode = ({ node, actions }) => {
 
     // TODO: check against links with no trailing slashes
     // or that already link to translations.
-    const markdown = node.internal.content;
-    let maybeAbsoluteLinks = [];
-    let linkRe = /\]\((\/[^\)]+\/)\)/g;
-    let match = linkRe.exec(markdown);
-    while (match != null) {
-      maybeAbsoluteLinks.push(match[1]);
-      match = linkRe.exec(markdown);
-    }
-    createNodeField({
-      node,
-      name: 'maybeAbsoluteLinks',
-      value: _.uniq(maybeAbsoluteLinks),
-    });
   }
 };
