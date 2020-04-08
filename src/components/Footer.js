@@ -35,7 +35,7 @@ class Footer extends React.Component {
           Stackoverflow
         </a>{' '}
         <br />
-        Inspired By:
+        Inspired from :{' '}
         <a
           href="https://overreacted.io/"
           target="_blank"
