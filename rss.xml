@@ -1,4 +1,210 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Dan Abramov's Overreacted Blog RSS Feed]]></title><description><![CDATA[My Journey with Code]]></description><link>https://erluxman.com</link><generator>GatsbyJS</generator><lastBuildDate>Sat, 11 Apr 2020 02:13:41 GMT</lastBuildDate><item><title><![CDATA[Flutter Tips 1-7]]></title><description><![CDATA[First 7 tips and tricks on the series 100DaysOfFlutter.]]></description><link>https://erluxman.com/00003-week1-100-days-of-flutter/</link><guid isPermaLink="false">https://erluxman.com/00003-week1-100-days-of-flutter/</guid><pubDate>Sat, 11 Apr 2020 00:00:00 GMT</pubDate><content:encoded>&lt;h2 id=&quot;day1-stless--stful&quot;&gt;&lt;a href=&quot;#day1-stless--stful&quot; aria-hidden class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;#Day1 &lt;code class=&quot;language-text&quot;&gt;stless&lt;/code&gt; &amp;#x26; &lt;code class=&quot;language-text&quot;&gt;stful&lt;/code&gt;.&lt;/h2&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Dan Abramov's Overreacted Blog RSS Feed]]></title><description><![CDATA[My Journey with Code]]></description><link>https://erluxman.com</link><generator>GatsbyJS</generator><lastBuildDate>Sat, 18 Apr 2020 04:16:08 GMT</lastBuildDate><item><title><![CDATA[Flutter Tips 8-14]]></title><description><![CDATA[Second bath of 7 tips and tricks on the series 100DaysOfFlutter.]]></description><link>https://erluxman.com/00004-week-2-100days-of-flutter/</link><guid isPermaLink="false">https://erluxman.com/00004-week-2-100days-of-flutter/</guid><pubDate>Sat, 18 Apr 2020 00:00:00 GMT</pubDate><content:encoded>&lt;h2 id=&quot;day8&quot;&gt;&lt;a href=&quot;#day8&quot; aria-hidden class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;#Day8&lt;/h2&gt;
+&lt;p&gt;If you have you been adding &lt;code class=&quot;language-text&quot;&gt;Container()&lt;/code&gt; with &lt;code class=&quot;language-text&quot;&gt;maxwidth&lt;/code&gt; at the bottom of &lt;code class=&quot;language-text&quot;&gt;ListItem&lt;/code&gt; to put divider line like me, you have been doing it wrong all the time. &lt;/p&gt;
+&lt;p&gt;Flutter has &lt;code class=&quot;language-text&quot;&gt;ListView.separated&lt;/code&gt; just for that purpose. We have to also provide &lt;code class=&quot;language-text&quot;&gt;separatorBuilder&lt;/code&gt; in addition to what we already passed while using &lt;code class=&quot;language-text&quot;&gt;ListView.builder&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Bonus 🍾🎁🎊🎉 : You do not have to check if the item is last in order not to draw divider after the last item.&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://dartpad.dartlang.org/31ec967b140ac6a5795c38ea4bdfd9a2&quot; target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot;&gt;try in dartpad&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;
+  &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;https://erluxman.com/static/f093293a6a6108e407121900c03cb6bf/2a333/08separatedlist.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+  
+  &lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block;  max-width: 590px; margin-left: auto; margin-right: auto;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 75.67567567567568%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAPCAYAAADkmO9VAAAACXBIWXMAAAsSAAALEgHS3X78AAACS0lEQVQ4y52SQU8TURSFXxmGabVtICBiSNS2tFAsWrGUagXa0iq01aobceNGiCaaCHGM2hgS0ZQFhugf0KUmutMEo7FuqayEqInBDagbEqwYbUzDHO8bpgYUTevizH1vMvd75543LLcwncfS2zxys3l8f0f1P/RjVmXkFmbyTMm+wbOJh7iWGsHwzVEkr6eQvFG8rqZGcWF4BE8mHmA5+xoEnFHOyUmF1TQrzNqusKo2hVWXoM0+hYk7lNPyFWV5cVph3z5N4Yx8GazOD6kxAtHRDbExjHJ7qChJTWGwLfuIcQlfP74EW/qQwcDQRTBLEGZPAsY9CZjdh6CzBsC2d/4pS9eaWmaj72p9OHVeRnZucgXYPyiD1XhR6T2K6s7jqPIeg8HVC72rBwZ3HBJVifZS80FI9gAMO6PQOw9A39KLjbRmm9rXAvmGvzTuisHoOQIDVdFBYzdFfklwaDFQJAJJZwuirCGkxsNqfwP2a0CTO4pKT5xOjsLUmsAGcieSE4mcVDgjkBxBchcjcPfKyCShIbjOyBqwwhGCeXcPjG1xchqFYCcX5KrQzCw8V23NMyb9E8hPLneGILg6ILTQrbvCal5q8yrI6v26wEKGBhpPZ6UPtvEb1NwUblQFdRUBnNduud5PwAiFHaCweeCFSrL9XSLFxOr2YmBQA/Kf8eTZITBTK9hWclO/vzTxHurljC9kjmXpMX57DL5YHzoOn4A/3leSeA/vHb81hs9zBFycn8L7V0+RSd9H+vFdpB/dKUkvqCfz/J7K4KyflAtiFBdXoJAAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+    &gt;
+      &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
+        alt=&quot;08separatedlist&quot;
+        title=&quot;&quot;
+        src=&quot;https://erluxman.com/static/f093293a6a6108e407121900c03cb6bf/fcda8/08separatedlist.png&quot;
+        srcset=&quot;https://erluxman.com/static/f093293a6a6108e407121900c03cb6bf/12f09/08separatedlist.png 148w,https://erluxman.com/static/f093293a6a6108e407121900c03cb6bf/e4a3f/08separatedlist.png 295w,https://erluxman.com/static/f093293a6a6108e407121900c03cb6bf/fcda8/08separatedlist.png 590w,https://erluxman.com/static/f093293a6a6108e407121900c03cb6bf/efc66/08separatedlist.png 885w,https://erluxman.com/static/f093293a6a6108e407121900c03cb6bf/c83ae/08separatedlist.png 1180w,https://erluxman.com/static/f093293a6a6108e407121900c03cb6bf/2a333/08separatedlist.png 1484w&quot;
+        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+      /&gt;
+    &lt;/span&gt;
+  &lt;/span&gt;
+  
+  &lt;/a&gt;
+    &lt;/p&gt;
+&lt;h2 id=&quot;day9-passing-function-as-parameter&quot;&gt;&lt;a href=&quot;#day9-passing-function-as-parameter&quot; aria-hidden class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;#Day9 Passing Function as parameter&lt;/h2&gt;
+&lt;p&gt;We can simply pass a &lt;code class=&quot;language-text&quot;&gt;function&lt;/code&gt;  as &lt;code class=&quot;language-text&quot;&gt;parameter&lt;/code&gt; like we pass a variable. When we want to call the passed function from calling function, we just call it with &lt;code class=&quot;language-text&quot;&gt;()&lt;/code&gt; at the end along with parameters if it accepts any.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://dartpad.dev/fa46336f5c1b3287c6420d3b3a277178&quot; target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot;&gt;try in dartpad&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;
+  &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;https://erluxman.com/static/04e44c2c14152c82d3caf69c2640975b/229ad/09functionargument.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+  
+  &lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block;  max-width: 590px; margin-left: auto; margin-right: auto;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 89.1891891891892%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAASCAYAAABb0P4QAAAACXBIWXMAAAsSAAALEgHS3X78AAAC20lEQVQ4y52US0hUYRiG/zPOTFpJY7ooxdSZsfGeWVrO1XHES6KUhLbQTYtCidTIAtuUmWmLNkFBWpJdyArahVHhIhW0QsqS3GSMIwXlNSVoPOft+8/MiMXkpcXL93Muz3m/7/3/w35+G3K7pz648WPEjdmPbsz9h+ZH3NL0sJuz2K/J9xh5240H91rR0dmKm7c8urFKtXe0obX9Ovp7n8BNLLYwNSRdvXZFCtOlS0LyXomFGyUWYVq9Is0S0+ySjp6slxYm3kls/ssbtFy+BCHGCk1aMTalFkEZmw2mzYKgs5OylpX87FYjDlfXYcbVDzbjGkDDxUYEGHIQZjwITXIhFARiMTYZupIUersMrKiqxcRoLwHH+mUg0zsQvLMIG+LzZGdMuxzQtigfsLyqBt8/EXCagOdbLoBFWjyuoqwkWkdTjbZ5Kr/GK7/PFU3QmCy5CloCbsn0Ans8Ds95Ww5NK4RmTwlCzWXYmFoIpcEOdXwu1Il5UNF9pT6b5IBgsELQ2+SqjqcZhptQXlm9xGEzOaQvrU/ORxAXBaNOyoUqzo7AxAIEpuzDOhqFSp8DlS4bQpwJTGeBEG+m5x1gEWY/QGqBuwyg1JRaK82GalyufE0R66CgeKJ2KBMIHJcHNVWFzuFp3W/LCfkItZQhzFyK0PRiaDIOUOul2EwKMZUiOIWcGhwI2lFIjgsQRK5VBs+H5FAqvcBFh9ssCNjukN0I3BE5ldfklLvlVQ6JB+ZTjC/lzD+BDRwYYfImuyTNv+VvH+rs/h3ywWsy9nv24D83tW0FoDeUxuYmBFKLYcYSedgcuJpjt3j0aNtU+EKZdQ2IZ5saRZqDqErKF1mUTaQfhEgjWJ0iLSIL2S0eOnJcnPzcJ7K5r4N40XUfdWfqcexELapqqtck/k7t6VN42NmGadcratn12ukc7h4b6nvs6nt2d7yn6/aa1Pv0zvjgy0fjo0PPxyacA87fH1LY1/3YC3wAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+    &gt;
+      &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
+        alt=&quot;09functionargument&quot;
+        title=&quot;&quot;
+        src=&quot;https://erluxman.com/static/04e44c2c14152c82d3caf69c2640975b/fcda8/09functionargument.png&quot;
+        srcset=&quot;https://erluxman.com/static/04e44c2c14152c82d3caf69c2640975b/12f09/09functionargument.png 148w,https://erluxman.com/static/04e44c2c14152c82d3caf69c2640975b/e4a3f/09functionargument.png 295w,https://erluxman.com/static/04e44c2c14152c82d3caf69c2640975b/fcda8/09functionargument.png 590w,https://erluxman.com/static/04e44c2c14152c82d3caf69c2640975b/efc66/09functionargument.png 885w,https://erluxman.com/static/04e44c2c14152c82d3caf69c2640975b/c83ae/09functionargument.png 1180w,https://erluxman.com/static/04e44c2c14152c82d3caf69c2640975b/229ad/09functionargument.png 1356w&quot;
+        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+      /&gt;
+    &lt;/span&gt;
+  &lt;/span&gt;
+  
+  &lt;/a&gt;
+    &lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&quot;day10-relative-import--the-right-way-to-import-dart-files-we-have-in-our-lib-package&quot;&gt;&lt;a href=&quot;#day10-relative-import--the-right-way-to-import-dart-files-we-have-in-our-lib-package&quot; aria-hidden class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;#Day10 Relative Import : the right way to import &lt;code class=&quot;language-text&quot;&gt;.dart&lt;/code&gt; files we have in our lib package.&lt;/h2&gt;
+&lt;p&gt;Ever wondered what is the right way to import a file in your own package? &lt;/p&gt;
+&lt;p&gt;Prefer relative imports to absolute imports.&lt;/p&gt;
+&lt;p&gt;Why? &lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;It’s shorter and cleaner.&lt;/li&gt;
+&lt;li&gt;We can easily differentiate our files and third-party ones.&lt;/li&gt;
+&lt;li&gt;It makes sense, doesn’t it?&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;
+  &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;https://erluxman.com/static/83c10a965bbabe7c931af7bab1d5181d/3145a/10import.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+  
+  &lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block;  max-width: 590px; margin-left: auto; margin-right: auto;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 42.567567567567565%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAJCAYAAAAywQxIAAAACXBIWXMAABYlAAAWJQFJUiTwAAAA6ElEQVQoz52RiWoDMQxE8/8/Wbqhe9DdrU/59kT2lkAa0jQ1PEay5LGwTzlnWGtB5BBCgPf+X7SztVacUkoYhjPGaYLWumOMeZk21NVQKYmPccS6br1whQ59yTDGBEMErRRsK3BMznGu+x5xXvhZMl+cU35A6j3dMJQM4V1ndwQRPFQKkKwNFT1Mjr+iGRncYUg5YZECo9UYtMTsDNbobvj8kd/XqesxIf9OiBE3iwuN1lDLtz6jlMOwGIf4NsGcF4hhgnjn3+a4kaYNZdmfM+/I83YY1hBRdoUkNOKX6vSYKdL8HU3d8ALsnrq8DxlYfgAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+    &gt;
+      &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
+        alt=&quot;10import&quot;
+        title=&quot;&quot;
+        src=&quot;https://erluxman.com/static/83c10a965bbabe7c931af7bab1d5181d/fcda8/10import.png&quot;
+        srcset=&quot;https://erluxman.com/static/83c10a965bbabe7c931af7bab1d5181d/12f09/10import.png 148w,https://erluxman.com/static/83c10a965bbabe7c931af7bab1d5181d/e4a3f/10import.png 295w,https://erluxman.com/static/83c10a965bbabe7c931af7bab1d5181d/fcda8/10import.png 590w,https://erluxman.com/static/83c10a965bbabe7c931af7bab1d5181d/efc66/10import.png 885w,https://erluxman.com/static/83c10a965bbabe7c931af7bab1d5181d/c83ae/10import.png 1180w,https://erluxman.com/static/83c10a965bbabe7c931af7bab1d5181d/3145a/10import.png 2112w&quot;
+        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+      /&gt;
+    &lt;/span&gt;
+  &lt;/span&gt;
+  
+  &lt;/a&gt;
+    &lt;/p&gt;
+&lt;h2 id=&quot;day11-reusing-text-style&quot;&gt;&lt;a href=&quot;#day11-reusing-text-style&quot; aria-hidden class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;#Day11 Reusing Text Style&lt;/h2&gt;
+&lt;p&gt;Tired of defining &lt;code class=&quot;language-text&quot;&gt;textStyle&lt;/code&gt; everytime you want to customize &lt;code class=&quot;language-text&quot;&gt;Text&lt;/code&gt;? &lt;strong&gt;Even worse&lt;/strong&gt; if you have multiple theme (&lt;strong&gt;dark, light, fullblack theme etc&lt;/strong&gt;).&lt;/p&gt;
+&lt;p&gt;just use &lt;/p&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;Theme.of(context).textTheme.title&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;where there are other styles like &lt;code class=&quot;language-text&quot;&gt;title&lt;/code&gt; inside &lt;code class=&quot;language-text&quot;&gt;textTheme&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://dartpad.dartlang.org/5270714ce97853fc36db1b17c255c999&quot; target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot;&gt;try in dartpad with theme example&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;
+  &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;https://erluxman.com/static/d01fadb4cf70bb72e466bfe4b80c1038/f1c64/11texttheme.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+  
+  &lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block;  max-width: 590px; margin-left: auto; margin-right: auto;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 37.83783783783784%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAICAYAAAD5nd/tAAAACXBIWXMAAAsSAAALEgHS3X78AAABd0lEQVQoz53P2yvDYRgH8FdGrWZDCWVzyKGcomVzaCOHLEnkzpULF9M226Sh/AkolKLcMMwpCzfSyAXTdqUN241syQXZHJZfkffr/WUXyo25+PR830M9z0PeQ14Or743PPs4vFz9T8THfYYvOe7Bw5Gg/wR79mXYd5awsRm7zS0rbOuLOHcf4CN0AWK1LiAjv4aKFLWUZKsoyWKkjOyPcuspSZFT3cgYxZOXktm5acQXa6iwtA1x+WoIyusQX6ICyW1g6n/LY/c5fP0mKGgESa9Gn9mCyJ0bZGpmgv9EE4uakVjcArGiA8KyViQruyGp1CBV3g5xVRdEFe1IquRzJySMiGVeQmETSGYNeg2DCN2cgkxOjYOkKdm6rKOUTSZVg60NImNVpopSR9+ifp75LJGjR2tEOOAEOdq3YXhslOrNJvQPGKA16KEd0H/XP9CZjDBZhrC2Mo/7azbhrf8YV65d6jq0wXmwHLMzxyo8p9sIXDjwGHThCxTselhR3yM+AAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+    &gt;
+      &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
+        alt=&quot;11texttheme&quot;
+        title=&quot;&quot;
+        src=&quot;https://erluxman.com/static/d01fadb4cf70bb72e466bfe4b80c1038/fcda8/11texttheme.png&quot;
+        srcset=&quot;https://erluxman.com/static/d01fadb4cf70bb72e466bfe4b80c1038/12f09/11texttheme.png 148w,https://erluxman.com/static/d01fadb4cf70bb72e466bfe4b80c1038/e4a3f/11texttheme.png 295w,https://erluxman.com/static/d01fadb4cf70bb72e466bfe4b80c1038/fcda8/11texttheme.png 590w,https://erluxman.com/static/d01fadb4cf70bb72e466bfe4b80c1038/efc66/11texttheme.png 885w,https://erluxman.com/static/d01fadb4cf70bb72e466bfe4b80c1038/c83ae/11texttheme.png 1180w,https://erluxman.com/static/d01fadb4cf70bb72e466bfe4b80c1038/f1c64/11texttheme.png 1390w&quot;
+        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+      /&gt;
+    &lt;/span&gt;
+  &lt;/span&gt;
+  
+  &lt;/a&gt;
+    &lt;/p&gt;
+&lt;h2 id=&quot;day12-use-literal-to-initialize-growable-collections&quot;&gt;&lt;a href=&quot;#day12-use-literal-to-initialize-growable-collections&quot; aria-hidden class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;#Day12 Use Literal to initialize growable collections.&lt;/h2&gt;
+&lt;p&gt;If we are to initialize growable collection, use literal initialization rather than with constructors.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;// Good
+var points = [];
+var addresses = {};
+
+// Bad
+var points = List();
+var addresses = Map();
+
+
+// With type argument 
+
+// Good
+var points = &amp;lt;Point&amp;gt;[];
+var addresses = &amp;lt;String, Address&amp;gt;{};
+
+// Bad
+var points = List&amp;lt;Point&amp;gt;();
+var addresses = Map&amp;lt;String, Address&amp;gt;();&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h2 id=&quot;day13-fat-arrow-functions&quot;&gt;&lt;a href=&quot;#day13-fat-arrow-functions&quot; aria-hidden class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;#Day13 Fat arrow functions&lt;/h2&gt;
+&lt;p&gt;We can use fat arrow  &lt;code class=&quot;language-text&quot;&gt;=&amp;gt;&lt;/code&gt;  members (&lt;code class=&quot;language-text&quot;&gt;function, getter,setter&lt;/code&gt;) in dart. &lt;/p&gt;
+&lt;p&gt;I would not use &lt;code class=&quot;language-text&quot;&gt;=&amp;gt;&lt;/code&gt; if the declaration is not &lt;strong&gt;ONE LINER&lt;/strong&gt;. But few lines are OK. &lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://dartpad.dev/76922028eccb4535f0cdddc8e4b17aa1&quot; target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot;&gt;try on dartpad&lt;/a&gt;&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;void main() {
+User()
+    ..firstName = &amp;quot;Laxman&amp;quot;
+    ..lastName = &amp;quot; Bhattarai&amp;quot;
+    ..age = 18
+    ..printUser();
+}
+
+class User {
+String firstName;
+String lastName;
+DateTime birthday;
+
+String get fullName =&amp;gt; firstName + lastName;
+
+set age(int age) =&amp;gt;  birthday = DateTime.now().subtract(Duration(days: age * 365));        
+
+int get age =&amp;gt; DateTime.now().year - birthday.year;
+
+bool get isAdult =&amp;gt; age &amp;gt;= 18;
+
+printUser() =&amp;gt; print(fullName + &amp;quot; is a ${isAdult ? &amp;quot;Adult&amp;quot; : &amp;quot;Child&amp;quot;}&amp;quot;);     
+}&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h2 id=&quot;day14-fractionallysizedbox&quot;&gt;&lt;a href=&quot;#day14-fractionallysizedbox&quot; aria-hidden class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;#Day14 FractionallySizedBox&lt;/h2&gt;
+&lt;p&gt;Ever wanted the widget to have height and width exactly in the same proportion to it’s screen’s height and width? &lt;/p&gt;
+&lt;p&gt;FractionallySizedBox is build exactly for that usecase. Just give it the fraction you need for your height and width and it will handle everything else. The fraction value will range between 0.0 to 1.0&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;FractionallySizedBox(
+            widthFactor: 0.5,
+            heightFactor: 0.5,
+            child: Container(color: Colors.green),
+        )&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;&lt;a href=&quot;https://codepen.io/erluxman/pen/rNOLOzG&quot; target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot;&gt;try on codepen&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://erluxman.com/6d0b023d81d555ee3e00b90c65d0eefd/14fractionallysizedbox.gif&quot;&gt;&lt;/p&gt;
+                &lt;div style=&quot;margin-top=55px; font-style: italic;&quot;&gt;(This is an article posted to my blog at erluxman.com. You can read it online by &lt;a href=&quot;https://erluxman.com/00004-week-2-100days-of-flutter/&quot;&gt;clicking here&lt;/a&gt;.)&lt;/div&gt;
+              </content:encoded></item><item><title><![CDATA[Flutter Tips 1-7]]></title><description><![CDATA[First 7 tips and tricks on the series 100DaysOfFlutter.]]></description><link>https://erluxman.com/00003-week1-100-days-of-flutter/</link><guid isPermaLink="false">https://erluxman.com/00003-week1-100-days-of-flutter/</guid><pubDate>Sat, 11 Apr 2020 00:00:00 GMT</pubDate><content:encoded>&lt;h2 id=&quot;day1-stless--stful&quot;&gt;&lt;a href=&quot;#day1-stless--stful&quot; aria-hidden class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;#Day1 &lt;code class=&quot;language-text&quot;&gt;stless&lt;/code&gt; &amp;#x26; &lt;code class=&quot;language-text&quot;&gt;stful&lt;/code&gt;.&lt;/h2&gt;
 &lt;p&gt;We can type &lt;code class=&quot;language-text&quot;&gt;stless&lt;/code&gt; and &lt;code class=&quot;language-text&quot;&gt;stful&lt;/code&gt; and we get Autocomplete Suggestion to generate Stateless Flutter Widget or Stateful Flutter Widget Respectively.&lt;/p&gt;
 &lt;p&gt; &lt;img src=&quot;https://erluxman.com/cd272c4159d23d0607689ed679af37a2/01stlesstful.gif&quot;&gt;&lt;/p&gt;
 &lt;h2 id=&quot;day2-if-null-operator-&quot;&gt;&lt;a href=&quot;#day2-if-null-operator-&quot; aria-hidden class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;#Day2 &lt;code class=&quot;language-text&quot;&gt;If Null&lt;/code&gt; Operator (&lt;code class=&quot;language-text&quot;&gt;??&lt;/code&gt;).&lt;/h2&gt;
