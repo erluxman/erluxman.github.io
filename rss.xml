@@ -1,4 +1,183 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Dan Abramov's Overreacted Blog RSS Feed]]></title><description><![CDATA[My Journey with Code]]></description><link>https://erluxman.com</link><generator>GatsbyJS</generator><lastBuildDate>Sat, 18 Apr 2020 04:16:08 GMT</lastBuildDate><item><title><![CDATA[Flutter Tips 8-14]]></title><description><![CDATA[Second bath of 7 tips and tricks on the series 100DaysOfFlutter.]]></description><link>https://erluxman.com/00004-week-2-100days-of-flutter/</link><guid isPermaLink="false">https://erluxman.com/00004-week-2-100days-of-flutter/</guid><pubDate>Sat, 18 Apr 2020 00:00:00 GMT</pubDate><content:encoded>&lt;h2 id=&quot;day8&quot;&gt;&lt;a href=&quot;#day8&quot; aria-hidden class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;#Day8&lt;/h2&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Dan Abramov's Overreacted Blog RSS Feed]]></title><description><![CDATA[My Journey with Code]]></description><link>https://erluxman.com</link><generator>GatsbyJS</generator><lastBuildDate>Sat, 25 Apr 2020 01:34:53 GMT</lastBuildDate><item><title><![CDATA[Flutter Tips 15-21]]></title><description><![CDATA[Third batch of 7 tips and tricks on the series 100DaysOfFlutter.]]></description><link>https://erluxman.com/00005-week-3-100-days-of-flutter/</link><guid isPermaLink="false">https://erluxman.com/00005-week-3-100-days-of-flutter/</guid><pubDate>Sat, 25 Apr 2020 00:00:00 GMT</pubDate><content:encoded>&lt;h2 id=&quot;day15-flexible-vs-expanded&quot;&gt;&lt;a href=&quot;#day15-flexible-vs-expanded&quot; aria-hidden class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;#Day15 Flexible vs Expanded&lt;/h2&gt;
+&lt;p&gt;Expandable() is nothing more than Flexible() with &lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;Flexible (fit: FlexFit.tight) = Expanded()&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;but, Flexible uses &lt;code class=&quot;language-text&quot;&gt;fit :FlexFit.loose&lt;/code&gt; by default.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;FlexFit.tight&lt;/strong&gt; = Wants to fit tight into parent taking as much space as possible. &lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;FlexFit.loose&lt;/strong&gt; = Wants to fit loose into parent taking as little space as possible for itself.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;flex&lt;/strong&gt; = The factor of space taken from parent. Mostly not fully used if &lt;code class=&quot;language-text&quot;&gt;flex: FlexFit.loose&lt;/code&gt; used i.e. &lt;code class=&quot;language-text&quot;&gt;Flexible&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://codepen.io/erluxman/pen/JjYKZGG&quot; target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot;&gt;try in codepen&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;If you fully read the following image, you will fully understand the differene &lt;code class=&quot;language-text&quot;&gt;Flexible&lt;/code&gt; and &lt;code class=&quot;language-text&quot;&gt;Expanded&lt;/code&gt;
+
+  &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;https://erluxman.com/static/54b03a8dc5ed8697082882e65daa9e01/9eaa0/15expandedvsflexible.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+  
+  &lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block;  max-width: 590px; margin-left: auto; margin-right: auto;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 85.8108108108108%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAARCAYAAADdRIy+AAAACXBIWXMAAAsSAAALEgHS3X78AAACtElEQVQ4y3WUWVPaUBTHsa2vUrq4DS4otgOSjU2rqGQjQIEqCQFaEOxTv0df+t4Hmakf0Rnfm3Bvz7lJEIxl5jd3S/45538ONxKJRJZW3sdjsY1EIrq6tRdd294PeD1HdG1rH86fJbaxC+/GY6gVwV+uqP+8qDdISmncp09bD+lSE2g9pBhNBq7/w3367It7UKz8ivi/pVReuS3VelQwLCpVO/RYtWgB4FWbZmSLckCmbNLD88sQIEZ5pUOTefUOtF6g4Mv9nHwrGUPKa72/wFQI0L9Occ1r/SkPc06xvbXam3JyZ8qpNu458CwFjT+gtewJZuWJCIJi9doBiGAMqFQb49pnOBul2ogh4jP1GwIfdXm1C4LK3aNgTpkU9S4tGn3nqDEiot6DVDuQqo/ijSx9nCt2cEbQP042nwhChJLxDbywHfgaYS8ogYC9AKRMOYgI5+AhObxou+hhSBDTgVQdwRiylJkFDH9eHXlpz52Bt/hxV9D7z0UInhhDRwIPpdr1zD+hMmCeCRXIAF4EEQYKoyAUy8XzZEFb9LCg2fTI6DnF+oBIetdLGVolU7ZY6kGLPMH30FqMMJlXJihyeNZyoFEJQKG5qTf6hMV8wVZY8GNOnnzSbUjRckTDJCdKmx5X+/S4CS2CFWeR+tH6EWe8ZieAyz1XlCz4lq2PnFx9TCTPH4pmo3fQax7zc++MQMXDESbE8u1Ja0wrvR/O+dV3Isgmgf8v0CKp07kxoNSc7UPKTkhwDyI8+jyklauRo7ZvyPnlmJw2BiRf6RJRsYioWiSr2x5ah0gqACPus6I8pvyK3Q4fCtpvUYPKlhquWL6ivNxepNymomIyBAT2cMQzKNgUI4TLYRJcDstw33Fv40kzurlnr6zvdqNrOyFWVrdnsLW//2YzYb+LH5ix9R0etf4BQefedy5mhJoAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+    &gt;
+      &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
+        alt=&quot;15expandedvsflexible&quot;
+        title=&quot;&quot;
+        src=&quot;https://erluxman.com/static/54b03a8dc5ed8697082882e65daa9e01/fcda8/15expandedvsflexible.png&quot;
+        srcset=&quot;https://erluxman.com/static/54b03a8dc5ed8697082882e65daa9e01/12f09/15expandedvsflexible.png 148w,https://erluxman.com/static/54b03a8dc5ed8697082882e65daa9e01/e4a3f/15expandedvsflexible.png 295w,https://erluxman.com/static/54b03a8dc5ed8697082882e65daa9e01/fcda8/15expandedvsflexible.png 590w,https://erluxman.com/static/54b03a8dc5ed8697082882e65daa9e01/efc66/15expandedvsflexible.png 885w,https://erluxman.com/static/54b03a8dc5ed8697082882e65daa9e01/c83ae/15expandedvsflexible.png 1180w,https://erluxman.com/static/54b03a8dc5ed8697082882e65daa9e01/9eaa0/15expandedvsflexible.png 1676w&quot;
+        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+      /&gt;
+    &lt;/span&gt;
+  &lt;/span&gt;
+  
+  &lt;/a&gt;
+    &lt;/p&gt;
+&lt;h2 id=&quot;day16-bulk-declaration&quot;&gt;&lt;a href=&quot;#day16-bulk-declaration&quot; aria-hidden class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;#Day16 Bulk declaration&lt;/h2&gt;
+&lt;p&gt;If you have been declaring each member seperately all the time, you can declare members of same types at once.&lt;/p&gt;
+&lt;p&gt;I wouldn’t declare &lt;code class=&quot;language-text&quot;&gt;age&lt;/code&gt; and &lt;code class=&quot;language-text&quot;&gt;shoeSize&lt;/code&gt; at once because they are not related.  &lt;/p&gt;
+&lt;p&gt;With great power comes great responsibility, Use this wisely.
+
+  &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;https://erluxman.com/static/550fafff58b3a26f79b7d6885c6beadd/772aa/16singlelinedeclartion.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+  
+  &lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block;  max-width: 590px; margin-left: auto; margin-right: auto;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 81.75675675675677%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAQCAYAAAAWGF8bAAAACXBIWXMAAAsSAAALEgHS3X78AAACY0lEQVQ4y52U6U7bQBSFJw6eCXuIqEQkIMFxICTBEKBFKIvHcdiyYFAr9WHb96BSMT+6PAWMb48XSho1qGqkozOKx5/PXN9rls8NGS80dZbb54wZnK00eMqUnJkdzgz4lp34FBn2s+sQw++crx/ITxnLeUiZ7l3KdL4AAsnYjTH/q+w77H2Af46gLGuLuYrzfc66ImENiFcviRkOsVKobuKvKNrrEqA/IQFgW3BTfs1bLi2/u3nMNT8qbtmKvz1V6bKjkE4hyWt6jKCG7UfHZ286Qjeln625NH8wVLPWkLTdNqWrHWySeLId+3SpGBgeG7VkSy0hytJfrbu0eHyjFo+8MD6x4hjsdegEcKMn0oi7sHdJon6lUlFdwo32fybMXwhe6vi5oyEtn35Qmun8a7IpwLXzCLh6PKLlk/dIOOXG6fAJYOkiOjKvnJG27Sq22UL98EIKicJ1BLNfyvBnSSaArCRQP3/l0KPc4bXKNoa0hH7MHoxopTHCup/c+Cw70e/UE8DZEzFfdf1sY0BLR55a2B/QzHaX9EqXwtSiekFaGQ1uIinKoZVdCABzWsK8LdIl+35hx8GUnD9l9vrBzG43QC8GAAUZqx/ou2eBVm0G6YoMMvVBwOs9XG8F6IgAwKeksR/ixl6TYsaU94u1Hs3uD0Kgmm+MVKYWtVA0DZhveFexItIUO4nL5ymKgVvSjz4SrNgD0Pkmapekh8IRdcwzx1rs9eFXhIdQeucsPuL4fBtjs2zYPyDBUoWmhos9Vmjf4g1fs822F6vlsfWmxzYSL+A/Q3pIBckXGfY1/Bbeg7RfOqt739BRcL4AAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+    &gt;
+      &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
+        alt=&quot;16singlelinedeclartion&quot;
+        title=&quot;&quot;
+        src=&quot;https://erluxman.com/static/550fafff58b3a26f79b7d6885c6beadd/fcda8/16singlelinedeclartion.png&quot;
+        srcset=&quot;https://erluxman.com/static/550fafff58b3a26f79b7d6885c6beadd/12f09/16singlelinedeclartion.png 148w,https://erluxman.com/static/550fafff58b3a26f79b7d6885c6beadd/e4a3f/16singlelinedeclartion.png 295w,https://erluxman.com/static/550fafff58b3a26f79b7d6885c6beadd/fcda8/16singlelinedeclartion.png 590w,https://erluxman.com/static/550fafff58b3a26f79b7d6885c6beadd/efc66/16singlelinedeclartion.png 885w,https://erluxman.com/static/550fafff58b3a26f79b7d6885c6beadd/c83ae/16singlelinedeclartion.png 1180w,https://erluxman.com/static/550fafff58b3a26f79b7d6885c6beadd/772aa/16singlelinedeclartion.png 2042w&quot;
+        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+      /&gt;
+    &lt;/span&gt;
+  &lt;/span&gt;
+  
+  &lt;/a&gt;
+    &lt;/p&gt;
+&lt;h2 id=&quot;day17-sliverappbar--collapsable-appbar--parallaxheader&quot;&gt;&lt;a href=&quot;#day17-sliverappbar--collapsable-appbar--parallaxheader&quot; aria-hidden class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;#Day17 SliverAppBar / Collapsable AppBar / ParallaxHeader&lt;/h2&gt;
+&lt;p&gt;Remember CollapsableAppBar (android) / ParallaxHeader (ios)? We have SliverAppBar in Flutter to do exactly that.&lt;/p&gt;
+&lt;p&gt;To use it, you will have to have a CustomScrollView as parent.&lt;/p&gt;
+&lt;p&gt;then you add two slivers of it. &lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;SliverAppBar&lt;/li&gt;
+&lt;li&gt;SliverFillRemaining&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;You can play with values of snap, floating, pinned etc to get desired effect&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://dartpad.dartlang.org/6874032a7a1ea129640b8f617f7ffed3&quot; target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot;&gt;try on dartpad&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://api.flutter.dev/flutter/material/SliverAppBar-class.html#snippet-container&quot; target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot;&gt;see various types of SliveAppBars here &lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://erluxman.com/6284089a154cc9bae35e2d7a1b17b289/17sliverappbars.gif&quot;&gt;&lt;/p&gt;
+&lt;h2 id=&quot;day18-what-the-key&quot;&gt;&lt;a href=&quot;#day18-what-the-key&quot; aria-hidden class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;#Day18 What the Key?&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&quot;https://erluxman.com/42e1956376bcbc92664e2bd6bc367283/18keys.gif&quot;&gt;&lt;/p&gt;
+&lt;p&gt;Ever wondered why we need GlobalKey(children : GlobalObjectKey, LabeledGlobalKey),  LocalKey(children: ObjectKey, ValueKey &amp;#x26; UniqueKey) right?&lt;/p&gt;
+&lt;p&gt;They are used to access or restore state In a statefulWidget (Mostly we don’t need them at all if our widget tree is all Stateless Widgets).&lt;/p&gt;
+&lt;h3 id=&quot;purpose-key-to-use-inside-bracket-&quot;&gt;&lt;a href=&quot;#purpose-key-to-use-inside-bracket-&quot; aria-hidden class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Purpose (Key to use inside bracket) :&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Mutate the collection i.e. remove / add / reorder item to list in stateful widget like draggable todo list where checked items get removed (ObjectKey, ValueKey &amp;#x26; UniqueKey)&lt;/li&gt;
+&lt;li&gt;Move widget from one Parent to another preserving it’s state. (GlobalKey)&lt;/li&gt;
+&lt;li&gt;Display same Widget in multiple screens and holding its state.(GlobalKey)&lt;/li&gt;
+&lt;li&gt;Validate Form.(GlobalKey)&lt;/li&gt;
+&lt;li&gt;You can to give a key without using any data. (UniqueKey)&lt;/li&gt;
+&lt;li&gt;If you can use certain field of data like UIID of users as unique Key. (ValueKey)&lt;/li&gt;
+&lt;li&gt;If you do not have any unique field to use as key but object itself is unique. (ObjectKey)&lt;/li&gt;
+&lt;li&gt;If you have multiple Forms or Multiple Widgets of same type that need GlobalKey. (GlobalObjectKey, LabeledGlobalKey whichever is appropriate , similar logic to ValueKey and ObjectKey)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=kn0EOS-ZiIc&quot; target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot;&gt;Learn more on this video&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&quot;day19-amazing-library-timedart&quot;&gt;&lt;a href=&quot;#day19-amazing-library-timedart&quot; aria-hidden class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;#Day19 Amazing Library Time.dart&lt;/h2&gt;
+&lt;p&gt;If you are tired to long and verbose DateTime and Duration calculation &lt;code class=&quot;language-text&quot;&gt;Time.dart&lt;/code&gt; comes to your rescue. &lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;//Before
+var 3dayLater = DateTime.now().add(Duration(days: 3)).day;
+
+//After
+var 3dayLater = 3.days.fromNow.day;
+
+
+//Before
+var duration = Duration(minutes: 10) +Duration(seconds: 15) -
+    Duration(minutes: 3) +Duration(hours: 2);
+
+//After
+var duration = 10.minutes + 15.seconds - 3.minutes + 2.hours;
+
+//Before
+await  Future.delayed(Duration(seconds: 2))
+
+//After
+await 2.seconds.delay&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;give it a try &lt;a href=&quot;https://github.com/jogboms/time.dart&quot; target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot;&gt;https://github.com/jogboms/time.dart&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&quot;day20-testing-errors&quot;&gt;&lt;a href=&quot;#day20-testing-errors&quot; aria-hidden class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;#Day20 Testing errors&lt;/h2&gt;
+&lt;p&gt;You can simply test if two values are equal in dart with &lt;code class=&quot;language-text&quot;&gt;expect(actual, expected)&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;But if you want to test errors use the &lt;code class=&quot;language-text&quot;&gt;function closure&lt;/code&gt; that throws error as actual and check with &lt;code class=&quot;language-text&quot;&gt;throwsA&amp;lt;ErrorType&amp;gt;&lt;/code&gt; as expected.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;  void main() {
+    group(&amp;quot;Exception/Error testing&amp;quot;, () {
+      test(&amp;quot;test method that throws errors&amp;quot;, () {
+        expect(_testError(fails: false), false);
+        expect(() =&amp;gt; _testError(fails: true), throwsA(isA&amp;lt;FooError&amp;gt;()));     
+      });
+    });
+  }
+  
+  bool _testError({bool fails}) {
+    if(fails)throw FooError();
+    return fails;
+  }
+  
+  class FooError extends Error {}&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h2 id=&quot;day21-concisely-add-collection-into-collection-with-spread-operator&quot;&gt;&lt;a href=&quot;#day21-concisely-add-collection-into-collection-with-spread-operator&quot; aria-hidden class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;#Day21 Concisely add collection into collection with &lt;code class=&quot;language-text&quot;&gt;Spread(...)&lt;/code&gt; operator&lt;/h2&gt;
+&lt;p&gt;We normally use addAll() on collection to add one collection to another.&lt;/p&gt;
+&lt;p&gt;But From dart 2.3 and above, we can use Spread Operator (&lt;code class=&quot;language-text&quot;&gt;...&lt;/code&gt;) to add collection inside collection.  &lt;/p&gt;
+&lt;p&gt;
+  &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;https://erluxman.com/static/141abfd65d5b4163154701d2d18951f9/a878e/21nullsafecollectioninsert.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+  
+  &lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block;  max-width: 590px; margin-left: auto; margin-right: auto;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 84.45945945945947%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAARCAYAAADdRIy+AAAACXBIWXMAAAsSAAALEgHS3X78AAACe0lEQVQ4y41T21LTUBQ9SU6StlZGwReRcdq0aXqJFCgwogMnpGl6AQFh8Mmv8xN88SN88TJS9IUZf8HxCU63K5dSwKJ0Zs1KzslZXXuvs9m7n0uM6YKze0KfWw55fvU1zzZCnq0F3KwGXLGxZ3mcFcd8A5aYsCUYfh19vinem674zp6Kz6yw+RWHr8BL2LrC1yC+4Jtv4I9AgbHHnqGVvDPVbhMckbG4S9wJiOOdVwJi5W1iJf92WOl+0ZNAjZlV38A/nyjYeLS6cz63fiBn1nZlvtWVRsOXuutJrdzGx0LC0TRcABAWvwCHseKmgYUhszuUcfsyC5cZuMw2d8hs9MiodEgvw2lRUHLwL4xS/g2HDlMXWhD0h4rTJ7PelfzZPhmNPsqNythKhVKx6aI3BCtBVPJQQR/ut/blg41jmn3xBs8HUV8SkTGmi14XVMpxD4esjFCWD2V+/ZhyrUPKrhxRrgm3CEgpbd9W7u0OWdmn/MorObtxRA+fH9LM2j7lFgeUqXVi0dhZYWvitpCiKEap80SQPUEPS/6QoYe82pVqbUBqdUC8vkPMDok5PWKVLilYVxBQdFi1fVIrbdIAuL/hME1ZQZJmrSMNd0BGvU+5pT3SnDAJqBqSXu/F4BCJ0jfdfnQrSHeCUdzryx7a7aRkhIKrIjNuLz6gj8scJ33J3r9Lhu1YULUD9HBPIqRJr6aF8L+UeeLwRMOo5d3+OcQu0tt/gfXJ87+QuEwmxXA6keCZVgmptP0WpYaT+bwTLmd5FM8ylHUIfgCfabZ/Aj7F+2nMlrgLhhD6Af4EFBmb34hEDZSaYTNNky28NBXLMyF6N1gRewlbQvkDIsWTLJP7H90AAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+    &gt;
+      &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
+        alt=&quot;21nullsafecollectioninsert&quot;
+        title=&quot;&quot;
+        src=&quot;https://erluxman.com/static/141abfd65d5b4163154701d2d18951f9/fcda8/21nullsafecollectioninsert.png&quot;
+        srcset=&quot;https://erluxman.com/static/141abfd65d5b4163154701d2d18951f9/12f09/21nullsafecollectioninsert.png 148w,https://erluxman.com/static/141abfd65d5b4163154701d2d18951f9/e4a3f/21nullsafecollectioninsert.png 295w,https://erluxman.com/static/141abfd65d5b4163154701d2d18951f9/fcda8/21nullsafecollectioninsert.png 590w,https://erluxman.com/static/141abfd65d5b4163154701d2d18951f9/efc66/21nullsafecollectioninsert.png 885w,https://erluxman.com/static/141abfd65d5b4163154701d2d18951f9/c83ae/21nullsafecollectioninsert.png 1180w,https://erluxman.com/static/141abfd65d5b4163154701d2d18951f9/a878e/21nullsafecollectioninsert.png 2048w&quot;
+        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+      /&gt;
+    &lt;/span&gt;
+  &lt;/span&gt;
+  
+  &lt;/a&gt;
+    &lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://dartpad.dev/98c2ab9d41fb2c20cc67c94956972721&quot; target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot;&gt;try in dartpad&lt;/a&gt;&lt;/p&gt;
+                &lt;div style=&quot;margin-top=55px; font-style: italic;&quot;&gt;(This is an article posted to my blog at erluxman.com. You can read it online by &lt;a href=&quot;https://erluxman.com/00005-week-3-100-days-of-flutter/&quot;&gt;clicking here&lt;/a&gt;.)&lt;/div&gt;
+              </content:encoded></item><item><title><![CDATA[Flutter Tips 8-14]]></title><description><![CDATA[Second batch of 7 tips and tricks on the series 100DaysOfFlutter.]]></description><link>https://erluxman.com/00004-week-2-100days-of-flutter/</link><guid isPermaLink="false">https://erluxman.com/00004-week-2-100days-of-flutter/</guid><pubDate>Sat, 18 Apr 2020 00:00:00 GMT</pubDate><content:encoded>&lt;h2 id=&quot;day8&quot;&gt;&lt;a href=&quot;#day8&quot; aria-hidden class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;#Day8&lt;/h2&gt;
 &lt;p&gt;If you have you been adding &lt;code class=&quot;language-text&quot;&gt;Container()&lt;/code&gt; with &lt;code class=&quot;language-text&quot;&gt;maxwidth&lt;/code&gt; at the bottom of &lt;code class=&quot;language-text&quot;&gt;ListItem&lt;/code&gt; to put divider line like me, you have been doing it wrong all the time. &lt;/p&gt;
 &lt;p&gt;Flutter has &lt;code class=&quot;language-text&quot;&gt;ListView.separated&lt;/code&gt; just for that purpose. We have to also provide &lt;code class=&quot;language-text&quot;&gt;separatorBuilder&lt;/code&gt; in addition to what we already passed while using &lt;code class=&quot;language-text&quot;&gt;ListView.builder&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Bonus 🍾🎁🎊🎉 : You do not have to check if the item is last in order not to draw divider after the last item.&lt;/strong&gt;&lt;/p&gt;
