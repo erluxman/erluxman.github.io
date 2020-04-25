@@ -18,10 +18,12 @@ but, Flexible uses `fit :FlexFit.loose` by default.
 
 **flex** = The factor of space taken from parent. Mostly not fully used if `flex: FlexFit.loose` used i.e. `Flexible`.
 
-[try in codepen](https://codepen.io/erluxman/pen/JjYKZGG)
+![](15flexibleexpanded.png)
 
 If you fully read the following image, you will fully understand the differene `Flexible` and `Expanded`
 ![](15expandedvsflexible.png)
+
+[try in codepen](https://codepen.io/erluxman/pen/JjYKZGG)
 
 ## #Day16 Bulk declaration 
 
