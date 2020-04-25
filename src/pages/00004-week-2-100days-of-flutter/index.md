@@ -1,7 +1,7 @@
 ---
 title: Flutter Tips 8-14
 date: '2020-04-18'
-spoiler: Second bath of 7 tips and tricks on the series 100DaysOfFlutter.
+spoiler: Second batch of 7 tips and tricks on the series 100DaysOfFlutter.
 ---
 
 ## #Day8 
