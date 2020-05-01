@@ -1,4 +1,120 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Dan Abramov's Overreacted Blog RSS Feed]]></title><description><![CDATA[My Journey with Code]]></description><link>https://erluxman.com</link><generator>GatsbyJS</generator><lastBuildDate>Sat, 25 Apr 2020 01:40:41 GMT</lastBuildDate><item><title><![CDATA[Flutter Tips 15-21]]></title><description><![CDATA[Third batch of 7 tips and tricks on the series 100DaysOfFlutter.]]></description><link>https://erluxman.com/00005-week-3-100-days-of-flutter/</link><guid isPermaLink="false">https://erluxman.com/00005-week-3-100-days-of-flutter/</guid><pubDate>Sat, 25 Apr 2020 00:00:00 GMT</pubDate><content:encoded>&lt;h2 id=&quot;day15-flexible-vs-expanded&quot;&gt;&lt;a href=&quot;#day15-flexible-vs-expanded&quot; aria-hidden class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;#Day15 Flexible vs Expanded&lt;/h2&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Dan Abramov's Overreacted Blog RSS Feed]]></title><description><![CDATA[My Journey with Code]]></description><link>https://erluxman.com</link><generator>GatsbyJS</generator><lastBuildDate>Fri, 01 May 2020 08:54:14 GMT</lastBuildDate><item><title><![CDATA[Flutter Tips 22-28]]></title><description><![CDATA[Forth batch of 7 tips and tricks on the series 100DaysOfFlutter.]]></description><link>https://erluxman.com/00006-week-4-100-days-of-flutter/</link><guid isPermaLink="false">https://erluxman.com/00006-week-4-100-days-of-flutter/</guid><pubDate>Sat, 02 May 2020 00:00:00 GMT</pubDate><content:encoded>&lt;h2 id=&quot;day22-callable-class&quot;&gt;&lt;a href=&quot;#day22-callable-class&quot; aria-hidden class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;#Day22 Callable class&lt;/h2&gt;
+&lt;p&gt;In flutter we can call instance of a class like we call method. &lt;/p&gt;
+&lt;p&gt;What you have to do is defile a &lt;code class=&quot;language-text&quot;&gt;call()&lt;/code&gt; method of any return type or arguments. that &lt;code class=&quot;language-text&quot;&gt;call()&lt;/code&gt; method will be called when you call the instance.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;void main() {
+    var member = CallableClass();
+    member(&amp;quot;Flutter&amp;quot;);
+}
+
+class CallableClass{
+    call(String name){
+        print(&amp;quot;Name is $name&amp;quot;);
+    }
+}&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;&lt;a href=&quot;https://dartpad.dartlang.org/294c4973aeab2b8312e415ce4dc55799&quot; target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot;&gt;try in dartpad&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&quot;day23-listwheelscrollview&quot;&gt;&lt;a href=&quot;#day23-listwheelscrollview&quot; aria-hidden class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;#Day23 ListWheelScrollView&lt;/h2&gt;
+&lt;p&gt;We can implement following Wheel List using &lt;code class=&quot;language-text&quot;&gt;ListWheelScrollView&lt;/code&gt; in flutter.&lt;/p&gt;
+&lt;p&gt;Just give it the children and it will start working for you. &lt;/p&gt;
+&lt;p&gt;You can customize the wheel with Constructor arguments of &lt;code class=&quot;language-text&quot;&gt;ListWheelScrollView&lt;/code&gt; play with them.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;ListWheelScrollView(
+    children: &amp;lt;Widget&amp;gt;[
+        ..Children Widgets
+    ],
+)&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;&lt;a href=&quot;https://dartpad.dartlang.org/a30529134eb181507207f305b2bf6201&quot; target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot;&gt;try on dartpad&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://codepen.io/erluxman/pen/NWGjBjX&quot; target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot;&gt;try on codepen&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://erluxman.com/2caa45fb223c7c4451e288091f0193e2/23wheelscrollview.gif&quot;&gt;&lt;/p&gt;
+&lt;h2 id=&quot;day24-rectangular-fab-with-notched-bottom-appbar&quot;&gt;&lt;a href=&quot;#day24-rectangular-fab-with-notched-bottom-appbar&quot; aria-hidden class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;#Day24 Rectangular Fab with Notched Bottom Appbar.&lt;/h2&gt;
+&lt;p&gt;Circular notched Buttom Bar with Fab is cool &lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;BUT&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Ever wanted rectangular Fab with Notch? &lt;/p&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;FloatingActionButton.extended&lt;/code&gt; with &lt;code class=&quot;language-text&quot;&gt;BottomAppBar&lt;/code&gt;’s &lt;code class=&quot;language-text&quot;&gt;shape&lt;/code&gt; as &lt;code class=&quot;language-text&quot;&gt;AutomaticNotchedShape&lt;/code&gt; like this: &lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;shape: AutomaticNotchedShape(
+        RoundedRectangleBorder(),
+        StadiumBorder(
+          side: BorderSide(),
+        ),
+      ),&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;&lt;a href=&quot;https://gist.github.com/erluxman/fd442639bcaf84e14b31f70b00c48fe9&quot; target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot;&gt;try this code on your editor&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;
+  &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;https://erluxman.com/static/e37966d3066d925943f82394a724f9a9/91f10/24rectangularnotch.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+  
+  &lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block;  max-width: 590px; margin-left: auto; margin-right: auto;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 205.4054054054054%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAApCAYAAAA1bQl+AAAACXBIWXMAABYlAAAWJQFJUiTwAAAD70lEQVRIx+WW3U9bdRjHz4WJcYkXk21hK6Wlb6evnL4ycLS0W0lHnRQoCLHTsADDRGe2/0GNvTPOiwGZGTBiYIO2QEHeHJuLI9mV8UIxDYXEG11iJcS+Qr8+p4UGjBcuOTFLbPLJ85zn9z3f8/vlpDlf5sbNGTR19UCls0Cpq4XaUEM9R5gLsHoTdHojdAYjtFRVejPUtM6yLDQaA9RaC1jtWbi8bQjeXQTjar+CCqkLF1rHcCkQxjnvCERiDcqOv4STZcdw4rVXiGMlTvL1+MsoLz+NmsZbuNgVgSswDHl1G+weHxi1wQKbewitvd+hq/8B3J0rsLhuQmu9Bl3NDehs14vUHMDPrsHkCMLlX0Tzu8vwfhiFMzCJ0+VKMDruLF73DsPZNo/65mmcb4/C3/MIHVfX4O99grfeWyvQRr2/70lh5u9bo/XHBa2jZQZO3zwafGFUKWxgNFwt9PVDsHqiMDeGqEbg615EZ/8y2nuWyJz6q8vo6F3C5fe/Kcy9gXk6zQpsFyMwuUMwe/g6AbHUDEauVOPL0ceYXohjKrqOUPRn3Jtex0RkvVQP+sPwM147RYTnYxgP/wCzpQ6MUsXi2W+/oPjbJfLPyV7xztyfcDobwBiNHGKxDezu5ZFMppBKZZ6LZDKNTCaH3xN/wOFwgFEpFdjc3Cw8JZ3mFzPIZrP/Gl6/u7uL7e3toqFMJsfW1hby+bwwhqxKKewOlf+/I3N6DeJxAQ2NBg02hDSsFnqHZk5PO4wLZ2jidMIa6nVaOrKAhlq94UU31Ar8lg3VAu+Q1ejoryegoVKtFdZQwQpsKN83zAtpuCWooUpDhpvCGcroQ/9iG1Yp2P/GkK+ZFF1TmjhCKnVU83dDqUKF+EachoejSBpp/iZ6SO4fSJMZrylFkWwOiYMoIpWr8OzXw2Fpbz8E5bD91UMkPhpHInifmETi4wkkBr9GPpnc1++VwlIuux+WKqRKfD7wCKP3Yxge/wkjxO3JGFbvPkWK7cO2qBs7hg+wo+rHjuU60pJuPP1iCUOhDYyO/4g7pB+biuH22PfgTLVgTonksDXeoWD5gAJkGDZPGEZ3GN7OWcxcuYVvmz/BamsQqy1BPPR9iqXAZ+i6HAHnjhT0VtL7e1bQ0BKCSEKB89QZKeyXRvDGO6sUi2eJOcrOc7C3zKG2YwH2txePUNe5gHO0dp40Tp62KJoCK7jQPguJVA+m7IwYWmMA9W+GKC9P7zNDmXkKDd5B2JsG4GgaLGDnq3eA1u6RZrakt/umoacgXy4Sg3m1ksMJkQTiqmqIZVbCgkq5jbCiUmaERG4q1EoZV+qLGmtBz2srqjiaK6Gt8+Av6aNxQPRUHOkAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+    &gt;
+      &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
+        alt=&quot;24rectangularnotch&quot;
+        title=&quot;&quot;
+        src=&quot;https://erluxman.com/static/e37966d3066d925943f82394a724f9a9/fcda8/24rectangularnotch.png&quot;
+        srcset=&quot;https://erluxman.com/static/e37966d3066d925943f82394a724f9a9/12f09/24rectangularnotch.png 148w,https://erluxman.com/static/e37966d3066d925943f82394a724f9a9/e4a3f/24rectangularnotch.png 295w,https://erluxman.com/static/e37966d3066d925943f82394a724f9a9/fcda8/24rectangularnotch.png 590w,https://erluxman.com/static/e37966d3066d925943f82394a724f9a9/efc66/24rectangularnotch.png 885w,https://erluxman.com/static/e37966d3066d925943f82394a724f9a9/91f10/24rectangularnotch.png 992w&quot;
+        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+      /&gt;
+    &lt;/span&gt;
+  &lt;/span&gt;
+  
+  &lt;/a&gt;
+    &lt;/p&gt;
+&lt;h2 id=&quot;day25-google-fonts-in-flutter&quot;&gt;&lt;a href=&quot;#day25-google-fonts-in-flutter&quot; aria-hidden class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;#Day25 Google Fonts in flutter&lt;/h2&gt;
+&lt;p&gt;With the pub.dev package &lt;code class=&quot;language-text&quot;&gt;google_fonts&lt;/code&gt; you can use any google fonts without downloading them.&lt;/p&gt;
+&lt;p&gt;Just give the textStyle as any google fonts.&lt;/p&gt;
+&lt;p&gt;Want to set other textStyles properties? Just provide &lt;code class=&quot;language-text&quot;&gt;textStyle&lt;/code&gt; to the font (Which is a textStyle itself)&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;Text(
+    &amp;#39;Notched Rectangular Fab&amp;#39;,
+    style: GoogleFonts.pacifico(
+        textStyle: TextStyle(color: Colors.red),
+    ),)&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;&lt;a href=&quot;https://pub.dev/packages/google_fonts&quot; target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot;&gt;try on pub.dev&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://erluxman.com/e8bed6dc1b63ed796aad5333d565147b/25googlefontstest.gif&quot;&gt;&lt;/p&gt;
+&lt;h2 id=&quot;day26--hero-animation-shared-element-transition&quot;&gt;&lt;a href=&quot;#day26--hero-animation-shared-element-transition&quot; aria-hidden class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;#Day26  Hero Animation (Shared Element Transition)&lt;/h2&gt;
+&lt;h3 id=&quot;do-you-want-your-widgetimage-to-fly-from-one-screen-to-another&quot;&gt;&lt;a href=&quot;#do-you-want-your-widgetimage-to-fly-from-one-screen-to-another&quot; aria-hidden class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;strong&gt;Do you want your Widget/Image to fly from one screen to another?&lt;/strong&gt;&lt;/h3&gt;
+&lt;p&gt;Flutter makes it super easy to do &lt;strong&gt;Shared Element / Hero animation&lt;/strong&gt; with Widget called &lt;code class=&quot;language-text&quot;&gt;Hero&lt;/code&gt;.
+Just give &lt;strong&gt;same &lt;code class=&quot;language-text&quot;&gt;tag&lt;/code&gt;&lt;/strong&gt; for the &lt;code class=&quot;language-text&quot;&gt;Hero&lt;/code&gt; widget in both screen and your Widget will start flying from one screen to another.&lt;/p&gt;
+&lt;p&gt;Caution : Do not give a static stiring as tag if your UI has dynamic data like List, use a value of object like title,id etc as tag &lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;//First Screen
+
+FirstPageWidget extends StatelessWidget{                      
+return Scaffold(
+    ...
+    Hero(
+        tag: player.name
+        child: Image.network(url)
+    )
+    //Other player List
+    ...
+    );
+}
+
+//Second Page
+
+SecondPageWidget extends StatelessWidget{
+return Scaffold(
+    ...
+    Hero(
+        tag: player.name
+        child: Image.network(url)
+        )
+    //Player details
+    ...
+    );
+}&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;&lt;a href=&quot;https://codepen.io/erluxman/pen/eYpEjoQ&quot; target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot;&gt;try on Codepen&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;For better experience : Decrease the browser width&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://erluxman.com/c16683f195f9f05f8ccadcb2ae6081b7/26hero.gif&quot;&gt;&lt;/p&gt;
+                &lt;div style=&quot;margin-top=55px; font-style: italic;&quot;&gt;(This is an article posted to my blog at erluxman.com. You can read it online by &lt;a href=&quot;https://erluxman.com/00006-week-4-100-days-of-flutter/&quot;&gt;clicking here&lt;/a&gt;.)&lt;/div&gt;
+              </content:encoded></item><item><title><![CDATA[Flutter Tips 15-21]]></title><description><![CDATA[Third batch of 7 tips and tricks on the series 100DaysOfFlutter.]]></description><link>https://erluxman.com/00005-week-3-100-days-of-flutter/</link><guid isPermaLink="false">https://erluxman.com/00005-week-3-100-days-of-flutter/</guid><pubDate>Sat, 25 Apr 2020 00:00:00 GMT</pubDate><content:encoded>&lt;h2 id=&quot;day15-flexible-vs-expanded&quot;&gt;&lt;a href=&quot;#day15-flexible-vs-expanded&quot; aria-hidden class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;#Day15 Flexible vs Expanded&lt;/h2&gt;
 &lt;p&gt;Expandable() is nothing more than Flexible() with &lt;/p&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;Flexible (fit: FlexFit.tight) = Expanded()&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;but, Flexible uses &lt;code class=&quot;language-text&quot;&gt;fit :FlexFit.loose&lt;/code&gt; by default.&lt;/p&gt;
