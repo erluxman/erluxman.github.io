@@ -135,3 +135,47 @@ For better experience : Decrease the browser width
 
 ![](26hero.gif)
 
+
+## #Day27 Dart function/constructor Arguments 
+
+There are three types of arguments (Function arguments and constructor arguments work the same way).
+
+1. Normal Parameters (✅✅Short & ❌Flexible)  => required, requires all arguments to be called in order, most concise (doesn't need argument names),least flexible.
+
+2. Named Parameters (✅Short & ✅✅Flexible) => Optional, can be called in any order BUT must provide the argument name.
+
+3. Positional Parameters (✅✅Short & ✅Flexible) => optional but we cannot skip any argument on left to provide arguement right to it. Does not require arguement name.
+   
+
+        void main() {
+            normalFunction("Laxman", "Bhattarai", 26, 65);
+
+            optionalFunction("Laxman", "Bhattarai");
+            optionalFunction("Laxman", "Bhattarai", age: 26);
+            optionalFunction("Laxman", "Bhattarai", weight: 65);
+            optionalFunction("Laxman", "Bhattarai", weight: 65, age: 26);
+
+            positionalFunction("Laxman", "Bhattarai");
+            positionalFunction("Laxman", "Bhattarai", 26);
+            positionalFunction("Laxman", "Bhattarai", 26, 65);
+        }
+
+
+        //Requires all arguments passed in order, i.e. no meaning of default parameters
+        normalFunction(String firstName, String lastName, int age, int weight) {
+            print("$firstName $lastName age: $age weight: $weight");
+        }
+
+
+        //Optional, can be called in any order BUT must provide the argument name.
+        optionalFunction(String firstName, String lastName,
+            {int age = 18, int weight = 60}) {
+            print("$firstName $lastName age: $age weight: $weight");
+        }
+
+        //Optional, doesn't need argument name  but cannot be skipped an argument on left to provide arguemt on right of it.
+        positionalFunction(String first, String last,[int age = 18, int weight = 60]) {
+            print("$first $last age: $age weight: $weight");
+        }
+
+[try on dartpad](https://dartpad.dartlang.org/5cb4bf8b064f117a22aadaee26747721)
