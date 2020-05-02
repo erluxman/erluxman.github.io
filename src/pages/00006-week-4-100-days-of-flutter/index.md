@@ -136,6 +136,8 @@ For better experience : Decrease the browser width
 ![](26hero.gif)
 
 
+
+
 ## #Day27 Dart function/constructor Arguments 
 
 There are three types of arguments (Function arguments and constructor arguments work the same way).
@@ -179,3 +181,24 @@ There are three types of arguments (Function arguments and constructor arguments
         }
 
 [try on dartpad](https://dartpad.dartlang.org/5cb4bf8b064f117a22aadaee26747721)
+
+
+## #Day28 AnimatedContainer
+
+
+`ImplicitlyAnimatedWidget`s like `AnimatedAlign,AnimatedContainer, AnimatedPadding, AnimatedTheme` are easy way to do animation. 
+
+`AnimatedContainer()` is one of the most common.
+
+You can animate any properties of `container` with `AnimatedContainer`. Mastery of this widget alone can get you far ahead in you animation game.
+
+Just provide the changed value like 
+
+    height, width,padding,transform,decoration(backgroundcolor, border radius & alignment etc.
+ along with curve then AnimatedContainer will automatically do the animation for you.
+
+The following animation is done with just `AnimatedContainer()`
+
+[play with the animation in codepen](https://codepen.io/erluxman/pen/MWaEZEz)
+
+![](28animatedcontainer.gif)
