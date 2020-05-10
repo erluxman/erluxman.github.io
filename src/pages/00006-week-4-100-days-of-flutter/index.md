@@ -3,6 +3,8 @@ title: Flutter Tips 22-28
 date: '2020-05-02'
 spoiler: Forth batch of 7 tips and tricks on the series 100DaysOfFlutter.
 ---
+
+
 ## #Day22 Callable class
 
 In flutter we can call instance of a class like we call method. 
