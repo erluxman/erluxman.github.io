@@ -1,4 +1,286 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Dan Abramov's Overreacted Blog RSS Feed]]></title><description><![CDATA[My Journey with Code]]></description><link>https://erluxman.com</link><generator>GatsbyJS</generator><lastBuildDate>Sat, 02 May 2020 06:20:19 GMT</lastBuildDate><item><title><![CDATA[Flutter Tips 22-28]]></title><description><![CDATA[Forth batch of 7 tips and tricks on the series 100DaysOfFlutter.]]></description><link>https://erluxman.com/00006-week-4-100-days-of-flutter/</link><guid isPermaLink="false">https://erluxman.com/00006-week-4-100-days-of-flutter/</guid><pubDate>Sat, 02 May 2020 00:00:00 GMT</pubDate><content:encoded>&lt;h2 id=&quot;day22-callable-class&quot;&gt;&lt;a href=&quot;#day22-callable-class&quot; aria-hidden class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;#Day22 Callable class&lt;/h2&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Dan Abramov's Overreacted Blog RSS Feed]]></title><description><![CDATA[My Journey with Code]]></description><link>https://erluxman.com</link><generator>GatsbyJS</generator><lastBuildDate>Sun, 10 May 2020 03:36:17 GMT</lastBuildDate><item><title><![CDATA[Flutter Tips 29-35]]></title><description><![CDATA[Fifth batch of 7 tips and tricks on the series 100DaysOfFlutter.]]></description><link>https://erluxman.com/00007-week-5-100-days-of-flutter/</link><guid isPermaLink="false">https://erluxman.com/00007-week-5-100-days-of-flutter/</guid><pubDate>Sun, 10 May 2020 00:00:00 GMT</pubDate><content:encoded>&lt;h2 id=&quot;day29-wrap-widget&quot;&gt;&lt;a href=&quot;#day29-wrap-widget&quot; aria-hidden class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;#Day29 Wrap widget&lt;/h2&gt;
+&lt;p&gt;When you are making responsive UIs, you need to wrap contents dynamically.&lt;/p&gt;
+&lt;p&gt;Wrap comes to the rescue. Wrap is like Column/Row but wraps it’s children to next row or column.&lt;/p&gt;
+&lt;p&gt;Use Wrap like you use Column or Row just give it’s direction (either vertical or horizontal)&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;Wrap(
+    direction: Axis.vertical/Axis.horizontal,
+    children: [Widgets],
+    runAlignment: WrapAlignment.start,
+    spacing: 20, //space between previous and next item
+    runSpacing: 20, //space between new row or column
+    );&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;&lt;a href=&quot;https://codepen.io/erluxman/pen/YzyENpR&quot; target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot;&gt;try in codepen&lt;/a&gt;
+&lt;img src=&quot;https://erluxman.com/680f28998e962b052ba208251151a74b/29wrap.gif&quot;&gt;&lt;/p&gt;
+&lt;h2 id=&quot;day30-blur-a-widget-in-flutter&quot;&gt;&lt;a href=&quot;#day30-blur-a-widget-in-flutter&quot; aria-hidden class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;#Day30 Blur a Widget in Flutter&lt;/h2&gt;
+&lt;p&gt;To blur a widget, put it below a BackdropFilter widget in stack. &lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Adjust Gussian blur level with sigmaX, and sigmaY.&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Must provide child to Backdrop it needs a layer to act as blur.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;Stack(
+    fit: StackFit.loose,
+    children: &amp;lt;Widget&amp;gt;[
+    FlutterLogo(size: 300),
+    Positioned.fill(
+        child: BackdropFilter(
+        filter: ImageFilter.blur(sigmaX: 5, sigmaY: 5),
+        child: Container(
+            color: Colors.transparent,
+        ),),
+    ],
+)&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;You will a blur like this.
+&lt;a href=&quot;https://codepen.io/erluxman/pen/xxwPJrY&quot; target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot;&gt;play in codepen&lt;/a&gt;
+
+  &lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block;  max-width: 590px; margin-left: auto; margin-right: auto;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 100%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAACXBIWXMAABYlAAAWJQFJUiTwAAABPElEQVQ4y9WUy0oDMRSG+0K+gvR5RHBh7aqgS/EZbEGfwAsVL4igdCG13rXtqoJYLViUqU1ykkx/Eys6M7bTTHHTxSGZJPPlz/lPkpJS4j8jNZlAIhv03adQ/Iy5AofBfufJXeEgmFYSvup/i9DcCOAgWM+Abp8J+QrHTk2gwwjKHRiBaYmrJmFhnyF7wHDdDMIcgFHYjVGW2WPIHTI8tAmAXUPuOQzm7PKJMG9gS0fsS2WtJXD3QvjgiXLYB1oDjhsCyycc5UdC4Vxgbpdjq8rBRQJgMI/WzVePsFISSK95KJx66Pk6cmRKZoo2P2xUCVPZEqZnNnFRb0Fr9acuk5WNMWe9eI/07DYWV8/w5jEoJWOhsYVtW9+o6nQ52u9dMC5CG4599awqrce4elHHYx8HV4XD4KPMmJwH9hM4hg1WoXtwmAAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+    &gt;
+      &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
+        alt=&quot;30blur&quot;
+        title=&quot;&quot;
+        src=&quot;https://erluxman.com/static/1c586f4a0e73ea906887a5a06096f223/fcda8/30blur.png&quot;
+        srcset=&quot;https://erluxman.com/static/1c586f4a0e73ea906887a5a06096f223/12f09/30blur.png 148w,https://erluxman.com/static/1c586f4a0e73ea906887a5a06096f223/e4a3f/30blur.png 295w,https://erluxman.com/static/1c586f4a0e73ea906887a5a06096f223/fcda8/30blur.png 590w,https://erluxman.com/static/1c586f4a0e73ea906887a5a06096f223/efc66/30blur.png 885w,https://erluxman.com/static/1c586f4a0e73ea906887a5a06096f223/c83ae/30blur.png 1180w,https://erluxman.com/static/1c586f4a0e73ea906887a5a06096f223/d7ceb/30blur.png 1446w&quot;
+        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+      /&gt;
+    &lt;/span&gt;
+  &lt;/span&gt;
+  &lt;/p&gt;
+&lt;h2 id=&quot;day31-changing-theme-dynamically&quot;&gt;&lt;a href=&quot;#day31-changing-theme-dynamically&quot; aria-hidden class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;#Day31 Changing Theme Dynamically&lt;/h2&gt;
+&lt;p&gt;Theme of the application is nothing but argument in MaterialApp or CupertinoApp.&lt;/p&gt;
+&lt;p&gt;Just create a StreamController of bool to represent it’s theme.&lt;/p&gt;
+&lt;p&gt;With the use of StreamBuilder, set the theme of inside Material/Cupertino App and boom 🚀 your app will be able to change it’s theme dynamically.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;//Define a Inherited Widget
+class SettingsStore extends InheritedWidget {
+    final ValueNotifier&amp;lt;ThemeData&amp;gt; theme = ValueNotifier(ThemeData.light());
+
+    SettingsStore({@required Widget child}) : super(child: child);
+
+    static SettingsStore of(BuildContext context) =&amp;gt;
+    context.dependOnInheritedWidgetOfExactType&amp;lt;SettingsStore&amp;gt;();
+
+    void updateTheme(ThemeData theme) =&amp;gt; this.theme.value = theme;
+
+    @override
+    bool updateShouldNotify(SettingsStore oldWidget) =&amp;gt; oldWidget.theme != this.theme;
+}
+
+
+//Listen to it
+class App extends StatelessWidget {
+    @override
+    Widget build(BuildContext context) {
+        return ValueListenableBuilder(
+            valueListenable: SettingsStore.of(context).theme,
+            builder: (context, theme, child) =&amp;gt; MaterialApp(
+            theme: theme,
+            home: SettingsView(),),
+        );
+    }
+}
+
+
+
+//Change the theme from any build method.
+SettingsStore.of(context).updateTheme(ThemeData.light())&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Credit: &lt;a href=&quot;https://www.reddit.com/user/Kounex/&quot; target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot;&gt;u/Kounex’s&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://dartpad.dartlang.org/ccac4c4dff07d69deb6fcacbdeebaa3c&quot; target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot;&gt;try on dartpad&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://erluxman.com/fcdcf2fe805efbc986df8024ec3aa3d1/32dynamictheme.gif&quot;&gt;&lt;/p&gt;
+&lt;h2 id=&quot;day32-dart-extension&quot;&gt;&lt;a href=&quot;#day32-dart-extension&quot; aria-hidden class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;#Day32 Dart Extension&lt;/h2&gt;
+&lt;p&gt;We can extend functionality to existing class/API/Library without inheriting it to a child class.&lt;/p&gt;
+&lt;p&gt;Extensions can have method, getter and setter.&lt;/p&gt;
+&lt;p&gt;Here we add function to DateTime class without subclassing it.&lt;/p&gt;
+&lt;p&gt;Define extension like this :&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;extension DateExtensions on DateTime{
+    
+    printYYYYMMdd(String seperator) {
+        var dateString = &amp;quot;${this.year}$seperator${getTwoDigit(this.month)}$seperator${getTwoDigit(this.day)}&amp;quot;;
+        print(dateString);
+    }
+    
+    String getTwoDigit(int number){
+        return (number &amp;lt; 10)? &amp;quot;0$number&amp;quot; :number.toString();
+    }
+    
+    DateTime get  nextYear =&amp;gt; this.add(Duration(days:365));
+    
+    DateTime previousYear() =&amp;gt; this.subtract(Duration(days:365));
+}&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Then Just Call those extensions &lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;void main() {
+    var now = DateTime.now();
+    var nextYear = now.nextYear;
+    var lastYear = now.previousYear();
+
+    now.printYYYYMMdd(&amp;quot;-&amp;quot;);
+    nextYear.printYYYYMMdd(&amp;quot;/&amp;quot;);
+    previousYear.printYYYYMMdd(&amp;quot;.&amp;quot;);
+}&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;&lt;a href=&quot;https://dartpad.dartlang.org/45e30e5208b39123053f2408624d641c&quot; target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot;&gt;try on dartpad&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&quot;day33-toastbadge-toast_badge-package&quot;&gt;&lt;a href=&quot;#day33-toastbadge-toast_badge-package&quot; aria-hidden class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;#Day33 ToastBadge (toast_badge) package&lt;/h2&gt;
+&lt;p&gt;If you want to show notification that auto dismisses anywhere in the screen, use &lt;code class=&quot;language-text&quot;&gt;toast_badge&lt;/code&gt;. &lt;/p&gt;
+&lt;p&gt;Just wrap any widget with &lt;code class=&quot;language-text&quot;&gt;ToastBadget&lt;/code&gt; or call &lt;code class=&quot;language-text&quot;&gt;.enableBadge()&lt;/code&gt; on any widget, you will be able to show notification on that widget without the need of BuildContext object. &lt;/p&gt;
+&lt;p&gt;i.e. You use it like toast but in the place you desire. &lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;Wrap &lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;child: ToastBadge( child: SettingPage(),),
+
+
+//OR 
+
+child: SettingPage().enableBadge(),&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Call &lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;ToastBadge.show(&amp;quot;Hello Toast&amp;quot;);
+
+
+//With more options
+
+ToastBadge.show(&amp;quot;Hello Toast&amp;quot;,  
+mode: ToastMode.INFO, 
+duration: Duration(milliseconds: 500));&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;a href=&quot;https://github.com/erluxman/toast_badge&quot; target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot;&gt;use this package&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://erluxman.com/b051b70d052fa45cadbe6890023214bd/33toastbadge.gif&quot;&gt;&lt;/p&gt;
+&lt;h2 id=&quot;day34-making-reorderable-list&quot;&gt;&lt;a href=&quot;#day34-making-reorderable-list&quot; aria-hidden class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;#Day34 Making Reorderable list.&lt;/h2&gt;
+&lt;p&gt;Create ReorderableListView just like normal ListView.&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Give Key to each child&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Handle onReorder: (oldIndex, newIndex)&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;ReorderableListView(
+      onReorder: (oldIndex, newIndex) {
+        setState(() {
+          if (oldIndex &amp;lt; newIndex) {
+            newIndex -= 1;
+          }
+          var previous = names.removeAt(oldIndex);
+          names.insert(newIndex, previous);
+        });
+      },
+      children:[
+        child(key:ObjectKey(item)),.....
+      ]
+)&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;a href=&quot;https://codepen.io/erluxman/pen/Yzyabpz&quot; target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot;&gt;try in codepen&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://erluxman.com/72435820d4ce6b9b5de94359c3c2d16b/34reorderable.gif&quot;&gt;&lt;/p&gt;
+&lt;h2 id=&quot;day35-dart-dev-tools&quot;&gt;&lt;a href=&quot;#day35-dart-dev-tools&quot; aria-hidden class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;#Day35 Dart Dev tools&lt;/h2&gt;
+&lt;p&gt;Dart dev tool is powerful set of debugging and performance tools like Layout Inspector,Timeline, Memory, App Performance,Debugger,Logging &amp;#x26; Network monitor.&lt;/p&gt;
+&lt;p&gt;Android Stidio : You can open it by clicking dart icon on Run tab when app is runnin in Anadroid Studio&lt;/p&gt;
+&lt;p&gt;VSCode: typing Open Dev Tools in command Pallet.&lt;/p&gt;
+&lt;p&gt;Learining to use Dart Dev tool  is very 🚨important skill🚨 to have as a Flutter/dart developer.&lt;/p&gt;
+&lt;p&gt;
+  &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;https://erluxman.com/static/7a87d285fa63218d86174ce8bb910dea/248b0/35as.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+  
+  &lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block;  max-width: 590px; margin-left: auto; margin-right: auto;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 77.02702702702703%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAPCAYAAADkmO9VAAAACXBIWXMAABYlAAAWJQFJUiTwAAACjklEQVQ4y2VT23baMBD05zRgDL7IsiVfAdvEMXdoQiBJz0n7/58w3RWY5qQPc6TVyrM7o7VV1FM8/mzREl5+n9EdN/CFxMQLMLBt2MMhXGcEZzSCN3EwGdsYO0M49gCDhwc8fIO16J4wXzYo2hrdYY1ut4WMEwRSQXguZBggUwGE1lBViyjW8CcuXCro+f/D2u8OaMoZquUWu8ML1usNposGTaHwqWOcIoGj9PHp2/gVODiHLuokQUrf5MUMGaP8t1rr5QrLWYU1ES/aDnVV0eUEdSrwJ5bYhj5a4eEy/oGtN4KOYsQ6haQ1CCWEjCB4JQRklbXa7FBWDXSSwSbP0jSDUiRPJ9DChyapuigRU3VFa5KmyLIMkSSfJxM4jgPXdQ183ycPqas0LzGd1/A8DxV1mOc54iii89wQqDiGiiQKilOKE5LMpAyOlVKGTFIRK6fK8+YRh+eTqcYJRhiGmM1mdwLulOOcSIqiuBP2EEJcCZ+6FcpZbTxkyXzIcpgojhUhNh3zR2VZmnMG75mEv+klM6xm0aKYzvH41Jkk+8LSIyJiEpbD0AQm7rvtcxFbc5PNOasiuUzIxEMaYpbLlfsu8i++TafTe7e8T28P9PXcmtcL6DQ3o8AecndMmCTXy31HWqtv8RXsNXvK5Bxb3WoDRSOjiMAZj++EPD5fK6ffOuxXlspKmDQnmLHhDhV1OBwODCFXTRJNDxKZR2GEVIRXHiHOm8eLrnkpQ7M3HmY0rGleEGlG/gWUjGjihfkvJV0KAmFiQSSBCM3KuZDuhUTKe5/uhPy3UN4qaA7bbolutcJmt8fr5Z3whuV6i5fXC7b7I/bHZzyfXnE6v93ODhSfcXn/MPkjzfD57cPgL1mLAn2vWJSdAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+    &gt;
+      &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
+        alt=&quot;Opening in Android Studio&quot;
+        title=&quot;&quot;
+        src=&quot;https://erluxman.com/static/7a87d285fa63218d86174ce8bb910dea/fcda8/35as.png&quot;
+        srcset=&quot;https://erluxman.com/static/7a87d285fa63218d86174ce8bb910dea/12f09/35as.png 148w,https://erluxman.com/static/7a87d285fa63218d86174ce8bb910dea/e4a3f/35as.png 295w,https://erluxman.com/static/7a87d285fa63218d86174ce8bb910dea/fcda8/35as.png 590w,https://erluxman.com/static/7a87d285fa63218d86174ce8bb910dea/efc66/35as.png 885w,https://erluxman.com/static/7a87d285fa63218d86174ce8bb910dea/c83ae/35as.png 1180w,https://erluxman.com/static/7a87d285fa63218d86174ce8bb910dea/248b0/35as.png 1316w&quot;
+        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+      /&gt;
+    &lt;/span&gt;
+  &lt;/span&gt;
+  
+  &lt;/a&gt;
+    
+&lt;em&gt;Opening in Android Stuido&lt;/em&gt; &lt;/p&gt;
+&lt;p&gt;
+  &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;https://erluxman.com/static/79769c7d9cb35a58215eefe71739edf3/248b0/35vscode.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+  
+  &lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block;  max-width: 590px; margin-left: auto; margin-right: auto;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 77.02702702702703%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAPCAYAAADkmO9VAAAACXBIWXMAABYlAAAWJQFJUiTwAAACNElEQVQ4y31T2W7bQAzUF7RNgxbwgUq2buuWZcmWrcOS5SQF+lSk/f8vmZBMbRiB3IcBteLu7HDIVUzXh5p1cIdXuP1v+OdXqPtfeEwHfM+e8BB1+BS0+Ezg+CU6Erp3hEc8JGd8O/zB4+EvvgY1lJmmw3Q9HPsBh7pFc+xRtR22+xpNNyDJCqyCGEG8hh+nWFouFoaNhelI1O0V/LSAE1CO/ik/7BCOF6HvOpxOJzRNg6auUe5K+J6HMAgRRxGSOCHEsC0LpmHCNE2Jlmkhofy2KCSnxGGANE2x3x9QEVGWbeB5PsIwwmrlYakb0AnLpS4wiMQgkito7VKFm00OxyGFFrEGQYCu6wWn04Dz+Ym+O0RRLAdMOniLj/94rcvFOnloRTBXIapDhbLco6oq5Hkum1jR5cAY8UdywzCg6PTB5bG6pmkxDGfxMSbPxgjGCC+kHJXdboeavNtRE8THqhal7KXjuHeVjZdPhCwzDEO0bYvjscPz8wuSJMVisbzr2Ziyiz3KbDYT5r4/ibLtdifqbon+p5Jztu2IbRyvhOxfnhfS/vU6u2P6uFImYyGWZUNhMh4bHhfGy8tPwYG6zjfyOFzKG4P5r6lXhbZtw/cD8Y8bwmPDHXbdlWzgxjD49ndVtuCy5j1cGTdVBns+n5OhSxTFlkpdS8kJvZxNnsuaydN0LaarqgZN0yTeQtMWUgk/EkVVVTApezmdTgkzUco3ZkTIlkwmE8mP4XI2ovdcliXeADzAxEKrqrDmAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+    &gt;
+      &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
+        alt=&quot;35vscode&quot;
+        title=&quot;&quot;
+        src=&quot;https://erluxman.com/static/79769c7d9cb35a58215eefe71739edf3/fcda8/35vscode.png&quot;
+        srcset=&quot;https://erluxman.com/static/79769c7d9cb35a58215eefe71739edf3/12f09/35vscode.png 148w,https://erluxman.com/static/79769c7d9cb35a58215eefe71739edf3/e4a3f/35vscode.png 295w,https://erluxman.com/static/79769c7d9cb35a58215eefe71739edf3/fcda8/35vscode.png 590w,https://erluxman.com/static/79769c7d9cb35a58215eefe71739edf3/efc66/35vscode.png 885w,https://erluxman.com/static/79769c7d9cb35a58215eefe71739edf3/c83ae/35vscode.png 1180w,https://erluxman.com/static/79769c7d9cb35a58215eefe71739edf3/248b0/35vscode.png 1316w&quot;
+        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+      /&gt;
+    &lt;/span&gt;
+  &lt;/span&gt;
+  
+  &lt;/a&gt;
+    
+&lt;em&gt;Opening in VSCode&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;
+  &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;https://erluxman.com/static/aea795dc63978dcc342c5521593d02dc/9b29b/35devtools.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+  
+  &lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block;  max-width: 590px; margin-left: auto; margin-right: auto;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 33.108108108108105%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAHCAYAAAAIy204AAAACXBIWXMAABYlAAAWJQFJUiTwAAAA3UlEQVQoz4WQ207DMBBE/f9v3MVfIAqIN74CEJSiSm3sQOI4sWmc+DbYkcqlD85KR7O2PKNdk7ObJY6vX3GymGF6s8T57RsuEne/XN6vcLp4wdHVM4hqa+w6Dq0ErFYYdh2C6QH4iDsgYK5IUVBsKUNZcQipUHMBqb4wjgbDAeNo4XzIQp42FSj7gFiv0TKGRrTo+x7WWhhj/pHuQghZyMNK4L34RLelcFJOphzJlGqvf/spcBNXpqxExRuIToJH1VpnJ8wGPpbx3+oGQ1xX6+EnzHsP59yke9J5LvAbYR0T2IijspAAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+    &gt;
+      &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
+        alt=&quot;35devtools&quot;
+        title=&quot;&quot;
+        src=&quot;https://erluxman.com/static/aea795dc63978dcc342c5521593d02dc/fcda8/35devtools.png&quot;
+        srcset=&quot;https://erluxman.com/static/aea795dc63978dcc342c5521593d02dc/12f09/35devtools.png 148w,https://erluxman.com/static/aea795dc63978dcc342c5521593d02dc/e4a3f/35devtools.png 295w,https://erluxman.com/static/aea795dc63978dcc342c5521593d02dc/fcda8/35devtools.png 590w,https://erluxman.com/static/aea795dc63978dcc342c5521593d02dc/efc66/35devtools.png 885w,https://erluxman.com/static/aea795dc63978dcc342c5521593d02dc/c83ae/35devtools.png 1180w,https://erluxman.com/static/aea795dc63978dcc342c5521593d02dc/9b29b/35devtools.png 3840w&quot;
+        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+      /&gt;
+    &lt;/span&gt;
+  &lt;/span&gt;
+  
+  &lt;/a&gt;
+    
+&lt;em&gt;Dev tools page&lt;/em&gt; &lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.google.com/search?q=dart+devtools+gif&amp;#x26;tbm=isch&amp;#x26;rlz=1C5CHFA_enNP896NP896&amp;#x26;hl=en&amp;#x26;ved=2ahUKEwjG5J75pqjpAhW8A7cAHTFmCdYQBXoECAEQKA&amp;#x26;biw=1920&amp;#x26;bih=1066&quot; target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot;&gt;See amazing dart dev tool gifs&lt;/a&gt;&lt;/p&gt;
+                &lt;div style=&quot;margin-top=55px; font-style: italic;&quot;&gt;(This is an article posted to my blog at erluxman.com. You can read it online by &lt;a href=&quot;https://erluxman.com/00007-week-5-100-days-of-flutter/&quot;&gt;clicking here&lt;/a&gt;.)&lt;/div&gt;
+              </content:encoded></item><item><title><![CDATA[Flutter Tips 22-28]]></title><description><![CDATA[Forth batch of 7 tips and tricks on the series 100DaysOfFlutter.]]></description><link>https://erluxman.com/00006-week-4-100-days-of-flutter/</link><guid isPermaLink="false">https://erluxman.com/00006-week-4-100-days-of-flutter/</guid><pubDate>Sat, 02 May 2020 00:00:00 GMT</pubDate><content:encoded>&lt;h2 id=&quot;day22-callable-class&quot;&gt;&lt;a href=&quot;#day22-callable-class&quot; aria-hidden class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;#Day22 Callable class&lt;/h2&gt;
 &lt;p&gt;In flutter we can call instance of a class like we call method. &lt;/p&gt;
 &lt;p&gt;What you have to do is defile a &lt;code class=&quot;language-text&quot;&gt;call()&lt;/code&gt; method of any return type or arguments. that &lt;code class=&quot;language-text&quot;&gt;call()&lt;/code&gt; method will be called when you call the instance.&lt;/p&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;void main() {
