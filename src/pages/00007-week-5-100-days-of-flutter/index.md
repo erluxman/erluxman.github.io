@@ -1,6 +1,6 @@
 ---
 title: Flutter Tips 29-35
-date: '2020-05-09'
+date: '2020-05-10'
 spoiler: Fifth batch of 7 tips and tricks on the series 100DaysOfFlutter.
 ---
 
@@ -95,7 +95,7 @@ With the use of StreamBuilder, set the theme of inside Material/Cupertino App an
 
 
 Credit: [u/Kounex's](https://www.reddit.com/user/Kounex/)
- 
+
 [try on dartpad](https://dartpad.dartlang.org/ccac4c4dff07d69deb6fcacbdeebaa3c)
 
 
