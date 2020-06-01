@@ -174,8 +174,74 @@ Gradients can be easily converted to Shader with createShader() method.
 
 ![](47mask.png)
 
-## #Day47 ShaderMask Widget.
+## #Day48 `synchronized` in dart.
 
- If you ever enjoyed Room database in Android or are looking for a Good ORM in Flutter that you can define a Database Table's Schema and just being able to save it, Floor is a good choice. You can even get Stream output and get notification on data change. 
+In languages like Java there is a `synchronized` keyboard that acts as lock for preventing concurrent access like while handling transactions.
 
- Caution : This is  still on it's early stage but if we start using it and give more feedback, it will be stable sooner. In my openion this is a Ideal ORM for Flutter even though Moor is more mature and bettle tested. 
+In dart we have a package called `synchronized`. Add `synchronized: ^latest_version` to `pubspec.yaml` then start using it by:
+
+Simply wrapping the transaction / block to be synchronized inside `synchronized()` and that block won't be called again until the previous call is finished.
+    
+    import 'package:synchronized/extension.dart';
+    main() async {
+        var demo = Demo();
+        await demo.runSynchronized();   // prints 12341234
+        await demo.runNotSynchronized();// prints 11223344
+    }
+    class Demo {
+        Future runNotSynchronized() async {
+            stdout.writeln('not synchronized');
+            write1234();
+            write1234();
+            await Future.delayed(const Duration(milliseconds: 300));                            
+            stdout.writeln();
+        }
+
+        Future runSynchronized() async {
+            stdout.writeln('synchronized');
+            synchronized(() async { await write1234(); });
+            synchronized(write1234);
+            await Future.delayed(const Duration(milliseconds: 300));
+            stdout.writeln();
+        }
+        
+        Future write1234() async {
+            for (var value in [1, 2, 3, 4]) {
+            await Future.delayed(const Duration(milliseconds: 30));
+            stdout.write(value);  }}
+    }
+
+[get synchronous package](https://pub.dev/packages/synchronized#-installing-tab-)
+
+[get code Gist](https://gist.github.com/erluxman/ff1e8e9581285cf327e95b281585fbd7)
+
+
+## #Day 49 Circular Image/Widget
+
+In almost every app we need circular image (with a border & shadow).
+
+Just wrap the Image like this :  
+
+___`Widget/Image()`___ -Inside-> ___`ClipRRect()`___ -Inside-> ___`Container()`___(with circular BoxDecoration and boxShadow)
+
+
+    Container(
+            decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(200),
+                border: Border.all(color: Colors.indigoAccent, width: 8),
+                boxShadow: [
+                    BoxShadow(
+                        color: Color(0x332222CC),
+                        blurRadius: 6,
+                        spreadRadius: 6,
+                        offset: Offset.fromDirection(0, 0)),
+                ]
+            ),
+            child: ClipRRect(
+                borderRadius: BorderRadius.circular(400),
+                child: Image.network("imageUrl",height: 200,width: 200,),
+            ),
+        ),
+
+[try in codepen](https://codepen.io/erluxman/pen/abvxvOz)
+![](49circularImage.png)
