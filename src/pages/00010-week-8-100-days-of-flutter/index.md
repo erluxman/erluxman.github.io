@@ -1,7 +1,7 @@
 ---
 title: Flutter Tips 50-56
-date: '2020-06-1'
-spoiler: 7th batch of 7 tips and tricks on the series 100DaysOfFlutter.
+date: '2020-05-31'
+spoiler: 8th batch of 7 tips and tricks on the series 100DaysOfFlutter.
 ---
 
 ## #Day 50 Use `a is! A` instead of `!(a is A)`
