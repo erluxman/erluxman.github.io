@@ -3,9 +3,9 @@ title: Flutter Tips 36-42
 date: '2020-05-18'
 spoiler: Sixth batch of 7 tips and tricks on the series 100DaysOfFlutter.
 ---
-
 ## #Day36 Implicit Interface of class
-Did you know you can extend and implement a class in Dart? 
+
+Did you know you can extend and implement a class in Dart?
 
 * No need to create `IInterface` to mock a `class`.
 * No need to extract `IInterface` as Contract / Protocal
@@ -14,7 +14,7 @@ Every class implicitly defines an interface containing all the instance variable
 
 1. extends ->  must override abstract methods, other methods and variables override optional. i.e can inherit parent's behavior.
 2. implements -> Every methdos and variables must be overriden. i.e. can't inherit parent behavior
-   
+
                 Dart has implicit Interface of every class          
 
         class A {
@@ -40,8 +40,6 @@ Every class implicitly defines an interface containing all the instance variable
         abstract class C implements A {} // ✅
         abstract class C implements B {} // ✅ 
         abstract class C extends B {} // ✅ 
-
-
 
 ## #Day37 Animated Switcher
 
@@ -73,14 +71,13 @@ Then, Flutter will handle the rest.
           )
 [try in codepen](https://codepen.io/erluxman/pen/xxwJRBQ)
 
-![](37animatedswitcher.gif)
+![animatedswitcher](https://raw.githubusercontent.com/erluxman/awesomefluttertips/master/assets/37animatedswitcher.gif)
 
 ## #Day38 GestureDetector widget
 
 Use Gesture Detector to detect gestures like tap, double Tap, press, LongPress, pan, drag, zoom etc.
 
 All those callbacks behave like `onClick(){}` on Button.
-
 
     GestureDetector(
         onTap: //Tapped
@@ -107,20 +104,20 @@ All those callbacks behave like `onClick(){}` on Button.
         ),
     );
 
-[try on codepen]
-(https://codepen.io/erluxman/pen/wvKxVrE)
+[try on codepen](https://codepen.io/erluxman/pen/wvKxVrE)
 
-![](38gesture.gif)
+![gesture](https://raw.githubusercontent.com/erluxman/awesomefluttertips/master/assets/38gesture.gif)
 
 ## #Day39 Package Animated Text Kit
-animated_text_kit provides some cool ways to animate text appearences. 
 
-1. Use built in Widget like 
-            
+animated_text_kit provides some cool ways to animate text appearences.
+
+1. Use built in Widget like
+
         RotateAnimatedTextKit(), TextLiquidFill(), ColorizeAnimatedTextKit() etc.
 
 2. & Pass a list of text in constructor
-   
+
        TyperAnimatedTextKit( 
            text: ["Colorize","Animated", "TextKit",])
 
@@ -130,12 +127,11 @@ animated_text_kit provides some cool ways to animate text appearences.
 
 [animated_text_kit package](https://pub.dev/packages/animated_text_kit#-installing-tab-)
 
-![](39animatetext.gif)
+![animatedtext](https://raw.githubusercontent.com/erluxman/awesomefluttertips/master/assets/39animatetext.gif)
 
+## #Day40  5 Steps of AnimatedIcon
 
-## #Day40  5 Steps of AnimatedIcon.
-
-We can use AnimatedIcon in 5 simple steps. 
+We can use AnimatedIcon in 5 simple steps.
 
 1. Define a Stateful Widget whose state mixins with SingleTickerProviderStateMixin.
 2. Define an AnimationController inside state with animation duration and pass this into vsync.
@@ -145,16 +141,15 @@ We can use AnimatedIcon in 5 simple steps.
 
 [play on codepen](https://codepen.io/erluxman/pen/PoPyNrM)
 
-![](40animatedicon.gif)
-
+![animatedicon](https://raw.githubusercontent.com/erluxman/awesomefluttertips/master/assets/40animatedicon.gif)
 
 ## #Day41 Path Provider( `path_provider package`) (common file locations in iOS and Android)
 
 Sometimes we want to get the location of Various common directories like:
-### **Download, Cache, Documents, External Storage, External Cache** etc.
 
-The package `path_provider` is build for exact same reason so that we do not have to deal with Platform specific issues by our own. 
+### Download, Cache, Documents, External Storage, External Cache etc
 
+The package `path_provider` is build for exact same reason so that we do not have to deal with Platform specific issues by our own.
 
 1. Add path_provider to pubspect.
    `path_provider: ^verison`
@@ -179,7 +174,7 @@ The package `path_provider` is build for exact same reason so that we do not hav
 We can use ShapeBorder to give outline to widgets or Clip them on it's shape. There are my ShapeBorder like `Border, ContinuousRectangleBorder, StadiumBorder, CircleBorder, BeveledRectangleBorder` etc.
 
 1. Use ShapeBorder to give a Widget outline.
-   
+
         Container(
             decoration: ShapeDecoration(
                 color: Colors.white,
@@ -187,7 +182,7 @@ We can use ShapeBorder to give outline to widgets or Clip them on it's shape. Th
             ),
         )
 2. Use ShapeBorder to clip a Widget.
-   
+
         ClipPath(
             clipper: ShapeBorderClipper(
                 shape: // Any shape border
@@ -197,5 +192,5 @@ We can use ShapeBorder to give outline to widgets or Clip them on it's shape. Th
 
 [try in codepen](https://codepen.io/erluxman/pen/vYNQLPx)
 
-![](41shapeborder1.png)
-![](41shapeborder2.png)
+![shapeborder](https://raw.githubusercontent.com/erluxman/awesomefluttertips/master/assets/41shapeborder1.png)
+![shapeborder](https://raw.githubusercontent.com/erluxman/awesomefluttertips/master/assets/41shapeborder2.png)

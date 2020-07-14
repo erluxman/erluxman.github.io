@@ -56,7 +56,7 @@ Still confused installing flutter in mac/linux easily?
         If you are using bash:
         echo "\nexport PATH="\$PATH:`pwd`/flutter/bin"">>~/.bashrc ; source ~/.bashrc
 
-![a](58flutterinstall.png)
+![a](https://raw.githubusercontent.com/erluxman/awesomefluttertips/master/assets/58flutterinstall.png)
 
 ## #Day59 #BlackLifeMatter
 
@@ -66,7 +66,7 @@ This is a tip not just for Flutter developers but to all humans.
 
 This is my tip number #59.
 
-![a](59blacklifematter.jpeg)
+![a](https://raw.githubusercontent.com/erluxman/awesomefluttertips/master/assets/59blacklifematter.jpeg)
 
 ## #Day60 Using SVG
 
@@ -85,7 +85,7 @@ Even though flutter doesn't support any vector graphics out of the box, the pack
 
 [visit flutter_svg](https://pub.dev/packages/flutter_svg#-readme-tab-)
 
-![a](60svg.png)
+![a](https://raw.githubusercontent.com/erluxman/awesomefluttertips/master/assets/60svg.png)
 
 ## #Day61 Using Flare Animations
 
@@ -111,7 +111,9 @@ Similar to vector graphics, Flutter doesn't support vector animation natively. [
             
             animation: "world")
 
-![a](61flare.gif)
+[Visit Flare and SVG sample](https://github.com/erluxman/FlutterSVGFlareDemo)
+
+![a](https://raw.githubusercontent.com/erluxman/awesomefluttertips/master/assets/61flare.gif)
 
 ## #Day62 pubspec autocomplete
 
@@ -119,13 +121,9 @@ When we want to add a dependency only way is either going to github document or 
 
 We can directly add dependencies from our IDEs using extensions/plugins.
 
-### __`For VS code`__ : [Pubspec Assist](https://marketplace.visualstudio.com/items?itemName=jeroen-meijer.pubspec-assist)
-
-![pubspectAssit](62pubspectassist.gif)
-
-### __`For Android Studio`__ : [Flutter Enhancement Suite](https://plugins.jetbrains.com/plugin/12693-flutter-enhancement-suite)
-
-![Flutter Enhancement Suite](62FlutterEnhancement.gif)
+__`For VS code`__ : [Pubspec Assist](https://marketplace.visualstudio.com/items?itemName=jeroen-meijer.pubspec-assist)            |  __`For Android Studio`__ : [Flutter Enhancement Suite](https://plugins.jetbrains.com/plugin/12693-flutter-enhancement-suite)
+:-------------------------:|:-------------------------:
+![a](https://raw.githubusercontent.com/erluxman/awesomefluttertips/master/assets/62pubspectassist.gif)  |  ![a](https://raw.githubusercontent.com/erluxman/awesomefluttertips/master/assets/62FlutterEnhancement.gif)
 
 P.S. Flutter Enhancement Suite comes with a lot of other great features.
 
@@ -133,7 +131,7 @@ P.S. Flutter Enhancement Suite comes with a lot of other great features.
 
 `cached_network_image` helps to __`show`__ and __`cache`__ image from Internet.
 
-It shows image from cache if it's already cached instead of downloading. 
+It shows image from cache if it's already cached instead of downloading.
 
 It will make app feel faster and save network bandwidth.
 
@@ -154,4 +152,4 @@ It will make app feel faster and save network bandwidth.
 
 Image.network            |  CachedNetworkImage
 :-------------------------:|:-------------------------:
-![a](63imagenetwork.gif)  |  ![a](63cachednetworkimage.gif)
+![a](https://raw.githubusercontent.com/erluxman/awesomefluttertips/master/assets/63imagenetwork.gif)  |  ![a](https://raw.githubusercontent.com/erluxman/awesomefluttertips/master/assets/63cachednetworkimage.gif)

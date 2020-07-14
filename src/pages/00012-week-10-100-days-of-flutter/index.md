@@ -3,7 +3,6 @@ title: Flutter Tips 64-70
 date: '2020-06-14'
 spoiler: 10th batch of 7 tips and tricks on the series 100DaysOfFlutter.
 ---
-
 ## #Day64 get_it
 
 `get_it` helps you to access :
@@ -46,7 +45,7 @@ __`To setup lint in Flutter :`__
                 lint: ^version
 
 2. Add `analysis_options.yaml` in project root directory.
-![lint](65lint.png)
+![lint](https://raw.githubusercontent.com/erluxman/awesomefluttertips/master/assets/65lint.png)
 
 3. Include `package:lint/analysis_options.yaml` inside `analysis_options.yaml` and add your custom rules.
 
@@ -62,11 +61,11 @@ __`To setup lint in Flutter :`__
 
 ### Before Lint
 
-![Before](65lintbefore.png)
+![Before](https://raw.githubusercontent.com/erluxman/awesomefluttertips/master/assets/65lintbefore.png)
 
 ### After Lint
 
-![Before](65afterlint.png)
+![Before](https://raw.githubusercontent.com/erluxman/awesomefluttertips/master/assets/65afterlint.png)
 
 [visit lint package](https://pub.dev/packages/lint)
 
@@ -101,14 +100,14 @@ Some examples :
 
 ## #Day67 Show build Status badget on Readme
 
-![badge](67cibadge.png)
+![badge](https://raw.githubusercontent.com/erluxman/awesomefluttertips/master/assets/67cibadge.png)
 
 1. Create `.github/workflows/main.yml` Inside your project's root directory. or Run the command in your **terminal / Powershell** :
 
         md .github/workflows  && cd "$_" && touch main.yml
 
 2. Put the steps in [this](https://gist.github.com/erluxman/ac4916fedc3b37982181b0a631561d20) file inside `main.yml`
-![main.yml](67mainyml.png)
+![main.yml](https://raw.githubusercontent.com/erluxman/awesomefluttertips/master/assets/67mainyml.png)
 
 3. Add the build badge on your README.md.
 
@@ -116,12 +115,72 @@ Some examples :
 
 4. Commit to Github.
 
-## #Day68 Show codecoverage badget on Readme
+## #Day68 Show code coverage badget on Readme ![codecov](https://codecov.io/gh/erluxman/productive/branch/master/graph/badge.svg)
 
-## #Day64 Using Blurhash during image Load
+1. Add the following steps at the end of your Github Actions  main.yml from previous tips.
+Find the full `main.yml` file [here](https://github.com/erluxman/productive/blob/master/.github/workflows/main.yml)
 
-We all load image into UI takes time. Instead of Loading Indicator show Blurhash when Image is loading.
+       - uses: codecov/codecov-action@v1.0.2
+           if: matrix.os == 'ubuntu-latest'
+           with:
+             token: ${{secrets.CODECOV}} #required
+             file: ./coverage/lcov.info #optional 
 
-https://github.com/woltapp/blurhash
-https://github.com/justacid/blurhash-dart
-https://github.com/fluttercommunity/flutter_blurhash
+2. Login/Sign up to [codecov.io](https://codecov.io/)
+3. Go to [https://codecov.io/gh](https://codecov.io/gh) > click on your username > search the repo to show codecoverage and select it.
+![codecov](https://raw.githubusercontent.com/erluxman/awesomefluttertips/master/assets/68codecov.gif)
+
+4. After that copy the Uplaod token (which should be staring at you at this point/inside setting tab)
+5. Go to project's setting(__`not profile setting`__), select "Secrets" from left navigation panel, Add new secret
+![github](https://raw.githubusercontent.com/erluxman/awesomefluttertips/master/assets/68gh.gif)
+
+6. Add code Coverage badge to your github repo README file.
+
+        [![codecov](https://codecov.io/gh/USER_NAME/REPO_NAME/branch/master/graph/badge.svg)](https://codecov.io/gh/USER_NAME/REPO_NAME)
+
+7. Git Push and wait for the build to complete, you will have the badges in your github Repo like this:
+![result](https://raw.githubusercontent.com/erluxman/awesomefluttertips/master/assets/68result.png)
+
+[See Video](https://www.youtube.com/watch?v=r4NQNSRWgY8)
+
+## #Day69 `factory` constructors
+
+Instead of using `static` methods to `create/return` `new/cached` instance of it's class or it's sub classi.e. __`factory pattern`__, we can use `factory constructors`.
+
+`factory` constructors **behave** like `static methods` but **called** like `normal constructors`. Factory constructors can also be be named & unnamed.
+
+    void main() {
+          //❌ static method ❌ 
+          var staticUser = User.getUser("John Doe");
+
+          //✅ factory connstructor ✅
+          var factoryUser = User("John Doe");
+    }
+    class User {
+          User._(this.name);
+          String name;
+          
+          static Map<String, User> users = {};
+
+          //❌ static method ❌ 
+          static User getUser(String name) => users.putIfAbsent(name, () => User._(name));
+          
+          //✅ factory connstructor ✅
+          factory User(String name) =>  users.putIfAbsent(name, () => User._(name));
+    }
+
+## #Day70 `AnimatedDefaultTextStyle`
+
+We can animate change in TextStyle with `AnimatedDefaultTextStyle`.
+
+Just give the animation `duration` & the updated `TextStyle`. `AnimatedDefaultTextStyle` will take care of the rest.
+
+        AnimatedDefaultTextStyle(
+          duration: Duration(milliseconds: 300),
+          child: Text("Flutter"),
+          style: newStyle,
+        )
+
+[try in codepen](https://codepen.io/erluxman/pen/XWXKBJP)
+
+![animatedtext](https://raw.githubusercontent.com/erluxman/awesomefluttertips/master/assets/70textanim.gif)

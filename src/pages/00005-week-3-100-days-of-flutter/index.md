@@ -6,34 +6,33 @@ spoiler: Third batch of 7 tips and tricks on the series 100DaysOfFlutter.
 
 ## #Day15 Flexible vs Expanded
 
-Expandable() is nothing more than Flexible() with 
+Expanded() is nothing more than Flexible() with
 
     Flexible (fit: FlexFit.tight) = Expanded()
 
 but, Flexible uses `fit :FlexFit.loose` by default.
 
-**FlexFit.tight** = Wants to fit tight into parent taking as much space as possible. 
+**FlexFit.tight** = Wants to fit tight into parent taking as much space as possible.
 
 **FlexFit.loose** = Wants to fit loose into parent taking as little space as possible for itself.
 
 **flex** = The factor of space taken from parent. Mostly not fully used if `flex: FlexFit.loose` used i.e. `Flexible`.
 
-![](15flexibleexpanded.png)
+![flex](https://raw.githubusercontent.com/erluxman/awesomefluttertips/master/assets/15flexibleexpanded.png)
 
-If you fully read the following image, you will fully understand the differene `Flexible` and `Expanded`
-![](15expandedvsflexible.png)
+If you fully read the following image, you will fully understand the difference between `Flexible` and `Expanded`
+![expanded](https://raw.githubusercontent.com/erluxman/awesomefluttertips/master/assets/15expandedvsflexible.png)
 
 [try in codepen](https://codepen.io/erluxman/pen/JjYKZGG)
 
-## #Day16 Bulk declaration 
+## #Day16 Bulk declaration
 
-If you have been declaring each member seperately all the time, you can declare members of same types at once.
+If you have been declaring each member separately all the time, you can declare members of same types at once.
 
-I wouldn't declare `age` and `shoeSize` at once because they are not related.  
+I wouldn't declare `age` and `shoeSize` at once because they are not related.
 
-With great power comes great responsibility, Use this wisely. 
-![](16singlelinedeclartion.png)
-
+With great power comes great responsibility, Use this wisely.
+![singleline](https://raw.githubusercontent.com/erluxman/awesomefluttertips/master/assets/16singlelinedeclartion.png)
 
 ## #Day17 SliverAppBar / Collapsable AppBar / ParallaxHeader
 
@@ -41,47 +40,43 @@ Remember CollapsableAppBar (android) / ParallaxHeader (ios)? We have SliverAppBa
 
 To use it, you will have to have a CustomScrollView as parent.
 
-then you add two slivers of it. 
+then you add two slivers of it.
+
 1. SliverAppBar
 2. SliverFillRemaining
 
 You can play with values of snap, floating, pinned etc to get desired effect
 
-
 [try on dartpad](https://dartpad.dartlang.org/6874032a7a1ea129640b8f617f7ffed3)
 
-[see various types of SliveAppBars here ](https://api.flutter.dev/flutter/material/SliverAppBar-class.html#snippet-container)
+[see various types of SliverAppBars here](https://api.flutter.dev/flutter/material/SliverAppBar-class.html#snippet-container)
 
+![sliverappbar](https://raw.githubusercontent.com/erluxman/awesomefluttertips/master/assets/17sliverappbars.gif)
 
-![](17sliverappbars.gif)
+## #Day18 What the Key
 
-## #Day18 What the Key?
+![keys](https://raw.githubusercontent.com/erluxman/awesomefluttertips/master/assets/18keys.gif)
 
-![](18keys.gif)
-
-Ever wondered why we need GlobalKey(children : GlobalObjectKey, LabeledGlobalKey),  LocalKey(children: ObjectKey, ValueKey & UniqueKey) right?
+Ever wondered why we need GlobalKey(children : GlobalObjectKey, LabeledGlobalKey), LocalKey(children: ObjectKey, ValueKey & UniqueKey) right?
 
 They are used to access or restore state In a statefulWidget (Mostly we don't need them at all if our widget tree is all Stateless Widgets).
 
-### Purpose (Key to use inside bracket) :
+### Purpose (Key to use inside bracket)
 
 - Mutate the collection i.e. remove / add / reorder item to list in stateful widget like draggable todo list where checked items get removed (ObjectKey, ValueKey & UniqueKey)
 - Move widget from one Parent to another preserving it's state. (GlobalKey)
 - Display same Widget in multiple screens and holding its state.(GlobalKey)
 - Validate Form.(GlobalKey)
 - You can to give a key without using any data. (UniqueKey)
-- If you can use certain field of data like UIID of users as unique Key. (ValueKey)
+- If you can use certain field of data like UUID of users as unique Key. (ValueKey)
 - If you do not have any unique field to use as key but object itself is unique. (ObjectKey)
 - If you have multiple Forms or Multiple Widgets of same type that need GlobalKey. (GlobalObjectKey, LabeledGlobalKey whichever is appropriate , similar logic to ValueKey and ObjectKey)
 
-
-
 [Learn more on this video](https://www.youtube.com/watch?v=kn0EOS-ZiIc)
 
+## #Day19 Amazing Library Time.dart
 
-##  #Day19 Amazing Library Time.dart
-
-If you are tired to long and verbose DateTime and Duration calculation `Time.dart` comes to your rescue. 
+If you are tired to long and verbose DateTime and Duration calculation `Time.dart` comes to your rescue.
 
     //Before
     var 3dayLater = DateTime.now().add(Duration(days: 3)).day;
@@ -99,12 +94,11 @@ If you are tired to long and verbose DateTime and Duration calculation `Time.dar
 
     //Before
     await  Future.delayed(Duration(seconds: 2))
-    
+
     //After
     await 2.seconds.delay
 
-give it a try https://github.com/jogboms/time.dart
-
+[visit time.dart](https://github.com/jogboms/time.dart)
 
 ## #Day20 Testing errors
 
@@ -116,26 +110,24 @@ But if you want to test errors use the `function closure` that throws error as a
         group("Exception/Error testing", () {
           test("test method that throws errors", () {
             expect(_testError(fails: false), false);
-            expect(() => _testError(fails: true), throwsA(isA<FooError>()));     
+            expect(() => _testError(fails: true), throwsA(isA<FooError>()));
           });
         });
       }
-      
+
       bool _testError({bool fails}) {
         if(fails)throw FooError();
         return fails;
       }
-      
+
       class FooError extends Error {}
 
-
-## #Day21 Concisely add collection into collection with `Spread(...)` operator 
+## #Day21 Concisely add collection into collection with `Spread(...)` operator
 
 We normally use addAll() on collection to add one collection to another.
 
-But From dart 2.3 and above, we can use Spread Operator (`...`) to add collection inside collection.  
+But From dart 2.3 and above, we can use Spread Operator (`...`) to add collection inside collection.
 
-
-![](21nullsafecollectioninsert.png)
+![nullsfae](https://raw.githubusercontent.com/erluxman/awesomefluttertips/master/assets/21nullsafecollectioninsert.png)
 
 [try in dartpad](https://dartpad.dev/98c2ab9d41fb2c20cc67c94956972721)

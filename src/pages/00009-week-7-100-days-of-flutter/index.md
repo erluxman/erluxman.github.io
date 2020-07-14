@@ -4,14 +4,14 @@ date: '2020-05-25'
 spoiler: 7th batch of 7 tips and tricks on the series 100DaysOfFlutter.
 ---
 
-## #Day 43 Collection if & for.
+## #Day 43 Collection if & for
 
 Do you miss number ranges like these in dart?
 
     for (i in 1..4) print(i) //Kotlin Range
     for (i until 1..4) print(i) //Kotlin Range
 
-No problem. Just define this Range Extension on numbers and you will be good to go. 
+No problem. Just define this Range Extension on numbers and you will be good to go.
 
     extension Range on num {
         List<num> until(num endPoint) {
@@ -35,7 +35,7 @@ No problem. Just define this Range Extension on numbers and you will be good to 
         }
     }
 
-Then Simply use them  like this : 
+Then Simply use them  like this:
 
     void main() {
         // 2,3,4,5,6,7,8,9,10
@@ -55,8 +55,7 @@ Then Simply use them  like this :
 
 If you want more advanced range and other cool extensions use [dartx](https://github.com/leisim/dartx)
 
-
-## #Day 44 Collection if & for.
+## #Day 44 Collection if & for
 
 If you logically decide wheather to add a particular item into collection or not? It looks like no big deal when we dealing with adding normal objects to a collection as we could simply add collection items inside if or for statement.
 
@@ -65,6 +64,7 @@ But if we want to conditionally add widget or list of them inside another as one
 From dart 2.3 onwards, we can use `collection if` and `collection for` operators for adding items to a collection `conditionally` or `in bulk`.
 
 ### **Without collection if  or collection for**
+
         ListView(
             children: [
                 Title(news.headline),
@@ -85,9 +85,8 @@ From dart 2.3 onwards, we can use `collection if` and `collection for` operators
             ],
         )
 
-
-
 ### **With collection if  or collection for**
+
         ListView(
             children: [
                 Title(news.headline),
@@ -108,25 +107,21 @@ From dart 2.3 onwards, we can use `collection if` and `collection for` operators
             ],
         )
 
-
 [try on codepen](https://codepen.io/erluxman/pen/yLYGbdy)
 
-![](44collectioniffor.png)
+![collectionif](https://raw.githubusercontent.com/erluxman/awesomefluttertips/master/assets/44collectioniffor.png)
 
+## #Day45 tear-off vs lambda vs function call
 
-## #Day45 tear-off vs lambda vs function call.
+### When possible we should use tear-off instead of these
 
-### When possible we should use tear-off instead of these:
+1. ___`A function call if caller and calling functions have same arguments.`___
 
-1.  ___`A function call if caller and calling functions have same arguments.`___
-        
- ![](45sameargsfunctions.png)
+    ![sameargs](https://raw.githubusercontent.com/erluxman/awesomefluttertips/master/assets/45sameargsfunctions.png)
 
 2. ___`A lambda.`___
-   
- ![](45sameargsfunctions.png)
 
-
+ ![lambda](https://raw.githubusercontent.com/erluxman/awesomefluttertips/master/assets/45lambda.png)
 
 ## #Day46 ColorFilterd Widget
 
@@ -141,19 +136,17 @@ Try different BlendMode and colors.
 
 ColorFiltered works with any widgets as child not just Image.
 
-
 [get the code](https://gist.github.com/erluxman/7b5c1dfec4461b147d9b00a86d080bb5)
 
-![](46colorfiltered.gif)
+![filters](https://raw.githubusercontent.com/erluxman/awesomefluttertips/master/assets/46colorfiltered.gif)
 
-## #Day47 ShaderMask Widget.
+## #Day47 ShaderMask Widget
 
-If you want to apply gradient mask or Image mask to any widget in flutter ShaderMask is the tool to use. 
+If you want to apply gradient mask or Image mask to any widget in flutter ShaderMask is the tool to use.
 
 Just give `blendMode` and `shaderCallback` to ShaderMask along with the Child that you want to mask.
 
 Gradients can be easily converted to Shader with createShader() method.
-
 
     ShaderMask(
         blendMode: BlendMode.srcIn,
@@ -172,16 +165,16 @@ Gradients can be easily converted to Shader with createShader() method.
         )
 [get the code](https://gist.github.com/erluxman/b6f1166ac19b7b2654ee2102c58a8837)
 
-![](47mask.png)
+![mask](https://raw.githubusercontent.com/erluxman/awesomefluttertips/master/assets/47mask.png)
 
-## #Day48 `synchronized` in dart.
+## #Day48 `synchronized` in dart
 
 In languages like Java there is a `synchronized` keyboard that acts as lock for preventing concurrent access like while handling transactions.
 
 In dart we have a package called `synchronized`. Add `synchronized: ^latest_version` to `pubspec.yaml` then start using it by:
 
 Simply wrapping the transaction / block to be synchronized inside `synchronized()` and that block won't be called again until the previous call is finished.
-    
+
     import 'package:synchronized/extension.dart';
     main() async {
         var demo = Demo();
@@ -215,7 +208,6 @@ Simply wrapping the transaction / block to be synchronized inside `synchronized(
 
 [get code Gist](https://gist.github.com/erluxman/ff1e8e9581285cf327e95b281585fbd7)
 
-
 ## #Day 49 Circular Image/Widget
 
 In almost every app we need circular image (with a border & shadow).
@@ -223,7 +215,6 @@ In almost every app we need circular image (with a border & shadow).
 Just wrap the Image like this :  
 
 ___`Widget/Image()`___ -Inside-> ___`ClipRRect()`___ -Inside-> ___`Container()`___(with circular BoxDecoration and boxShadow)
-
 
     Container(
             decoration: BoxDecoration(
@@ -244,4 +235,4 @@ ___`Widget/Image()`___ -Inside-> ___`ClipRRect()`___ -Inside-> ___`Container()`_
         ),
 
 [try in codepen](https://codepen.io/erluxman/pen/abvxvOz)
-![](49circularImage.png)
+![circularimage](https://raw.githubusercontent.com/erluxman/awesomefluttertips/master/assets/49circularImage.png)
