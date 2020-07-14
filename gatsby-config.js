@@ -125,7 +125,7 @@ module.exports = {
               }
             `,
             output: '/rss.xml',
-            title: "Dan Abramov's Overreacted Blog RSS Feed",
+            title: "erluxman's personal blog RSS Feed",
           },
         ],
       },
@@ -133,7 +133,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-ebook`,
       options: {
-        filename: 'overreacted-ebook.epub',
+        filename: 'erluxman-ebook.epub',
         query: `
           {
             site {
@@ -164,8 +164,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Overreacted`,
-        short_name: `Overreacted`,
+        name: `Erluxman`,
+        short_name: `Erluxman`,
         start_url: `/`,
         background_color: `#ffffff`,
         theme_color: `#ffa7c4`,
