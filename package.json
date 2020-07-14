@@ -1,14 +1,14 @@
 {
-  "name": "overreacted",
+  "name": "erluxman",
   "private": true,
   "engines": {
-    "node": "13.x"
+    "node": "14.x"
   },
-  "description": "Overreacted",
+  "description": "Erluxman",
   "version": "1.0.0",
-  "author": "Dan Abramov <dan.abramov@me.com>",
+  "author": "Laxman Bhattarai <erluxman@gmail.com>",
   "bugs": {
-    "url": "https://github.com/gaearon/overreacted.io/issues"
+    "url": "https://github.com/erluxman/erluxman.github.io/issues"
   },
   "dependencies": {
     "gatsby": "^2.0.76",
@@ -50,7 +50,7 @@
     "glob": "^7.1.3",
     "prettier": "^1.14.2"
   },
-  "homepage": "https://overreacted.io",
+  "homepage": "https://erluxman.com",
   "license": "MIT",
   "scripts": {
     "dev": "gatsby develop",
