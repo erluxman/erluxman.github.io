@@ -170,7 +170,7 @@ module.exports = {
         background_color: `#ffffff`,
         theme_color: `#ffa7c4`,
         display: `minimal-ui`,
-        icon: `src/assets/favicon.ico`,
+        icon: `src/assets/favicon.png`,
         theme_color_in_head: false,
       },
     },
