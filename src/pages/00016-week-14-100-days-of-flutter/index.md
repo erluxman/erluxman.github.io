@@ -1,5 +1,5 @@
 ---
-title: Flutter Tips 85-91
+title: Flutter Tips 92-98
 date: '2020-07-12'
 spoiler: 14th batch of 7 tips and tricks on the series 100DaysOfFlutter.
 ---
@@ -199,7 +199,7 @@ flutter_spinkit: ^4.1.2+1
 ```
 
 1. Start Using
-   - #### 🔥Type `SpinKit` and press  `Ctrl+SPACE` to see all possible indicators.
+   - ### 🔥Type `SpinKit` and press  `Ctrl+SPACE` to see all possible indicators.
    - Give `color (@required)`, `size(optional)` and `duration(optional)` to SpinKit* widgets.
 
 ```yml

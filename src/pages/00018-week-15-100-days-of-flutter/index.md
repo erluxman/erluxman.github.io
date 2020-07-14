@@ -1,6 +1,6 @@
 ---
-title: Flutter Tips 85-91
-date: '2020-07-12'
+title: Flutter Tips 99-100
+date: '2020-07-14'
 spoiler: 14th batch of 7 tips and tricks on the series 100DaysOfFlutter.
 ---
 
