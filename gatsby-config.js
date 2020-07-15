@@ -131,37 +131,6 @@ module.exports = {
       },
     },
     {
-      resolve: `gatsby-plugin-ebook`,
-      options: {
-        filename: 'overreacted-ebook.epub',
-        query: `
-          {
-            site {
-              siteMetadata {
-                title
-                author
-              }
-            }
-            allMarkdownRemark(
-              sort: { fields: frontmatter___date, order: ASC },
-              filter: { fields: { langKey: { eq: "en" } } }
-            ) {
-              edges {
-                node {
-                  id
-                  fileAbsolutePath
-                  rawMarkdownBody
-                  frontmatter {
-                    title
-                    date
-                  }
-                }
-              }
-            }
-          }`,
-      },
-    },
-    {
       resolve: `gatsby-plugin-manifest`,
       options: {
         name: `Overreacted`,

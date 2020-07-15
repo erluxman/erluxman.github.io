@@ -1,7 +1,7 @@
 ---
 title: Flutter Tips 99-100
 date: '2020-07-14'
-spoiler: 14th batch of 7 tips and tricks on the series 100DaysOfFlutter.
+spoiler: last 2 tips and tricks on the series 100DaysOfFlutter.
 ---
 
 ### #99 Show widgets as `Toast` with `oktoast`
