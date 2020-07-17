@@ -1,7 +1,371 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Dan Abramov's Overreacted Blog RSS Feed]]></title><description><![CDATA[My Journey with Code]]></description><link>https://erluxman.com</link><generator>GatsbyJS</generator><lastBuildDate>Wed, 15 Jul 2020 04:59:40 GMT</lastBuildDate><item><title><![CDATA[My Journey of 100 Days Of Flutter]]></title><description><![CDATA[My conslusion of]]></description><link>https://erluxman.com/00018-my-journey-of-100-day-of-flutter/</link><guid isPermaLink="false">https://erluxman.com/00018-my-journey-of-100-day-of-flutter/</guid><pubDate>Wed, 15 Jul 2020 00:00:00 GMT</pubDate><content:encoded>&lt;h1 id=&quot;in-progress-please-skippppppp-&quot;&gt;&lt;a href=&quot;#in-progress-please-skippppppp-&quot; aria-hidden class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;In Progress please skippppppp 😉&lt;/h1&gt;
-&lt;!-- I started #100 days of Flutter as a challenge with a motive to my long wish to learning something in a daily basis and writing about it. 
-I am a mobile developer (Android &amp; Flutter) by background and one of my college friends (Nabin Shrestha) helped me take my website to live at erluxman.com 
-There as --&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Dan Abramov's Overreacted Blog RSS Feed]]></title><description><![CDATA[My Journey with Code]]></description><link>https://erluxman.com</link><generator>GatsbyJS</generator><lastBuildDate>Fri, 17 Jul 2020 07:32:12 GMT</lastBuildDate><item><title><![CDATA[My Journey of 100 Days Of Flutter (Awesome Flutter tips and tricks)]]></title><description><![CDATA[Best 100 days of my programming career.]]></description><link>https://erluxman.com/00018-my-journey-of-100-day-of-flutter/</link><guid isPermaLink="false">https://erluxman.com/00018-my-journey-of-100-day-of-flutter/</guid><pubDate>Wed, 15 Jul 2020 00:00:00 GMT</pubDate><content:encoded>&lt;h2 id=&quot;my-best-100-days-as-a-developer&quot;&gt;&lt;a href=&quot;#my-best-100-days-as-a-developer&quot; aria-hidden class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;My best 100 days as a developer&lt;/h2&gt;
+&lt;p&gt;On &lt;strong&gt;April 5th 2020&lt;/strong&gt;, I publicly announced on twitter that I will be posting Flutter tips and tricks everyday for 100 days.&lt;/p&gt;
+&lt;p&gt;
+  &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;https://erluxman.com/static/dab77ed5905aecae798045dd6d62701a/35252/day1.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+  
+  &lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block;  max-width: 590px; margin-left: auto; margin-right: auto;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 70.27027027027026%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAOCAYAAAAvxDzwAAAACXBIWXMAABYlAAAWJQFJUiTwAAAB4klEQVQ4y41TXZOaMBTl//+RvvW9L33qzK4VpjNY160rKFJWqFUhHyR85fQmrE4/nGqGMzfcJIdzuSde07T48P4dkiTBfPGMH/s97BiGAcYYF3+Hy/0FemjNoO8HeFXJ8fDxE7ioke0KHMsKt4e5Cvsxj3OBeJMijtfIsgx5niNNU6yiCHtSa/ObTYJku0VMudcjR8SBZTkg4QaryiBmBt/FG2FRFJhMJgjDEFPfx3z+5PB5OqXcDH4QwPcDhLMZHh4fEc4XCJdrBPMlgqcXfFms4H99xiLeOu2e0g0OxxOYkCgrBkaKtdaolYJVL6XEqSzdXNAexhg4qyAoSs5pTmeqitbZqLDteqjGooNue2iKnDZaIqVqR2Cbcc/oaZ/XtB1ErRElGUpGJLrFOknx7SVycRUnyIs9qWRou25siTFXMVwIVYOfJ5IuFWoirKi8w6nCgUhKJtBRFZbMHvrfcISuZCKxURO5Il/+edBcVA0XX5orGH3qaSKwamxTxsZwFwvR45V1yAg73r0Z+Da8vu+po9pB1spF3TRoewPdDReY+wkHR8RJlf13Fvb9n7txL2Fd16MPuYSQNSQpPJfPhcBul7u18z2+SWjLE+Q5q+pcsiRTW8M3tFaRD23O/vh7CH8Bb+o69mybqs8AAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+    &gt;
+      &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
+        alt=&quot;day1&quot;
+        title=&quot;&quot;
+        src=&quot;https://erluxman.com/static/dab77ed5905aecae798045dd6d62701a/fcda8/day1.png&quot;
+        srcset=&quot;https://erluxman.com/static/dab77ed5905aecae798045dd6d62701a/12f09/day1.png 148w,https://erluxman.com/static/dab77ed5905aecae798045dd6d62701a/e4a3f/day1.png 295w,https://erluxman.com/static/dab77ed5905aecae798045dd6d62701a/fcda8/day1.png 590w,https://erluxman.com/static/dab77ed5905aecae798045dd6d62701a/efc66/day1.png 885w,https://erluxman.com/static/dab77ed5905aecae798045dd6d62701a/c83ae/day1.png 1180w,https://erluxman.com/static/dab77ed5905aecae798045dd6d62701a/35252/day1.png 1204w&quot;
+        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+      /&gt;
+    &lt;/span&gt;
+  &lt;/span&gt;
+  
+  &lt;/a&gt;
+    &lt;/p&gt;
+&lt;h3 id=&quot;apr-5---may-4&quot;&gt;&lt;a href=&quot;#apr-5---may-4&quot; aria-hidden class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Apr 5 - May 4&lt;/h3&gt;
+&lt;p&gt;I started posting tips on Twitter in a &lt;a href=&quot;https://twitter.com/erluxman/status/1246608678486065152&quot; target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot;&gt;thread&lt;/a&gt;. I was planning to publish tips for sometime but haven’t really started. So, I wanted to officially kick start the journey and keep myself committed to it by having myself publicly accountable within my twitter circle.&lt;/p&gt;
+&lt;p&gt;I started posting daily tips in twitter and a blog of 7 tips at once on my site &lt;a href=&quot;https:erluxman.com&quot; target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot;&gt;erluxman.com&lt;/a&gt; every week &amp;#x26; also shared the blog on reddit. At the beginning I didn’t intend of building any helpful document. In fact I didn’t even expect I would create something helpful by publishing tips. But I did just for the sake of being disciplined and being a man of words. I started to get good response on reddit about my blogs. I started getting  replies like “nice tips”, “Waiting for next 7 tips”. It kinda gave me a extra push to keep going.&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;
+  &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;https://erluxman.com/static/5529a0be41296fdb9c6f570db5155884/536c7/week_1.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+  
+  &lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block;  max-width: 590px; margin-left: auto; margin-right: auto;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 102.7027027027027%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAVCAYAAABG1c6oAAAACXBIWXMAABYlAAAWJQFJUiTwAAACc0lEQVQ4y6VUy27TUBS0YEMr1Um6Ycean+CTWCD+B0UVNHZql4KEhIQqfoFNW4m2QglNk/rt+P0czrmtg4nSJiqWRvfEuR7PnLnHUnd3F9uShJ3tLTzb2kKv14Msy+h2uwJyp4NeR4b8/AV2Xr6C9OQpJNp/L16/eQtVUTBUVQyHQ2iaBp2h6zg81KHRqusatI9HOPj8FQrtVZWBeGYwGEAbqvhypAkcqAokVf+E/7mcFDg+s/Ht1IKXAdK7vX2UNRDHMTzfJ8zhuB5cz4dp2fBoFaD7URQjJMxsH1PLhx9EOBub2Pt+hv7xKc4nDqT+e0W8Kc8zpEmCNE1R1/WjFROhKooiz4mUUBQoy1KgqipBvozqDqKuahRlJcD3pP7+EGUUIvAcGKYpFDJZsz5CoYKKCtfzMJ3NqE8RErLO4L4ykuRvG1YpbmNhuUpjoSrKCmGbW5BlGQqqG+sN4cMKP6jknVJ2TFycn2N0dY0oTkQ/WSUTtpVtZJm35dQvfz5HfGc5TSl1Usjq2so2UsgS67L4J9Um6WV16wkp5SIM4FoGxr+vYFLSDJ8OeWN3Fel9xAvLEaUZBOFtMGSbV7bN9jmcNvFay7wndy1cTyaYGLYYrzAMhUpemZxJOaj1CjllKmI63LObG4IB23Fg27YAz7HruphTYEEQbG6ZAwhaahhcL1/rLTfHhgjYolBDSlhRA56Wpo/tqXhw9PjI8GfLMEw4ZNkwDPrt0ifMEjPO1pljmXCZ+DaUO8I6owlJImTU/FI8Xd0Cq9WsUrkIhf8LHQsnF2P8uJzh58TF5dTFycjE6djCyAxwMfXx62Yu1igtVpL+AYEXECd2tXDtAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+    &gt;
+      &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
+        alt=&quot;week1&quot;
+        title=&quot;&quot;
+        src=&quot;https://erluxman.com/static/5529a0be41296fdb9c6f570db5155884/fcda8/week_1.png&quot;
+        srcset=&quot;https://erluxman.com/static/5529a0be41296fdb9c6f570db5155884/12f09/week_1.png 148w,https://erluxman.com/static/5529a0be41296fdb9c6f570db5155884/e4a3f/week_1.png 295w,https://erluxman.com/static/5529a0be41296fdb9c6f570db5155884/fcda8/week_1.png 590w,https://erluxman.com/static/5529a0be41296fdb9c6f570db5155884/efc66/week_1.png 885w,https://erluxman.com/static/5529a0be41296fdb9c6f570db5155884/c83ae/week_1.png 1180w,https://erluxman.com/static/5529a0be41296fdb9c6f570db5155884/536c7/week_1.png 1480w&quot;
+        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+      /&gt;
+    &lt;/span&gt;
+  &lt;/span&gt;
+  
+  &lt;/a&gt;
+    &lt;/th&gt;
+&lt;th&gt;
+  &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;https://erluxman.com/static/2259ef9cc5a7bb094d402d11d4d211ef/ee3fb/week_2.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+  
+  &lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block;  max-width: 590px; margin-left: auto; margin-right: auto;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 153.3783783783784%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAfCAYAAADnTu3OAAAACXBIWXMAABYlAAAWJQFJUiTwAAADWUlEQVRIx6VV227TQBANAhUhtZRSlUf4ACT+G0Ej+kBJ1Uh9QOIf+oAqNUlzsR3f704Oc8bexClpScVKo12v7bNn5szMdvaedXD48jle7O3h6OgIBwevsb+/j+PjY5ycvMPbN4c4/PARr95/QqfT+bd9O+3i++lnfPl6irOzM7Vut4vz83P0ej38kPmif4Wrn79weXn5oPX7ffQuLtApFtCR5zkWi0rnoih1ppVliaeMju0FqEIP1nQCy/URJynSNEEUx8iyDFVVqRF40wpUZVq/EyOZNMvRcYMYRRJhNBxiNJ7Ath1YliWzDdd1V+b7PjzPU/P9AL5rIfF/K6vlcqlzIQcJYKQPcZIoI1qaZk0IFv+wpYJtAs5dFOKyJ6dGUaSABEvkALrzlKGADuMWBpiJm47jYD6fq4uz2QxhGCoTxszE0cS0HdeqWqwBvTARF1MMBkMMh7Xd3g50vru7w2g0wng81rV5z73JZCL/1N/xcLpdlJUAiigE5A8UYyzCEIAf8ZksyaIoCrV2OrWtZljVKld5ijAIFDjLUuQqTKoAT4ljo7IARj5sMpJUsf1YzRGxoihUcciSgtUWI5DDeZhJmU2V/QiVBF4FETHGtoep4ysgc5H7BCLjOE6aOV4x3wq4FEDDIpGPSzndxO2xYYD+BpQNMqIwFIMKMnU0po0AhknbtjKc+6yUJXLWL13LC6nJOrlrkbKt8drGdF16VQl/JrkmzKy5p+6zdgl2/6fHXG8xBAIBmU5ncBohLMtWlttcfcj9mqG0LzI05fM/o2bouEhcR0SZq5sUgwy5ZkyZcyYHGYowNHPY2gvrWJtK4cb19TVubm607EydTqdTVZ7vKVDStDiujXGPpp3e1DJTgzEjq6TVF9sK7+6yACKT8vKlE8eSJgUTOlcwk3/tpmqeHxZFAPM4lCtggPGkqWcxJrjjzJuWX8fWXAFcb0ujVaVwUGXTNIum9Gj1LVhs7LWf+X6jwWoeymlGMaMsG4BZc5/MTMLTuE8jW1MAa4YCaLoIjcKYdRCEO9/Nm81B7xNemd7q6iQwWdK93SuliSEf7qu3a+varGW52CNbEljuEt4hvPXsRmlTBeaSN7EzIdjaDykK48fSM0FepYgCrKvEVAc9abNrA/4B4SoowAVuIRcAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+    &gt;
+      &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
+        alt=&quot;week2&quot;
+        title=&quot;&quot;
+        src=&quot;https://erluxman.com/static/2259ef9cc5a7bb094d402d11d4d211ef/fcda8/week_2.png&quot;
+        srcset=&quot;https://erluxman.com/static/2259ef9cc5a7bb094d402d11d4d211ef/12f09/week_2.png 148w,https://erluxman.com/static/2259ef9cc5a7bb094d402d11d4d211ef/e4a3f/week_2.png 295w,https://erluxman.com/static/2259ef9cc5a7bb094d402d11d4d211ef/fcda8/week_2.png 590w,https://erluxman.com/static/2259ef9cc5a7bb094d402d11d4d211ef/efc66/week_2.png 885w,https://erluxman.com/static/2259ef9cc5a7bb094d402d11d4d211ef/ee3fb/week_2.png 1144w&quot;
+        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+      /&gt;
+    &lt;/span&gt;
+  &lt;/span&gt;
+  
+  &lt;/a&gt;
+    &lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h3 id=&quot;may-5&quot;&gt;&lt;a href=&quot;#may-5&quot; aria-hidden class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;May 5&lt;/h3&gt;
+&lt;p&gt;On &lt;code class=&quot;language-text&quot;&gt;May 5&lt;/code&gt; i.e. on the 28th day I decided to merge all the tips into a Github Repo called &lt;a href=&quot;https://github.com/erluxman/awesomefluttertips&quot; target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot;&gt;Awesome Flutter Tips and Tricks&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;The repo got well received and it was trending in &lt;strong&gt;#1 in Github&lt;/strong&gt; under &lt;code class=&quot;language-text&quot;&gt;dart 🎯&lt;/code&gt; language the other day (which I only found later). In fact it was trending in #1 multiple times over last 100 days, which was a really big thing for me as The most ★ I ever got on repo was around 5. I felt like I was was on right path doing all these tips. I also got many amazing comments about th
+e repo.&lt;/p&gt;
+&lt;p&gt;
+  &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;https://erluxman.com/static/0ea4904cbc01cc070d61d349dc35e81e/4be12/week_4.jpg&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+  
+  &lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block;  max-width: 590px; margin-left: auto; margin-right: auto;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 38.513513513513516%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAIABQDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAAAAIF/8QAFAEBAAAAAAAAAAAAAAAAAAAAAP/aAAwDAQACEAMQAAAB3LAD/8QAFRABAQAAAAAAAAAAAAAAAAAAARD/2gAIAQEAAQUCL//EABQRAQAAAAAAAAAAAAAAAAAAABD/2gAIAQMBAT8BP//EABQRAQAAAAAAAAAAAAAAAAAAABD/2gAIAQIBAT8BP//EABQQAQAAAAAAAAAAAAAAAAAAABD/2gAIAQEABj8Cf//EABcQAAMBAAAAAAAAAAAAAAAAAAABESH/2gAIAQEAAT8hxEiCP//aAAwDAQACAAMAAAAQCA//xAAUEQEAAAAAAAAAAAAAAAAAAAAQ/9oACAEDAQE/ED//xAAVEQEBAAAAAAAAAAAAAAAAAAABEP/aAAgBAgEBPxBn/8QAGxAAAQQDAAAAAAAAAAAAAAAAAQARMVFxkaH/2gAIAQEAAT8QF5BIqeplHagcr//Z&apos;); background-size: cover; display: block;&quot;
+    &gt;
+      &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
+        alt=&quot;week4&quot;
+        title=&quot;&quot;
+        src=&quot;https://erluxman.com/static/0ea4904cbc01cc070d61d349dc35e81e/1c72d/week_4.jpg&quot;
+        srcset=&quot;https://erluxman.com/static/0ea4904cbc01cc070d61d349dc35e81e/a80bd/week_4.jpg 148w,https://erluxman.com/static/0ea4904cbc01cc070d61d349dc35e81e/1c91a/week_4.jpg 295w,https://erluxman.com/static/0ea4904cbc01cc070d61d349dc35e81e/1c72d/week_4.jpg 590w,https://erluxman.com/static/0ea4904cbc01cc070d61d349dc35e81e/a8a14/week_4.jpg 885w,https://erluxman.com/static/0ea4904cbc01cc070d61d349dc35e81e/fbd2c/week_4.jpg 1180w,https://erluxman.com/static/0ea4904cbc01cc070d61d349dc35e81e/4be12/week_4.jpg 2132w&quot;
+        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+      /&gt;
+    &lt;/span&gt;
+  &lt;/span&gt;
+  
+  &lt;/a&gt;
+    &lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;
+  &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;https://erluxman.com/static/d5018b68dd2ae1f620e6938d8802daf7/536c7/week_4_1.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+  
+  &lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block;  max-width: 590px; margin-left: auto; margin-right: auto;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 109.45945945945948%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAWCAYAAADAQbwGAAAACXBIWXMAABYlAAAWJQFJUiTwAAAB0ElEQVQ4y51V7W7bMBDL+z9FB6zDuodKmqxdUtvyVyxZlmxzR9nKiv2SauCg/JAI8ni8HJ5+/AJGA923aLsOWmtM0wRrLZZlQfzWdUXKd/j2/ALvPJq6RlGUUFUFYwycc/Deh5rnORn08PT9Z/gx6QEdGY4W4ziGIrCRcxLwdEBhSGWmLnE+n/H+UaFpRb6UqhSapnmAJTPkNefn8Ph+76Xu6PvtZD8jUDJDInp5SGk0gsW+fQZKNoUuz0ajVVUwhSxrMShKzXY5Su5EIoE66R1P9pCmaCmOUJ5k+Ra99210IneTzP5xbKLkZEDeGxqF4/GIy9u7SC8CGEeHgF+SvMgDSuNAP2pnlzc2zxI9Pmb89thRbkxJvikC6IVZ8XHD6fUV1+s1sCNbazfwmOms6FlGjTGbXHD3ET0pss5yeV1WjKrA6XTC71sZeke5ZJmzGP4BkqGwUErJ6HSbXCbnv9jlzeHsN0P22MX19XkG0wAlehzqtipRllVYCIwde/jl6NHDpu1QyXJl9CidI0TpYzBqyo+e131YsIN1QbaTLU4wt2+gvAUr90xb43K54O3PDYVIb9UVVivEv5UMl+OC9bJhhOFwlxqg5bTW7EDppvwF6Saux73l7R0AAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+    &gt;
+      &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
+        alt=&quot;week4&quot;
+        title=&quot;&quot;
+        src=&quot;https://erluxman.com/static/d5018b68dd2ae1f620e6938d8802daf7/fcda8/week_4_1.png&quot;
+        srcset=&quot;https://erluxman.com/static/d5018b68dd2ae1f620e6938d8802daf7/12f09/week_4_1.png 148w,https://erluxman.com/static/d5018b68dd2ae1f620e6938d8802daf7/e4a3f/week_4_1.png 295w,https://erluxman.com/static/d5018b68dd2ae1f620e6938d8802daf7/fcda8/week_4_1.png 590w,https://erluxman.com/static/d5018b68dd2ae1f620e6938d8802daf7/efc66/week_4_1.png 885w,https://erluxman.com/static/d5018b68dd2ae1f620e6938d8802daf7/c83ae/week_4_1.png 1180w,https://erluxman.com/static/d5018b68dd2ae1f620e6938d8802daf7/536c7/week_4_1.png 1480w&quot;
+        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+      /&gt;
+    &lt;/span&gt;
+  &lt;/span&gt;
+  
+  &lt;/a&gt;
+    &lt;/th&gt;
+&lt;th&gt;
+  &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;https://erluxman.com/static/708db5a4bbd447718765554258b7cfcf/536c7/week_4_3.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+  
+  &lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block;  max-width: 590px; margin-left: auto; margin-right: auto;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 106.08108108108108%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAVCAYAAABG1c6oAAAACXBIWXMAABYlAAAWJQFJUiTwAAACAUlEQVQ4y6VU7VLDIBDs+z9Gf6ijvpP+qOajIZ+EJA3hvL1ApGqdVplh7mjh2L3dsNvfPxGGWywty0L/Gc452u0fnsn2moospZfXVzocDpSmGSVJQlmWUVVVVBQFKaVkIj8ej1SW5fZ7Xdc0TZMU3e3vHiVp2lYKZGkqEYfyPJcY1igQclyE/6uqptPptLHbCg6MsmkaMuNIZhhk08g5bl6YyvWUuYducTSUudBNjiWj7Uh3ndDqOPZ9L/Fz6i1vmZkxJirICHH/xIiKQlHD/WibVjaC1sBocQAx5GGNi7TuhUlUcFV5sbPQm+eZZmsl3qK6820RlRfuX61YOUZkfbFwa3zgt/mNMgSBYkAJKoiBHvIfiyBG6M5UnrmHOAh1gTAgRXQXVHYrrLPfNmPXqqAUPuQJo3ZeZbESo8RaomaFWTDLey4idN7YSq0F1kKttABKQ/G+N5vKaInleLGHn5RXx8fzTyrbng1aKnrn7zfQRAS6IIzWq5kR4zy04pvKLbsfBeLexZRhI1ANF4Qc8dzY/vma2vVVqTX3yquNjYi3UeaC/CmTaSo6vL1RkuXc/FEsAxvBNjcbG8PyAnSHwQiycZy2N+6nw5cGI3wmOk00Gi3PFvoSDA26McJrhlC2jKTk/oFy5s0NUcKXA/tcj9BThlowM8y7UvfPFc+v1H8bH9bhVi2xTpyVAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+    &gt;
+      &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
+        alt=&quot;week4&quot;
+        title=&quot;&quot;
+        src=&quot;https://erluxman.com/static/708db5a4bbd447718765554258b7cfcf/fcda8/week_4_3.png&quot;
+        srcset=&quot;https://erluxman.com/static/708db5a4bbd447718765554258b7cfcf/12f09/week_4_3.png 148w,https://erluxman.com/static/708db5a4bbd447718765554258b7cfcf/e4a3f/week_4_3.png 295w,https://erluxman.com/static/708db5a4bbd447718765554258b7cfcf/fcda8/week_4_3.png 590w,https://erluxman.com/static/708db5a4bbd447718765554258b7cfcf/efc66/week_4_3.png 885w,https://erluxman.com/static/708db5a4bbd447718765554258b7cfcf/c83ae/week_4_3.png 1180w,https://erluxman.com/static/708db5a4bbd447718765554258b7cfcf/536c7/week_4_3.png 1480w&quot;
+        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+      /&gt;
+    &lt;/span&gt;
+  &lt;/span&gt;
+  
+  &lt;/a&gt;
+    &lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;
+  &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;https://erluxman.com/static/573815953a2d3dc058a1c72ef8e5cb75/536c7/week4_2.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+  
+  &lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block;  max-width: 590px; margin-left: auto; margin-right: auto;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 49.32432432432432%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAKCAYAAAC0VX7mAAAACXBIWXMAABYlAAAWJQFJUiTwAAAA70lEQVQoz5WS266DIBBF/f+v6MNp09PfMtF6o6JFFBx2Yaq29qFakp2BhKzMYogOx3+ERaMFEXGcc5zP85xvKzqcLqDujvYmUBSlTwEpJZRSGIYBxpjl8hbsCfw7Y/QbIQSSNEVVVcjz3FeBrus4WvdPGHf4HcxAVqZx0Zu7eVfe2+WkrKBkzcpN07BuyL1tWdkY6/U1HA2b0CgMxY4OwqvGcYwsy5AkCWun1ytS/wxFWaGpSzjb7gBOymutl97nZHcpu0n5VstJ0aDvwyBoBXp/3w1l8lMtWTGAQrTWXOevswe2UrbWLt3NkFB/BT4AvpIJlueA5YgAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+    &gt;
+      &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
+        alt=&quot;week4&quot;
+        title=&quot;&quot;
+        src=&quot;https://erluxman.com/static/573815953a2d3dc058a1c72ef8e5cb75/fcda8/week4_2.png&quot;
+        srcset=&quot;https://erluxman.com/static/573815953a2d3dc058a1c72ef8e5cb75/12f09/week4_2.png 148w,https://erluxman.com/static/573815953a2d3dc058a1c72ef8e5cb75/e4a3f/week4_2.png 295w,https://erluxman.com/static/573815953a2d3dc058a1c72ef8e5cb75/fcda8/week4_2.png 590w,https://erluxman.com/static/573815953a2d3dc058a1c72ef8e5cb75/efc66/week4_2.png 885w,https://erluxman.com/static/573815953a2d3dc058a1c72ef8e5cb75/c83ae/week4_2.png 1180w,https://erluxman.com/static/573815953a2d3dc058a1c72ef8e5cb75/536c7/week4_2.png 1480w&quot;
+        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+      /&gt;
+    &lt;/span&gt;
+  &lt;/span&gt;
+  
+  &lt;/a&gt;
+    &lt;/td&gt;
+&lt;td&gt;
+  &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;https://erluxman.com/static/3918e2642267c753a4595f67ddeee4f2/536c7/week_4_4.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+  
+  &lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block;  max-width: 590px; margin-left: auto; margin-right: auto;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 60.810810810810814%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAMCAYAAABiDJ37AAAACXBIWXMAABYlAAAWJQFJUiTwAAABM0lEQVQoz5VS2Y6DMAzk/z9zRUjDlZNwM2u7Sh+6qspaGtlByeDxuGq7AWd0GF2AnxbMc0bOGTFGbNuG4zhe2Pdd8Ol8XRcq01skb1GrBko/4L2Dcw5931PtEUKQzLDWCrjmO+M4Si7gBqp29DgvwLQtfbTU4YxlWbCu66vmP98NIgzAkhGIzMeENK9ExtIXIStS7kII95xgdIMfpeGGGvuWiXST+ZS4Tzh4eTBNE1KaMOdJOmOc5/mHrJw/S+5Gkkwk1BHPjAfLRAyu3+PbPCtDhJlcbshhpRS01mjJoK7rYIyR2lonzvI8v3c4sMuX2P7cvyTSU0qIKUkuu3ZPMrucA5nRoxstIrl7kCllaf8tmffwoFmx1LpWeDw0om2kWyZ8d/GGZCdFMYIv86K/S7y73L8CrKuBkERW8QAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+    &gt;
+      &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
+        alt=&quot;week4&quot;
+        title=&quot;&quot;
+        src=&quot;https://erluxman.com/static/3918e2642267c753a4595f67ddeee4f2/fcda8/week_4_4.png&quot;
+        srcset=&quot;https://erluxman.com/static/3918e2642267c753a4595f67ddeee4f2/12f09/week_4_4.png 148w,https://erluxman.com/static/3918e2642267c753a4595f67ddeee4f2/e4a3f/week_4_4.png 295w,https://erluxman.com/static/3918e2642267c753a4595f67ddeee4f2/fcda8/week_4_4.png 590w,https://erluxman.com/static/3918e2642267c753a4595f67ddeee4f2/efc66/week_4_4.png 885w,https://erluxman.com/static/3918e2642267c753a4595f67ddeee4f2/c83ae/week_4_4.png 1180w,https://erluxman.com/static/3918e2642267c753a4595f67ddeee4f2/536c7/week_4_4.png 1480w&quot;
+        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+      /&gt;
+    &lt;/span&gt;
+  &lt;/span&gt;
+  
+  &lt;/a&gt;
+    &lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h4 id=&quot;may-6---july-13&quot;&gt;&lt;a href=&quot;#may-6---july-13&quot; aria-hidden class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;May 6 - July 13&lt;/h4&gt;
+&lt;p&gt;As I was posting tips everyday, I missed posting in 2 different days due to power and network issue in my area but covered that delay the next days.&lt;/p&gt;
+&lt;p&gt;As the days went by it became harder to find good tips and it sometimes took me more than 5 hours to publish a tip.&lt;/p&gt;
+&lt;p&gt;I kept getting awesome replies and started getting messages on my Twitter DM for help, which I tried my best. Most of them were beginner folks in Flutter. One of the guys who messaged me just got hired yesterday 🚀. I feel really really happy for him 👍🏻.&lt;/p&gt;
+&lt;p&gt;In this period I also published a plugin &lt;a href=&quot;https://pub.dev/packages/pdf_flutter&quot; target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot;&gt;pdf_flutter&lt;/a&gt; to render PDF files in Android &amp;#x26; iOS, which was also received considerably well. This was needed for my job and I spent sometime to make it publishable as plugin.&lt;/p&gt;
+&lt;p&gt;I also tried to do live coding of a Habit Management / Todo app but I couldn’t manage time for daily live coding and tips collection. I am going to do live coding in days.&lt;/p&gt;
+&lt;h4 id=&quot;july-14-the-100th-day&quot;&gt;&lt;a href=&quot;#july-14-the-100th-day&quot; aria-hidden class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;July 14 (The 100th day)&lt;/h4&gt;
+&lt;p&gt;It was an amazing coincidence that my 100th tip was going to published exactly on my birthday, I didn’t plan it.
+After I completed all 100 tips that I initially targeted,
+My repo was was being starred even more than Flutter itself across the whole week.&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;
+  &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;https://erluxman.com/static/528fba180514081ded721c9c57bd8b3d/63908/week14.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+  
+  &lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block;  max-width: 590px; margin-left: auto; margin-right: auto;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 71.62162162162163%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAOCAYAAAAvxDzwAAAACXBIWXMAABYlAAAWJQFJUiTwAAABxUlEQVQ4y32Ty5LTMBRE5/+X/AwLvoAVBUtSVDHJZBgnfki6etmy3bQ08TAoBlVuSX6kdfq2/ACOLz8dPnxq8fmg4EXBhREhTohjKmulBYM2MNZzFihjuXbolSnXU0rAuvK34iELPrUeH78qfDtanFuHMM4Yp0TBqZQPEYHC0+1efraVpngRBP4I+ikiegtrLbqBuzbPkL6jSHyraZpQj3GkkxAwz3MlSHvPfUQrCReTyjrc/r++E1hvtrZalgXOeaRUCRoStIOG84E2ZlIqHI8niBp2hbZ7Y2lHQKoJY4xohoCXIc8Rx6tlwwXpZrMW3Gomod0jdF4K4aBtSe7cWRy+/2Difl9wI+SGgTB3PTQ+4hdFTldXbEc2W3hMRr6Mf9DlyqkPSpOwStlSoCdNpxwU59YwpHODvm3+azknv2+ZuzSnC15IeTx1ODx2vG4wkTBqDXp6s1mnvBuKY8raOJ7+UIKQvoc019eX3n0FdcU4ktDdC1r28NwKy8Kzh3lXcRZapKzzAa6t55HDELH3oThSGZdFIntIWvbRimZYFsu6/HX2asJysO8ESfh0FaZs8XixaHrHnQWGwq+fXihzTZh7WBP+Bj4IRPrR87a5AAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+    &gt;
+      &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
+        alt=&quot;week14&quot;
+        title=&quot;&quot;
+        src=&quot;https://erluxman.com/static/528fba180514081ded721c9c57bd8b3d/fcda8/week14.png&quot;
+        srcset=&quot;https://erluxman.com/static/528fba180514081ded721c9c57bd8b3d/12f09/week14.png 148w,https://erluxman.com/static/528fba180514081ded721c9c57bd8b3d/e4a3f/week14.png 295w,https://erluxman.com/static/528fba180514081ded721c9c57bd8b3d/fcda8/week14.png 590w,https://erluxman.com/static/528fba180514081ded721c9c57bd8b3d/efc66/week14.png 885w,https://erluxman.com/static/528fba180514081ded721c9c57bd8b3d/c83ae/week14.png 1180w,https://erluxman.com/static/528fba180514081ded721c9c57bd8b3d/63908/week14.png 2410w&quot;
+        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+      /&gt;
+    &lt;/span&gt;
+  &lt;/span&gt;
+  
+  &lt;/a&gt;
+    &lt;/th&gt;
+&lt;th&gt;
+  &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;https://erluxman.com/static/0a5eca9e38977290f9af79b2e134dd2f/63908/week14_1.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+  
+  &lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block;  max-width: 590px; margin-left: auto; margin-right: auto;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 71.62162162162163%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAOCAYAAAAvxDzwAAAACXBIWXMAABYlAAAWJQFJUiTwAAABvklEQVQ4y31TW3LbMBDL1XumHqD/PUB/OnHGteJaD8t8P0RKKMjGda3I5swOKYrEYoHly7LMMD6hkxHKRcQYkFJmJEx1ztybEBhxKpE+1h8zI+eMeZ5rvIDj+87iy9ce335cIKSEdAkuzbyQ4KcMqS1GoSCUgTIOZ6619bhIXdcF/DoqoLkIHPctjr3GoRnx89cZp0OLGDyCVGBqbI1lWWCdq9VcvyugDQFSWWb3PBAxtANU29dDmWWWg+soowA555FY8h2gtxpNp/A+WBw6jV1r0Z4FwW6ZH8UmoIsRmj+MpSET1z5i/7aH0+4h4JWhte4zYAFrqF/TG5bs4alLjB7Ou8qgOLkGrnIQSGld53uG1ElSP+MCFFmO0uLU05hRMvvfdniqYVoBGh+oXdFQ43g26ARB7cL2We4cXQOWRJsl2xBxUQ5Ce4arbF3M3M8IU2mZbUMyATcZSmZpOoluNHjvBF4PA5rBoFcTbNwGvGlo+KJWfegpei/4AlSgbpZOT/+379O28ZTrkynKe7KT6EdVDVHygrfdK9vIPG2bAlQ1XDN01PD36DGoiJOY0NIUx9YpF8rdR+zmf0/vxvAPcAVGefi53dQAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+    &gt;
+      &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
+        alt=&quot;week4&quot;
+        title=&quot;&quot;
+        src=&quot;https://erluxman.com/static/0a5eca9e38977290f9af79b2e134dd2f/fcda8/week14_1.png&quot;
+        srcset=&quot;https://erluxman.com/static/0a5eca9e38977290f9af79b2e134dd2f/12f09/week14_1.png 148w,https://erluxman.com/static/0a5eca9e38977290f9af79b2e134dd2f/e4a3f/week14_1.png 295w,https://erluxman.com/static/0a5eca9e38977290f9af79b2e134dd2f/fcda8/week14_1.png 590w,https://erluxman.com/static/0a5eca9e38977290f9af79b2e134dd2f/efc66/week14_1.png 885w,https://erluxman.com/static/0a5eca9e38977290f9af79b2e134dd2f/c83ae/week14_1.png 1180w,https://erluxman.com/static/0a5eca9e38977290f9af79b2e134dd2f/63908/week14_1.png 2410w&quot;
+        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+      /&gt;
+    &lt;/span&gt;
+  &lt;/span&gt;
+  
+  &lt;/a&gt;
+    &lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h4 id=&quot;tips-vs-article&quot;&gt;&lt;a href=&quot;#tips-vs-article&quot; aria-hidden class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Tips vs Article&lt;/h4&gt;
+&lt;p&gt;When I started to post tips, I want to cover every important topic. But as I went with the journey, I discovered that there are certain stuffs which can never be taken as a tips and they must be a detailed Article to properly introduce to developers.&lt;/p&gt;
+&lt;p&gt;A tips is very specific for a use case and usually something that can be understood when we look at it without significant cognitive effort and makes you feel smart 😉. Finding topic was easy but converting them to a valid tips took real effort. I sometimes spent hours trying to reduce the words and details so that it looks like a proper tips.&lt;/p&gt;
+&lt;p&gt;There are still more than 100 other topics in my backlog that I wanted to make tips of. I tried to make tips about many of those topics but I wasn’t satisfied how they came out as most of them required considerable amount of details that needed to be an article.&lt;/p&gt;
+&lt;h4 id=&quot;what-i-learned&quot;&gt;&lt;a href=&quot;#what-i-learned&quot; aria-hidden class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;What I learned?&lt;/h4&gt;
+&lt;p&gt;I was a student of habit before I stared this series but I was not familiar with Open-source. I kinda knew that &lt;strong&gt;public accountability&lt;/strong&gt; ”&lt;strong&gt;works&lt;/strong&gt;” as I had woken up and went for run before 5 AM for more than 120 days in a row with the help of same principle.&lt;/p&gt;
+&lt;p&gt;What I learned in this period is more about open-source. I didn’t even consider my repo as open-source project as it wasn’t a typical project which can be compiled &amp;#x26; run. Then as I kept getting the response I got, I realized &lt;strong&gt;&lt;code class=&quot;language-text&quot;&gt;Oh so this is also open source project 💡😎&lt;/code&gt;&lt;/strong&gt;. Then it gave me confidence to release a &lt;code class=&quot;language-text&quot;&gt;pdf_flutter&lt;/code&gt; plugin to render PDF in Flutter UIs. It also taught many other ways I could contribute to open-source. &lt;/p&gt;
+&lt;h4 id=&quot;whats-next&quot;&gt;&lt;a href=&quot;#whats-next&quot; aria-hidden class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;What’s next?&lt;/h4&gt;
+&lt;p&gt;I will be writing tips (though not daily) in future. I will also write article about the topic that I couldn’t fit into the repo as a tips and other important topics like State management, Code generation, Effective List, Animation, Drawing, Efficient UI rendering etc.&lt;/p&gt;
+&lt;p&gt;I will resume live coding on my &lt;a href=&quot;https://youtube.com/channel/UCrNwm2ZAfqF0gfPv4hrxGNg&quot; target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot;&gt;Youtube Channel&lt;/a&gt; from 6:AM IST for 2-3 hours on daily basis from July 18, 2020 for at least 300 days in one year building real Application (Todo/Habit management). I will start from scratch, publish to app stores, fix the bugs &amp;#x26; even do any necessary marketing / design strategy in live coding. Completely and literally open-source. I hope to get feedback to make this project a success. Wish me luck 🙏🏼&lt;/p&gt;
+&lt;p&gt;I am also working on publishing an utility package for doing easy and obvious stuffs in Flutter &amp;#x26; dart that can help developers speedup the development and jump past minor issues that kill time and give headache. Basically a package with amazing tips already implemented, ready to be used. But I cannot provide a exact date or approximation on this project as I might not have realized how big it is actually gonna get.&lt;/p&gt;
+&lt;h3 id=&quot;thats-it-for-today-thank-you-&quot;&gt;&lt;a href=&quot;#thats-it-for-today-thank-you-&quot; aria-hidden class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;That’s it for today, Thank you 🙏🏼&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&quot;https://i.giphy.com/media/rY93u9tQbybks/source.gif&quot;&gt;&lt;/p&gt;
                 &lt;div style=&quot;margin-top=55px; font-style: italic;&quot;&gt;(This is an article posted to my blog at erluxman.com. You can read it online by &lt;a href=&quot;https://erluxman.com/00018-my-journey-of-100-day-of-flutter/&quot;&gt;clicking here&lt;/a&gt;.)&lt;/div&gt;
               </content:encoded></item><item><title><![CDATA[Flutter Tips 99-100]]></title><description><![CDATA[last 2 tips and tricks on the series 100DaysOfFlutter.]]></description><link>https://erluxman.com/00017-week-15-100-days-of-flutter/</link><guid isPermaLink="false">https://erluxman.com/00017-week-15-100-days-of-flutter/</guid><pubDate>Tue, 14 Jul 2020 00:00:00 GMT</pubDate><content:encoded>&lt;h3 id=&quot;99-show-widgets-as-toast-with-oktoast&quot;&gt;&lt;a href=&quot;#99-show-widgets-as-toast-with-oktoast&quot; aria-hidden class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;#99 Show widgets as &lt;code class=&quot;language-text&quot;&gt;Toast&lt;/code&gt; with &lt;code class=&quot;language-text&quot;&gt;oktoast&lt;/code&gt;&lt;/h3&gt;
 &lt;p&gt;We can show toast with &lt;code class=&quot;language-text&quot;&gt;oktoast&lt;/code&gt; package.&lt;/p&gt;
@@ -2104,6 +2468,6 @@ printUser() =&amp;gt; print(fullName + &amp;quot; is a ${isAdult ? &amp;quot;Adu
   
   &lt;/a&gt;
     &lt;/p&gt;
-&lt;h2 id=&quot;that-is-all-for-this-time-thanks-for-following-through&quot;&gt;&lt;a href=&quot;#that-is-all-for-this-time-thanks-for-following-through&quot; aria-hidden class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;That is all for this time. Thanks for following through.&lt;/h2&gt;
+&lt;h2 id=&quot;that-is-all-for-this-time-thanks-for-following-through&quot;&gt;&lt;a href=&quot;#that-is-all-for-this-time-thanks-for-following-through&quot; aria-hidden class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;That is all for this time. Thanks for following through&lt;/h2&gt;
                 &lt;div style=&quot;margin-top=55px; font-style: italic;&quot;&gt;(This is an article posted to my blog at erluxman.com. You can read it online by &lt;a href=&quot;https://erluxman.com/00001-kotlin-data-class-my-love-at-first-sight-with-kotlin/&quot;&gt;clicking here&lt;/a&gt;.)&lt;/div&gt;
               </content:encoded></item></channel></rss>
