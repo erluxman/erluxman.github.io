@@ -6,15 +6,15 @@ spoiler: Best 100 days of my programming career.
 
 ## My best 100 days as a developer
 
-On **April 5th 2020**, exactly **100** days ago, I publicly announced on twitter that I will be posting Flutter tips and tricks everyday for 100 days.
+On **April 5th 2020**, I publicly announced on twitter that I will be posting Flutter tips and tricks everyday for 100 days.
 
 ![day1](day1.png)
 
 ### Apr 5 - May 4
 
-I officially started posting tips on Twitter in a [thread](https://twitter.com/erluxman/status/1246608678486065152). I was planning to publish tips for sometime but haven't really started. So, I wanted to officially kick start the journey and keep myself committed to it by keeping myself publicly accountable within my twitter circle.
+I started posting tips on Twitter in a [thread](https://twitter.com/erluxman/status/1246608678486065152). I was planning to publish tips for sometime but haven't really started. So, I wanted to officially kick start the journey and keep myself committed to it by having myself publicly accountable within my twitter circle.
 
-I started posting daily tips in twitter and a blog of 7 tips at once on my site erluxman.com every week & also shared the blog on reddit. At the beginning I didn't intend of building any helpful document. In fact I didn't even expect I would create something helpful by publishing tips. But I did just for the sake of being disciplined and being a man of words. I started to get good response on reddit about my blogs. I started getting  replies like "nice tips", "Waiting for next 7 tips". It kinda gave me a extra push to keep going.
+I started posting daily tips in twitter and a blog of 7 tips at once on my site [erluxman.com](https:erluxman.com) every week & also shared the blog on reddit. At the beginning I didn't intend of building any helpful document. In fact I didn't even expect I would create something helpful by publishing tips. But I did just for the sake of being disciplined and being a man of words. I started to get good response on reddit about my blogs. I started getting  replies like "nice tips", "Waiting for next 7 tips". It kinda gave me a extra push to keep going.
 
 | ![week1](week_1.png)|  ![week2](week_2.png)  |
 |--|--|
@@ -23,10 +23,11 @@ I started posting daily tips in twitter and a blog of 7 tips at once on my site 
 
 On `May 5` i.e. on the 28th day I decided to merge all the tips into a Github Repo called [Awesome Flutter Tips and Tricks](https://github.com/erluxman/awesomefluttertips).
 
-The repo got well received and it was trending in **#1 in Github** under `dart 🎯` language the other day(Which I only found later). In fact it was trending in #1 multiple times over last 100 days, which was a really big thing for me as The most ★ I ever got on repo was around 5. I felt like I was was right path doing all these tips. I also got many amazing comments about th
+The repo got well received and it was trending in **#1 in Github** under `dart 🎯` language the other day (which I only found later). In fact it was trending in #1 multiple times over last 100 days, which was a really big thing for me as The most ★ I ever got on repo was around 5. I felt like I was was on right path doing all these tips. I also got many amazing comments about th
 e repo.
 
 ![week4](week_4.jpeg)
+
 |![week4](week_4_1.png)|![week4](week_4_3.png)|
 |--|--|
 |![week4](week4_2.png)|![week4](week_4_4.png)|
@@ -48,6 +49,7 @@ I also tried to do live coding of a Habit Management / Todo app but I couldn't m
 It was an amazing coincidence that my 100th tip was going to published exactly on my birthday, I didn't plan it.
 After I completed all 100 tips that I initially targeted,
 My repo was was being starred even more than Flutter itself across the whole week.
+
 |![week14](week14.png)|![week4](week14_1.png)|
 |--|--|
 
