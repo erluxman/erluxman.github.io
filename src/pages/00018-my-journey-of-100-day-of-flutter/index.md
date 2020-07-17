@@ -1,6 +1,6 @@
 ---
 title: My Journey of 100 Days Of Flutter (Awesome Flutter tips and tricks)
-date: '2020-07-15'
+date: '2020-07-17'
 spoiler: Best 100 days of my programming career.
 ---
 
