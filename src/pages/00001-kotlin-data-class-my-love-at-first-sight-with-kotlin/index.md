@@ -31,5 +31,5 @@ And the Output looks Something like this :
 
 ![](output.png)
 
-That is all for this time. Thanks for following through.
+That is all for this time. Thanks for following through
 ---
