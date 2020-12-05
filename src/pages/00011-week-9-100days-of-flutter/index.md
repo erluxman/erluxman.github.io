@@ -58,3 +58,13 @@ Still confused installing flutter in mac/linux easily?
         If you are using bash:
         echo "\nexport PATH="\$PATH:`pwd`/flutter/bin"">>~/.bashrc ; source ~/.bashrc
 ![](58flutterinstall.png)
+
+## #Day59 Black Life matter
+
+Black lives matter.  ✊🏿 & Racial Equality should be the norm.
+
+This is a tip not just for Flutter developers but to all humans. 
+
+This is my tip number #59.
+
+![](59blacklifematter.jpg)
