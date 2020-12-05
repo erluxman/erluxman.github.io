@@ -1,16 +1,16 @@
 ---
 title: Flutter Tips 22-28
 date: '2020-05-02'
-spoiler: Forth batch of 7 tips and tricks on the series 100DaysOfFlutter.
+spoiler: Fourth batch of 7 tips and tricks on the series 100DaysOfFlutter.
 ---
 
 
-## #Day22 Callable class
 
-In flutter we can call instance of a class like we call method. 
+## #Day22 Callable Class
+
+In flutter we can call instance of a class like we call method.
 
 What you have to do is defile a `call()` method of any return type or arguments. that `call()` method will be called when you call the instance.
-
 
     void main() {
         var member = CallableClass();
@@ -25,12 +25,11 @@ What you have to do is defile a `call()` method of any return type or arguments.
 
 [try in dartpad](https://dartpad.dartlang.org/294c4973aeab2b8312e415ce4dc55799)
 
-
 ## #Day23 ListWheelScrollView
 
 We can implement following Wheel List using `ListWheelScrollView` in flutter.
 
-Just give it the children and it will start working for you. 
+Just give it the children and it will start working for you.
 
 You can customize the wheel with Constructor arguments of `ListWheelScrollView` play with them.
 
@@ -44,18 +43,17 @@ You can customize the wheel with Constructor arguments of `ListWheelScrollView` 
 
 [try on codepen](https://codepen.io/erluxman/pen/NWGjBjX)
 
-![](23wheelscrollview.gif)
+![wheelscroll](https://raw.githubusercontent.com/erluxman/awesomefluttertips/master/assets/23wheelscrollview.gif)
 
+## #Day24 Rectangular Fab with Notched Bottom Appbar
 
-## #Day24 Rectangular Fab with Notched Bottom Appbar.
+Circular notched Button Bar with Fab is cool
 
-Circular notched Buttom Bar with Fab is cool 
+### ___**BUT**___
 
-**BUT**
+Ever wanted rectangular/stadium Fab with Notch?
 
-Ever wanted rectangular Fab with Notch? 
-
-`FloatingActionButton.extended` with `BottomAppBar`'s `shape` as `AutomaticNotchedShape` like this: 
+`FloatingActionButton.extended` with `BottomAppBar`'s `shape` as `AutomaticNotchedShape` like this:
 
     shape: AutomaticNotchedShape(
             RoundedRectangleBorder(),
@@ -63,11 +61,10 @@ Ever wanted rectangular Fab with Notch?
               side: BorderSide(),
             ),
           ),
+
 [try this code on your editor](https://gist.github.com/erluxman/fd442639bcaf84e14b31f70b00c48fe9)
 
-![](24rectangularnotch.png)
-
-
+![rectangular notch](https://raw.githubusercontent.com/erluxman/awesomefluttertips/master/assets/24rectangularnotch.png)
 
 ## #Day25 Google Fonts in flutter
 
@@ -77,35 +74,28 @@ Just give the textStyle as any google fonts.
 
 Want to set other textStyles properties? Just provide `textStyle` to the font (Which is a textStyle itself)
 
-
     Text(
         'Notched Rectangular Fab',
         style: GoogleFonts.pacifico(
             textStyle: TextStyle(color: Colors.red),
         ),)
 
-
-
 [try on pub.dev](https://pub.dev/packages/google_fonts)
 
-![](25googlefontstest.gif)
+![googlefonts](https://raw.githubusercontent.com/erluxman/awesomefluttertips/master/assets/25googlefontstest.gif)
 
-
-
-## #Day26  Hero Animation (Shared Element Transition)
+## #Day26 Hero Animation (Shared Element Transition)
 
 ### **Do you want your Widget/Image to fly from one screen to another?**
-
 
 Flutter makes it super easy to do **Shared Element / Hero animation** with Widget called `Hero`.
 Just give **same `tag`** for the `Hero` widget in both screen and your Widget will start flying from one screen to another.
 
-
-Caution : Do not give a static stiring as tag if your UI has dynamic data like List, use a value of object like title,id etc as tag 
+Caution : Do not give a static string as tag if your UI has dynamic data like List, use a value of object like title,id etc as tag
 
     //First Screen
 
-    FirstPageWidget extends StatelessWidget{                      
+    FirstPageWidget extends StatelessWidget{
     return Scaffold(
         ...
         Hero(
@@ -135,21 +125,17 @@ Caution : Do not give a static stiring as tag if your UI has dynamic data like L
 
 For better experience : Decrease the browser width
 
-![](26hero.gif)
+![hero](https://raw.githubusercontent.com/erluxman/awesomefluttertips/master/assets/26hero.gif)
 
-
-
-
-## #Day27 Dart function/constructor Arguments 
+## #Day27 Dart function/constructor Arguments
 
 There are three types of arguments (Function arguments and constructor arguments work the same way).
 
-1. Normal Parameters (✅✅Short & ❌Flexible)  => required, requires all arguments to be called in order, most concise (doesn't need argument names),least flexible.
+1. Normal Parameters (✅✅Short & ❌Flexible) => required, requires all arguments to be called in order, most concise (doesn't need argument names),least flexible.
 
 2. Named Parameters (✅Short & ✅✅Flexible) => Optional, can be called in any order BUT must provide the argument name.
 
-3. Positional Parameters (✅✅Short & ✅Flexible) => optional but we cannot skip any argument on left to provide arguement right to it. Does not require arguement name.
-   
+3. Positional Parameters (✅✅Short & ✅Flexible) => optional but we cannot skip any argument on left to provide argument right to it. Does not require argument name.
 
         void main() {
             normalFunction("Laxman", "Bhattarai", 26, 65);
@@ -177,30 +163,29 @@ There are three types of arguments (Function arguments and constructor arguments
             print("$firstName $lastName age: $age weight: $weight");
         }
 
-        //Optional, doesn't need argument name  but cannot be skipped an argument on left to provide arguemt on right of it.
+        //Optional, doesn't need argument name  but cannot be skipped an argument on left to provide argument on right of it.
         positionalFunction(String first, String last,[int age = 18, int weight = 60]) {
             print("$first $last age: $age weight: $weight");
         }
 
 [try on dartpad](https://dartpad.dartlang.org/5cb4bf8b064f117a22aadaee26747721)
 
-
 ## #Day28 AnimatedContainer
 
-
-`ImplicitlyAnimatedWidget`s like `AnimatedAlign,AnimatedContainer, AnimatedPadding, AnimatedTheme` are easy way to do animation. 
+`ImplicitlyAnimatedWidget`s like `AnimatedAlign,AnimatedContainer, AnimatedPadding, AnimatedTheme` are easy way to do animation.
 
 `AnimatedContainer()` is one of the most common.
 
 You can animate any properties of `container` with `AnimatedContainer`. Mastery of this widget alone can get you far ahead in you animation game.
 
-Just provide the changed value like 
+Just provide the changed value like
 
     height, width,padding,transform,decoration(backgroundcolor, border radius & alignment etc.
- along with curve then AnimatedContainer will automatically do the animation for you.
+
+along with curve then AnimatedContainer will automatically do the animation for you.
 
 The following animation is done with just `AnimatedContainer()`
 
 [play with the animation in codepen](https://codepen.io/erluxman/pen/MWaEZEz)
 
-![](28animatedcontainer.gif)
+![animatedcontainer](https://raw.githubusercontent.com/erluxman/awesomefluttertips/master/assets/28animatedcontainer.gif)
