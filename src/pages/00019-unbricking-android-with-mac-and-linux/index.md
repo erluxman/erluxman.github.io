@@ -1,6 +1,6 @@
 ---
 title: Unbricking Android with mac/linux
-date: '2020-12-05'
+date: '2020-12-09'
 spoiler: How to unbrick soft brick with mac/linux
 ---
 ## Unbricking Android with mac/linux
@@ -9,7 +9,7 @@ It's easy to brick your phone. Just flash one zip/iso that you were not supposed
 
 I have been a custom ROM user for years may be for more than 8 years now. But I wasn't really aware of the ways I installed them. I just followed a blog or youtube video.
 
-I also have another friend Prakash who has similar inclination towards custom ROMS. So he has all the windows tool that we may need if it can't be done from termial or phone itself. Of course I bricked my phone again yesterday. Usually I buy Xaiomi phones with Snapdragon processors for major two reasons.
+I also have another friend Prakash who has similar inclination towards custom ROMS. So he has all the windows tool that we may need if it can't be done from termial or phone itself. Of course I bricked my phone again few days ago. Usually I buy Xaiomi phones with Snapdragon processors for major two reasons.
 
 1. They are cheap and have good hardware for the price.
 
